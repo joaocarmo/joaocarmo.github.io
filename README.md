@@ -1,2 +1,2 @@
 # joaocarmo.github.io
-Johnny Eyelash
+Johnny Eyelash's guide to surviving life
