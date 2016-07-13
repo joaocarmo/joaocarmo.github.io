@@ -1,12 +1,11 @@
 #app {
   display: table;
   text-align: center;
-  width: 600px;
-  height: 200px;
+  padding: 60px;
   color: black;
   background-color: white;
   opacity: 0.7;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 div.centered-text {
