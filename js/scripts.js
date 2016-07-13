@@ -7,4 +7,5 @@ $(document).ready(function() {
   		top: ($(window).height() - $('#app').outerHeight())/2
   	});
   });
+  $(window).resize();
 });
