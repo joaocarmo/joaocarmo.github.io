@@ -1,34 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>We are all mad here !</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css" type="text/css">
+    <style type="text/css">
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        background-color: #f5f5f5;
+      }
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+      main {
+        flex: 1 0 auto;
+      }
 
-  <title>João Carmo</title>
-  <meta name="description" content="Repository">
-  <meta name="author" content="Joao Carmo">
-
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
-
-  <link rel="stylesheet" href="./css/styles.css">
-
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-</head>
-
-<body>
-  <div class="aligner">
-    <div class="aligned">
-      <div class="content">
-        <div class="centered-text">João Carmo's repository</div>
-        <div class="centered-links">&nbsp;</div>
-        <div class="centered-links">
-          <a href="https://github.com/joaocarmo/market-reconstruction" alt="">Market reconstruction</a>
-          <a href="https://github.com/joaocarmo/react-smart-data-table" alt="">React Smart Data Table</a>
+      .is-invisible {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Content Start -->
+    <header></header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <p>
+              &nbsp;
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col m3"></div>
+          <div class="col m6 s12">
+            <div class="card-panel white">
+              <h6 class="blue-text">
+                Are you sure ?
+              </h6>
+              <p class="blue-text">
+                The universe has conjured a heavily complex path in which your
+                life has taken all the necessary and improbable steps of bringing
+                you into this place. Abandon all hope and proceed at your own risk.
+              </p>
+              <a id="click-me-not" class="waves-effect waves-light btn blue">
+                Yes, I understand
+              </a>
+            </div>
+          </div>
+          <div class="col m3"></div>
+        </div>
+        <div class="row">
+          <div class="col m3"></div>
+          <div class="col m6 s12">
+            <p id="countdown" class="is-invisible">
+              You will be redirected in {{time}} seconds...
+            </p>
+          </div>
+          <div class="col m3"></div>
         </div>
       </div>
-    </div>
-  </div>
-</body>
+    </main>
+    <footer></footer>
+    <!-- Content End -->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+      // Find the thing
+      var clickMeNot = document.getElementById('click-me-not');
+      var counter = document.getElementById('countdown');
+      var placeholder = '{{time}}';
+      var text = '';
+      var invisibleClass = 'is-invisible';
+      var disabledClass = 'disabled';
+      var inst;
+      var timer;
+      var destination = 'https://github.com/joaocarmo';
+
+      // What should happend
+      function redirectTo(dest) {
+        window.location.replace(dest);
+      }
+
+      function change() {
+        if (timer > 0) {
+          timer -= 1;
+          setText();
+        } else {
+          clearInterval(inst);
+          if (counter.classList) {
+            counter.classList.add(invisibleClass);
+          }
+          redirectTo(destination);
+        }
+      }
+
+      function setText() {
+        counter.innerHTML = text.replace(placeholder, timer);
+      }
+
+      function startCountdown(seconds) {
+        timer = seconds;
+        if (!timer) {
+          timer = 3;
+        }
+        if (counter) {
+          if (!text) {
+            text = counter.innerHTML;
+            if (counter.classList) {
+              counter.classList.remove(invisibleClass);
+            }
+          }
+          setText();
+          inst = setInterval(change, 1000);
+        }
+      }
+
+      function clickBait() {
+        if (clickMeNot && clickMeNot.classList) {
+          clickMeNot.classList.add(disabledClass);
+          startCountdown(3);
+        }
+      }
+
+      // Append the action
+      if (clickMeNot.addEventListener) {
+        clickMeNot.addEventListener('click', clickBait, false);
+      } else if (clickMeNot.attachEvent) {
+        clickMeNot.attachEvent('onclick', clickBait);
+      }
+    </script>
+  </body>
 </html>
