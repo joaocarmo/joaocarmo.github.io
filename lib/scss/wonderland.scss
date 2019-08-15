@@ -1,10 +1,42 @@
+$mainSectionSize: 10em;
+
+main {
+  section {
+    position: absolute;
+    top: calc(50% - #{($mainSectionSize / 2)});
+    height: $mainSectionSize;
+    width: 100%;
+    text-align: center;
+    header {
+      display: inline-block;
+      width: 45em;
+      h1 {
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+      }
+      h4 {
+        line-height: 2em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
 footer {
   width: 100%;
   position: fixed;
   bottom: 0;
+  .social-links {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    .spacer {
+      margin-left: 0.7em;
+    }
+  }
   p {
     position: relative;
-    top: 1em;
+    top: 0.9em;
     width: 100%;
     text-align: center;
     font-size: 0.7em;

@@ -1,5 +1,8 @@
 // Imports
 import React from 'react'
+import BrandName from './BrandName'
+import Social from './Social'
+import Copyright from './Copyright'
 import '../../scss/wonderland.scss'
 
 class Wonderland extends React.Component {
@@ -7,9 +10,12 @@ class Wonderland extends React.Component {
     return (
       <>
         <header key='header'></header>
-        <main key='main'></main>
+        <main key='main'>
+          <BrandName />
+        </main>
         <footer key='footer'>
-          <p>Copyright © 2019 João Carmo. All rights reserved.</p>
+          <Social />
+          <Copyright />
         </footer>
       </>
     )

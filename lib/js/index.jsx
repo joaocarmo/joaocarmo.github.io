@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Typography from 'typography'
-import twinPeaksTheme from 'typography-theme-twin-peaks'
+import twinPeaksTheme from 'typography-theme-alton'
 import injectFonts from 'typography-inject-fonts'
 import Wonderland from './components/Wonderland.jsx'
 import '../scss/index.scss'
