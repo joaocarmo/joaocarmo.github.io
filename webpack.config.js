@@ -12,18 +12,18 @@ const styleLoader = mode === 'production' ? MiniCssExtractPlugin.loader : 'style
 module.exports = {
   mode,
   context: path.join(__dirname, 'lib', 'js'),
-  entry: './index.js',
+  entry: './index.jsx',
   output: {
     path: __dirname,
     filename: './js/[name].js',
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
@@ -39,7 +39,13 @@ module.exports = {
         ],
       },
       { test: /\.hbs$/, use: ['handlebars-loader'] },
-      { test: /\.jpg$/, use: ['file-loader'] },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'img',
+        },
+      },
     ],
   },
   plugins: [
