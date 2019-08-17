@@ -1,4 +1,3 @@
-
 // Imports
 import React from 'react'
 
@@ -16,7 +15,9 @@ const tagLines = [
 const BrandName = () => (
   <section>
     <header>
-      <h1>{brandName}</h1>
+      <h1>
+        <p>{brandName}</p>
+      </h1>
       <h4>
         {tagLines.map((tag) => (
           <React.Fragment key={tag}>

@@ -5,6 +5,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {
   faLinkedin, faGithub, faStackOverflow, faInstagram, faFlickr,
 } from '@fortawesome/free-brands-svg-icons'
+import '../../scss/social.scss'
 
 const socialLinks = [
   {
@@ -46,7 +47,7 @@ const socialLinks = [
 ]
 
 const Social = () => (
-  <div className='social-links'>
+  <div className='social'>
     {socialLinks.map(({ style, icon, name, url }) => (
       <React.Fragment key={name}>
         <a

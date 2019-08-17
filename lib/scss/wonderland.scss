@@ -13,10 +13,23 @@ main {
       h1 {
         text-transform: uppercase;
         letter-spacing: 0.4em;
+        /* Fade in animation */
+        opacity: 0;
+        animation: fadeinbrand;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
       }
       h4 {
         line-height: 2em;
         text-transform: uppercase;
+        opacity: 0;
+        animation: fadeintext;
+        animation-duration: 4s;
+        animation-delay: 3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
       }
     }
   }
@@ -26,14 +39,6 @@ footer {
   width: 100%;
   position: fixed;
   bottom: 0;
-  .social-links {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    .spacer {
-      margin-left: 0.7em;
-    }
-  }
   p {
     position: relative;
     top: 0.9em;
@@ -41,5 +46,42 @@ footer {
     text-align: center;
     font-size: 0.7em;
     color: hsl(0, 0%, 95%);
+  }
+  opacity: 0;
+  animation: fadeintext;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeinbrand {
+  from {
+    opacity: 0;
+    letter-spacing: 0.3em;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.4em;
+  }
+}
+
+@keyframes borderanim {
+  from {
+    border-top: 0;
+    border-bottom: 0;
+  }
+  to {
+    border-top: solid 0.1em;
+    border-bottom: solid 0.1em;
+  }
+}
+
+@keyframes fadeintext {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
