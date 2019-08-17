@@ -1,0 +1,23 @@
+div {
+  &.navbar {
+    height: 100vh;
+    background-color: var(--bg-color);
+    &.avatar {
+      display: flex;
+      height: 240px;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(var(--bg-dark-color), var(--bg-color));
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    &.menu {
+      padding: 2em;
+    }
+  }
+}

@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import '../../scss/nextbutton.scss'
 
-const NextButton = () => (
-  <button className='next'>
+const NextButton = ({ onClick = () => null }) => (
+  <button className='next' onClick={onClick}>
     <FontAwesomeIcon icon={faChevronDown} size='3x' />
   </button>
 )
