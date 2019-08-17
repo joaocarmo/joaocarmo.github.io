@@ -17,6 +17,7 @@ div {
       }
     }
     &.menu {
+      height: calc(100vh - 240px);
       padding: 2em;
     }
   }
