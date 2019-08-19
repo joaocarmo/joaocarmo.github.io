@@ -55,7 +55,7 @@
     "typography-inject-fonts": "0.0.0",
     "typography-theme-alton": "^0.16.19",
     "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.6",
+    "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
   }
 }
