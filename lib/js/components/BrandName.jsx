@@ -13,7 +13,7 @@ const tagLines = [
 ]
 
 const BrandName = () => (
-  <section>
+  <section id="brandname">
     <header>
       <h1>
         <p>{brandName}</p>

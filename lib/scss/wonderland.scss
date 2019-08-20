@@ -4,7 +4,7 @@ main {
   &#brandname {
     color: var(--text-color);
   }
-  section {
+  section#brandname {
     position: absolute;
     top: calc(50% - #{($mainSectionSize / 2)});
     height: $mainSectionSize;

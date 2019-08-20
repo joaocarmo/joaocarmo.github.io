@@ -1,6 +1,10 @@
 div {
   &.content {
     height: 100vh;
-    padding: 2em;
+    overflow-y: auto;
+    section {
+      min-height: 100vh;
+      padding: 2em;
+    }
   }
 }

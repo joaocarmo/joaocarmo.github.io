@@ -2,10 +2,10 @@
 import React from 'react'
 import Social from './Social'
 import me from '../../img/not-me.jpg'
-import '../../scss/content.scss'
+import '../../scss/navbar.scss'
 
 const menuItems = [
-  { key: 'about', title: 'About Me', action: '' },
+  { key: 'about', title: 'About me', action: '' },
   { key: 'do', title: 'What I do', action: '' },
   { key: 'did', title: 'What I did', action: '' },
   { key: 'like', title: 'What I like', action: '' },
