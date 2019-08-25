@@ -1,39 +1,42 @@
 $mainSectionSize: 10em;
 
-main {
-  &#brandname {
-    color: var(--text-color);
-  }
-  section#brandname {
-    position: absolute;
-    top: calc(50% - #{($mainSectionSize / 2)});
-    height: $mainSectionSize;
+#brandname {
+  height: 100vh;
+  color: var(--text-color);
+}
+
+#brandname-section {
+  position: absolute;
+  top: calc(50% - #{($mainSectionSize / 2)});
+  height: $mainSectionSize;
+  width: 100%;
+  text-align: center;
+  header {
+    display: inline-block;
     width: 100%;
-    text-align: center;
-    header {
-      display: inline-block;
-      width: 45em;
-      h1 {
-        text-transform: uppercase;
-        letter-spacing: 0.4em;
-        /* Fade in animation */
-        opacity: 0;
-        animation: fadeinbrand;
-        animation-duration: 2s;
-        animation-delay: 1s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-      }
-      h4 {
-        line-height: 2em;
-        text-transform: uppercase;
-        opacity: 0;
-        animation: fadeintext;
-        animation-duration: 4s;
-        animation-delay: 3s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
-      }
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      opacity: 0;
+      /* Fade in animation */
+      animation: fadeinbrand;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+    }
+    h4 {
+      line-height: 2em;
+      text-transform: uppercase;
+      opacity: 0;
+      /* Fade in animation */
+      animation: fadeintext;
+      animation-duration: 4s;
+      animation-delay: 3s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
     }
   }
 }
@@ -52,6 +55,7 @@ footer {
     color: hsl(0, 0%, 95%);
   }
   opacity: 0;
+  /* Fade in animation */
   animation: fadeintext;
   animation-duration: 2s;
   animation-delay: 4s;
@@ -67,17 +71,6 @@ footer {
   to {
     opacity: 1;
     letter-spacing: 0.4em;
-  }
-}
-
-@keyframes borderanim {
-  from {
-    border-top: 0;
-    border-bottom: 0;
-  }
-  to {
-    border-top: solid 0.1em;
-    border-bottom: solid 0.1em;
   }
 }
 

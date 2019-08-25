@@ -16,12 +16,25 @@ class Wonderland extends React.Component {
       showPages: true,
     }
 
+    this.wheelTimer = null
+
     this.handleOnClick = this.handleOnClick.bind(this)
+    this.handleOnWheel = this.handleOnWheel.bind(this)
   }
 
   handleOnClick() {
     const { showPages } = this.state
     this.setState({ showPages: !showPages })
+  }
+
+  handleOnWheel(event) {
+    const { showPages } = this.state
+    if (!showPages) {
+      if (event.nativeEvent.wheelDelta < 0 && event.nativeEvent.deltaY > 100) {
+        if (this.wheelTimer) clearTimeout(this.wheelTimer)
+        this.wheelTimer = setTimeout(() => this.setState({ showPages: true }), 0)
+      }
+    }
   }
 
   render() {
@@ -30,7 +43,7 @@ class Wonderland extends React.Component {
       <>
         {!showPages && (
           <>
-            <main id='brandname'>
+            <main id='brandname' onWheel={this.handleOnWheel}>
               <BrandName />
               <NextButton onClick={this.handleOnClick} />
             </main>

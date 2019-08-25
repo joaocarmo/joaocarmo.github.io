@@ -25,10 +25,21 @@ main {
   }
 }
 
-div {
-  &.grid {
+.grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-navbar {
+    display: none;
+  }
+
+  .grid {
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 1fr;
     height: 100vh;
     width: 100vw;
   }
