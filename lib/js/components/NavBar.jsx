@@ -1,8 +1,17 @@
 // Imports
 import React from 'react'
 import Social from './Social'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import me from '../../img/not-me.jpg'
 import '../../scss/navbar.scss'
+
+let version = 'development'
+try {
+  version = VERSION
+} catch(error) {
+  console.log(error.message)
+}
 
 const menuItems = [
   { key: 'about-me', title: 'About me', action: '' },
@@ -22,6 +31,18 @@ const NavBar = ({ activeIndex } = {}) => (
     <div className='navbar avatar'>
       <img src={me} alt='My photograph' />
     </div>
+    <div className='navbar name'>
+      <h3 className='navbar-name'>João Carmo</h3>
+      <h6 className='navbar-title'>
+        Front-end engineer<br />
+        Back-end developer
+      </h6>
+      <div className='navbar-location'>
+        <p className='navbar-location-text'>
+          <FontAwesomeIcon icon={faMapMarkerAlt} /> Portugal
+        </p>
+      </div>
+    </div>
     <div className='navbar menu'>
       {menuItems.map(({ key, title }, idx) => (
         <button
@@ -34,7 +55,12 @@ const NavBar = ({ activeIndex } = {}) => (
       ))}
     </div>
     <div className='navbar social'>
-    <Social />
+      <Social />
+    </div>
+    <div className='navbar copyright'>
+      <p className='copyright-version'>
+        {`version ${version}`}
+      </p>
     </div>
   </div>
 )

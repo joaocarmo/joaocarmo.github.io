@@ -1,10 +1,17 @@
+$avatarHeight: 240px;
+$nameTitleHeight: 100px;
+$socialHeight: 30px;
+$copyrightHeight: 20px;
+$buttonHeight: 3.5em;
+
 div {
   &.navbar {
     height: 100vh;
     background-color: var(--bg-color);
+    overflow-y: auto;
     &.avatar {
       display: flex;
-      height: 240px;
+      height: $avatarHeight;
       justify-content: center;
       align-items: center;
       background: linear-gradient(var(--bg-dark-color), var(--bg-color));
@@ -17,15 +24,52 @@ div {
       }
     }
     &.menu {
-      height: calc(100vh - 240px - 40px);
-      padding-top: 2em;
-      padding-bottom: 2em;
+      height: calc(100vh - #{$avatarHeight} - #{$nameTitleHeight} - #{$socialHeight} - #{$copyrightHeight});
+      min-height: (4  * $buttonHeight);
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    &.name {
+      height: $nameTitleHeight;
+      color: var(--text-color);
+      .navbar-name {
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
+        text-align: center;
+        letter-spacing: 0.1em;
+      }
+      .navbar-title {
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+      }
+      .navbar-location {
+        margin-top: 1.4em;
+        font-size: 0.7em;
+        text-align: center;
+        .navbar-location-text {
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
     &.social {
       display: flex;
-      height: 40px;
+      height: $socialHeight;
       justify-content: center;
       align-items: center;
+    }
+    &.copyright {
+      height: $copyrightHeight;
+      text-align: center;
+      .copyright-version {
+        color: hsl(0, 0%, 10%);
+        margin: 0;
+        padding: 0;
+        font-size: 0.6em;
+      }
     }
   }
 }
@@ -33,7 +77,7 @@ div {
 button {
   &.navbar {
     width: 100%;
-    height: 3.5em;
+    height: $buttonHeight;
     border-top: solid 1px hsl(0, 0, 15%);
     border-bottom: solid 1px hsl(0, 0, 15%);
     border-left: 0;
