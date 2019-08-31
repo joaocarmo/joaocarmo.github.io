@@ -25,7 +25,11 @@ const Pages = () => {
     observableElementIds.forEach((elementId, idx) => {
       const observer = new IntersectionObserver(observerFn(elementId, idx), observerOpts)
       const target = document.querySelector(`#${elementId} > h1`)
-      observer.observe(target)
+      try {
+        observer.observe(target)
+      } catch (error) {
+        console.log(error.message)
+      }
     })
   }, [])
 

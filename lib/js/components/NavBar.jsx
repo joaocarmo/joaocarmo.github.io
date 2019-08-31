@@ -4,15 +4,9 @@ import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import Social from './Social'
+import { scrollToElement, getAppVersion } from '../functions'
 import me from '../../img/not-me.jpg'
 import '../../scss/navbar.scss'
-
-let version = 'development'
-try {
-  version = VERSION
-} catch (error) {
-  console.log(error.message)
-}
 
 const menuItems = [
   { key: 'about-me', title: 'About me', action: '' },
@@ -20,12 +14,6 @@ const menuItems = [
   { key: 'what-i-did', title: 'What I did', action: '' },
   { key: 'what-i-like', title: 'What I like', action: '' },
 ]
-
-const scrollToElement = (event, elementId) => {
-  event.preventDefault()
-  const node = document.getElementById(elementId)
-  node.scrollIntoView({ behavior: 'smooth' })
-}
 
 const NavBar = ({ activeIndex } = {}) => (
   <div className="navbar">
@@ -64,7 +52,7 @@ Portugal
     </div>
     <div className="navbar copyright">
       <p className="copyright-version">
-        {`version ${version}`}
+        {`version ${getAppVersion()}`}
       </p>
     </div>
   </div>

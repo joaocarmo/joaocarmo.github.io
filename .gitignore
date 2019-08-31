@@ -89,3 +89,6 @@ typings/
 
 # macOS files
 .DS_Store
+
+# me
+lib/img/about-bg.jpg

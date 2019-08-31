@@ -8,3 +8,74 @@ div {
     }
   }
 }
+
+span.emoji {
+  font-style: normal;
+  margin-left: 0.5em;
+}
+
+section#about-me {
+  /* Location of the image */
+  background-image: var(--bg-about-image);
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  div.top-spacer {
+    height: 300px;
+  }
+  h1 {
+    color: var(--text-color);
+    text-align: left;
+    text-transform: uppercase;
+    span {
+      opacity: 0;
+      animation: aboutheader;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      &.first {
+        animation-delay: 1s;
+      }
+      &.second {
+        animation-delay: 1.5s;
+      }
+    }
+  }
+  h5 {
+    color: hsl(0, 0%, 80%);
+    font-style: italic;
+    text-transform: lowercase;
+    margin-left: 5em;
+    opacity: 0;
+    animation: aboutsubheader;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+  }
+}
+
+@keyframes aboutheader {
+  from {
+    opacity: 0;
+    letter-spacing: inherit;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.1em;
+  }
+}
+
+@keyframes aboutsubheader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

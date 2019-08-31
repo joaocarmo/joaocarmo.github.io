@@ -1,0 +1,33 @@
+button {
+  &.more {
+    color: var(--text-color);
+    height: 72px;
+    width: 297px;
+    background: none;
+    border: 2px solid;
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 0;
+    cursor: pointer;
+    color: var(--text-color);
+    outline-color: var(--outline-color);
+    opacity: 0;
+    animation: fadeinbtn;
+    animation-duration: 0.5s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    &:hover {
+      border: 1px solid;
+    }
+  }
+}
+
+@keyframes fadeinbtn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
