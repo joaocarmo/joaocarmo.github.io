@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import Social from './Social'
-import { scrollToElement, getAppVersion } from '../functions'
+import { scrollToElement, getAppVersion, getBuildTime } from '../functions'
 import me from '../../img/not-me.jpg'
 import '../../scss/navbar.scss'
 
@@ -31,7 +31,7 @@ const NavBar = ({ activeIndex } = {}) => (
         <p className="navbar-location-text">
           <FontAwesomeIcon icon={faMapMarkerAlt} />
           {' '}
-Portugal
+          Portugal
         </p>
       </div>
     </div>
@@ -52,7 +52,7 @@ Portugal
     </div>
     <div className="navbar copyright">
       <p className="copyright-version">
-        {`version ${getAppVersion()}`}
+        {`version ${getAppVersion()} | ${getBuildTime()}`}
       </p>
     </div>
   </div>

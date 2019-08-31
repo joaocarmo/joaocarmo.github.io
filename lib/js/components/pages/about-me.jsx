@@ -2,6 +2,7 @@
 import React from 'react'
 import MoreButton from '../MoreButton'
 import { scrollToElement } from '../../functions'
+import '../../../scss/pages/about-me.scss'
 
 const AboutMe = () => (
   <>

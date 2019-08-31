@@ -67,6 +67,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       VERSION: JSON.stringify('1.0.0'),
+      BUILDTIME: JSON.stringify(new Date().toISOString().substring(0, 10)),
     }),
   ],
   optimization: {

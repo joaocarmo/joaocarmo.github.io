@@ -9,7 +9,6 @@ const observableElementIds = [
 ]
 
 const Pages = () => {
-  const [page, setPage] = useState(0)
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
@@ -36,13 +35,10 @@ const Pages = () => {
   return (
     <div className="grid">
       <div className="grid-navbar">
-        <NavBar
-          onClickPage={(newPage) => setPage(newPage)}
-          activeIndex={activeIndex}
-        />
+        <NavBar activeIndex={activeIndex} />
       </div>
       <div className="grid-content">
-        <Content page={page} />
+        <Content />
       </div>
     </div>
   )
