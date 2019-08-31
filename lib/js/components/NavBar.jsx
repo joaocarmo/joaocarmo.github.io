@@ -1,15 +1,16 @@
 // Imports
 import React from 'react'
-import Social from './Social'
+import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import Social from './Social'
 import me from '../../img/not-me.jpg'
 import '../../scss/navbar.scss'
 
 let version = 'development'
 try {
   version = VERSION
-} catch(error) {
+} catch (error) {
   console.log(error.message)
 }
 
@@ -27,25 +28,29 @@ const scrollToElement = (event, elementId) => {
 }
 
 const NavBar = ({ activeIndex } = {}) => (
-  <div className='navbar'>
-    <div className='navbar avatar'>
-      <img src={me} alt='My photograph' />
+  <div className="navbar">
+    <div className="navbar avatar">
+      <img src={me} alt="My photograph" />
     </div>
-    <div className='navbar name'>
-      <h3 className='navbar-name'>João Carmo</h3>
-      <h6 className='navbar-title'>
-        Front-end engineer<br />
+    <div className="navbar name">
+      <h3 className="navbar-name">João Carmo</h3>
+      <h6 className="navbar-title">
+        Front-end engineer
+        <br />
         Back-end developer
       </h6>
-      <div className='navbar-location'>
-        <p className='navbar-location-text'>
-          <FontAwesomeIcon icon={faMapMarkerAlt} /> Portugal
+      <div className="navbar-location">
+        <p className="navbar-location-text">
+          <FontAwesomeIcon icon={faMapMarkerAlt} />
+          {' '}
+Portugal
         </p>
       </div>
     </div>
-    <div className='navbar menu'>
+    <div className="navbar menu">
       {menuItems.map(({ key, title }, idx) => (
         <button
+          type="button"
           className={activeIndex === idx ? 'navbar active item' : 'navbar item'}
           onClick={(event) => scrollToElement(event, key)}
           key={key}
@@ -54,15 +59,23 @@ const NavBar = ({ activeIndex } = {}) => (
         </button>
       ))}
     </div>
-    <div className='navbar social'>
+    <div className="navbar social">
       <Social />
     </div>
-    <div className='navbar copyright'>
-      <p className='copyright-version'>
+    <div className="navbar copyright">
+      <p className="copyright-version">
         {`version ${version}`}
       </p>
     </div>
   </div>
 )
+
+NavBar.propTypes = {
+  activeIndex: PropTypes.number,
+}
+
+NavBar.defaultProps = {
+  activeIndex: 0,
+}
 
 export default NavBar

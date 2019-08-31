@@ -47,18 +47,18 @@ const socialLinks = [
 ]
 
 const Social = () => (
-  <div className='social'>
-    {socialLinks.map(({ style, icon, name, url }) => (
+  <div className="social">
+    {socialLinks.map(({ icon, name, url }) => (
       <React.Fragment key={name}>
         <a
           href={url}
-          target='_blank'
-          rel='noopener noreferrer'
+          target="_blank"
+          rel="noopener noreferrer"
           alt={name}
         >
           <FontAwesomeIcon icon={icon} />
         </a>
-        <span className='spacer' />
+        <span className="spacer" />
       </React.Fragment>
     ))}
   </div>

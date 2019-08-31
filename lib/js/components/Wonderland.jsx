@@ -43,7 +43,7 @@ class Wonderland extends React.Component {
       <>
         {!showPages && (
           <>
-            <main id='brandname' onWheel={this.handleOnWheel}>
+            <main id="brandname" onWheel={this.handleOnWheel}>
               <BrandName />
               <NextButton onClick={this.handleOnClick} />
             </main>
@@ -54,7 +54,7 @@ class Wonderland extends React.Component {
           </>
         )}
         {showPages && (
-          <main id='pages'>
+          <main id="pages">
             <Pages />
             <BackButton onClick={this.handleOnClick} />
           </main>

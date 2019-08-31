@@ -18,7 +18,7 @@ const Pages = () => {
       rootMargin: '0px',
       threshold: 0.0,
     }
-    const observerFn = (elementId, idx) => (entries, observer) => {
+    const observerFn = (elementId, idx) => (entries) => {
       const [{ isIntersecting }] = entries
       if (isIntersecting) setActiveIndex(idx)
     }
@@ -30,14 +30,14 @@ const Pages = () => {
   }, [])
 
   return (
-    <div className='grid'>
-      <div className='grid-navbar'>
+    <div className="grid">
+      <div className="grid-navbar">
         <NavBar
           onClickPage={(newPage) => setPage(newPage)}
           activeIndex={activeIndex}
         />
       </div>
-      <div className='grid-content'>
+      <div className="grid-content">
         <Content page={page} />
       </div>
     </div>
