@@ -32,10 +32,11 @@ section#about-me {
     }
   }
   h5 {
-    color: hsl(0, 0%, 80%);
+    color: hsl(0, 0%, 85%);
     font-style: italic;
     text-transform: lowercase;
-    margin-left: 5em;
+    letter-spacing: 0.1em;
+    margin-left: 3em;
     opacity: 0;
     animation: aboutsubheader;
     animation-duration: 1s;

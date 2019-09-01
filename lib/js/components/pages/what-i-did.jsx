@@ -1,5 +1,6 @@
 // Imports
 import React from 'react'
+import '../../../scss/pages/what-i-did.scss'
 
 const WhatIDid = () => (
   <>

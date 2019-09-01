@@ -94,3 +94,15 @@ body {
     box-shadow: 0 2.5em 0 0;
   }
 }
+
+p {
+  &.idented {
+    text-indent: 2em;
+  }
+  &.smaller {
+    font-size: 0.9em;
+  }
+  &.justified {
+    text-align: justify;
+  }
+}

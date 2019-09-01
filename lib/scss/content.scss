@@ -1,3 +1,11 @@
+div.content {
+  p {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
 div {
   &.content {
     height: 100vh;
