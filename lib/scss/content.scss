@@ -1,4 +1,14 @@
 div.content {
+  height: 100vh;
+  overflow-y: auto;
+  section {
+    height: 100vh;
+    padding: 2em;
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+  }
   p {
     a {
       text-decoration: underline;
@@ -6,14 +16,9 @@ div.content {
   }
 }
 
-div {
-  &.content {
-    height: 100vh;
-    overflow-y: auto;
-    section {
-      min-height: 100vh;
-      padding: 2em;
-    }
+@media only screen and (max-width: 600px) {
+  div.content section#what-i-do {
+    min-height: 1060px;
   }
 }
 

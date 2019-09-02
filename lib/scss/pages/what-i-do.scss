@@ -1,3 +1,7 @@
+$skillBoxHeight: 100px;
+$skillBoxHoverHeight: 240px;
+$skillBoxMargin: 10px;
+
 section#what-i-do {
   div.top-spacer {
     height: 60px;
@@ -5,13 +9,10 @@ section#what-i-do {
   div.mid-spacer {
     height: 40px;
   }
-  h1 {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
 }
 
 div#skills {
+  height: $skillBoxHeight + 2 * $skillBoxMargin;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -42,9 +43,9 @@ div#skills {
 }
 
 div.skill-box {
-  height: 100px;
+  height: $skillBoxHeight;
   background-color: hsl(0, 0%, 100%);
-  margin: 10px;
+  margin: $skillBoxMargin;
   padding: 10px;
   border-bottom: 2px solid black;
   box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.2);
@@ -65,9 +66,9 @@ div.skill-box {
     }
   }
   &:hover {
-    height: 240px;
+    height: $skillBoxHoverHeight;
     div.skill-box-content {
-      max-height: 140px;
+      max-height: $skillBoxHoverHeight - $skillBoxHeight;
       visibility: visible;
     }
   }

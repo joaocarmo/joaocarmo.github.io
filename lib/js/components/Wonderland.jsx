@@ -47,7 +47,7 @@ class Wonderland extends React.Component {
               <BrandName />
               <NextButton onClick={this.handleOnClick} />
             </main>
-            <footer>
+            <footer className="brandname">
               <Social />
               <Copyright />
             </footer>
