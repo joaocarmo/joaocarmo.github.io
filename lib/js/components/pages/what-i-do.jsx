@@ -31,7 +31,7 @@ const unixSkills = [
 
 const WhatIDo = () => (
   <>
-    <h1>About that coffee...</h1>
+    <h2>About that coffee...</h2>
     <div className="top-spacer" />
     <p className="idented smaller justified">
       Hi! I&apos;m
