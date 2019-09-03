@@ -1,9 +1,9 @@
 // Imports
 import React from 'react'
-import AboutMe from './pages/about-me'
-import WhatIDo from './pages/what-i-do'
-import WhatIDid from './pages/what-i-did'
-import WhatILike from './pages/what-i-like'
+import AboutMe from './pages/AboutMe'
+import WhatIDo from './pages/WhatIDo'
+import WhatIDid from './pages/WhatIDid'
+import WhatILike from './pages/WhatILike'
 import '../../scss/content.scss'
 
 const Content = () => (

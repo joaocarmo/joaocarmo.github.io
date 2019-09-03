@@ -1,0 +1,36 @@
+section#what-i-did {
+  div.top-spacer {
+    height: 60px;
+  }
+  div.mid-spacer {
+    height: 40px;
+  }
+}
+
+div#academic {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "leftcol middlecol rightcol"
+  ;
+  .leftcol {
+    grid-area: leftcol;
+  }
+  .middlecol {
+    grid-area: middlecol;
+  }
+  .rightcol {
+    grid-area: rightcol;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  div#academic {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "middlecol"
+    ;
+  }
+}
