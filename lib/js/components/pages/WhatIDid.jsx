@@ -3,6 +3,29 @@ import React from 'react'
 import Accordion from '../Accordion'
 import '../../../scss/pages/what-i-did.scss'
 
+const academicSkills = [
+  {
+    key: 'MEc',
+    title: 'M.Econ. in Economics',
+    content: 'Instituto Superior de Economia e Gestão',
+  },
+  {
+    key: 'BPh',
+    title: 'B.Sc. in Physics',
+    content: 'Faculdade de Ciências da Universidade do Porto',
+  },
+  {
+    key: 'BEn',
+    title: 'B.Eng. in Electrical Engineering',
+    content: 'Escola Superior de Tecnologia e Gestão de Viseu',
+  },
+  {
+    key: 'Sec',
+    title: 'Portuguese Secondary School',
+    content: 'Escola Secundária Alves Martins',
+  },
+]
+
 const WhatIDid = () => (
   <>
     <h2>...and our second date</h2>
@@ -18,12 +41,11 @@ const WhatIDid = () => (
       <div className="leftcol" />
       <div className="middlecol">
         <Accordion.Container>
-          <Accordion.Item title="Title here">
-            Stuff here
-          </Accordion.Item>
-          <Accordion.Item title="Title here">
-            Stuff here
-          </Accordion.Item>
+          {academicSkills.map(({ key, title, content }) => (
+            <Accordion.Item title={title} key={key}>
+              {content}
+            </Accordion.Item>
+          ))}
         </Accordion.Container>
       </div>
       <div className="rightcol" />

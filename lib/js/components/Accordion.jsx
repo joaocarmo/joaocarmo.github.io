@@ -1,6 +1,7 @@
 // Imports
 import React from 'react'
 import PropType from 'prop-types'
+import '../../scss/accordion.scss'
 
 const AccordionContainer = ({ children }) => (
   <ul className="accordion">

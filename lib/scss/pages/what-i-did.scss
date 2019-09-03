@@ -27,10 +27,10 @@ div#academic {
 
 @media only screen and (max-width: 600px) {
   div#academic {
-    grid-template-columns: auto;
+    grid-template-columns: 0fr 1fr 0fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "middlecol"
+      "leftcol middlecol rightcol"
     ;
   }
 }
