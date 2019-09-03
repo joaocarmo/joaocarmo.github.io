@@ -1,22 +1,20 @@
-button {
-  &.back {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2em;
-    width: 2em;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    outline-color: var(--outline-color);
-    opacity: 0;
-    animation: fadeinbtn;
-    animation-duration: 0.3s;
-    animation-delay: 0.2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-  }
+button.back {
+  position: absolute;
+  top: 0;
+  right: calc(50% - 1440px / 2);
+  height: 2em;
+  width: 2em;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-color: var(--outline-color);
+  opacity: 0;
+  animation: fadeinbtn;
+  animation-duration: 0.3s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes fadeinbtn {
