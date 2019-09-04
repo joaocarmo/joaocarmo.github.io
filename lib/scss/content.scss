@@ -22,7 +22,7 @@ div.content {
 
 @media only screen and (max-width: 600px) {
   div.content section#what-i-do {
-    min-height: 1060px;
+    min-height: var(--section-min-height);
   }
 }
 
