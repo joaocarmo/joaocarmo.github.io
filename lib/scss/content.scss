@@ -2,7 +2,7 @@ div.content {
   height: 100vh;
   overflow-y: auto;
   section {
-    height: 100vh;
+    min-height: 100vh;
     padding: 2em;
     h1 {
       text-transform: uppercase;
@@ -17,12 +17,6 @@ div.content {
     a {
       text-decoration: underline;
     }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  div.content section#what-i-do {
-    min-height: var(--section-min-height);
   }
 }
 

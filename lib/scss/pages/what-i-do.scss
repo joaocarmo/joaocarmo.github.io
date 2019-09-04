@@ -12,7 +12,6 @@ section#what-i-do {
 }
 
 div#skills {
-  height: $skillBoxHeight + 2 * $skillBoxMargin;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -62,6 +61,7 @@ div.skill-box {
         font-size: 0.8em;
         padding: 0.2em;
         line-height: 1em;
+        user-select: none;
       }
     }
   }
@@ -89,5 +89,8 @@ div.skill-box {
   }
   &.yellow:hover {
     border-bottom-color: hsl(41, 94%, 61%);
+  }
+  h6 {
+    user-select: none;
   }
 }

@@ -7,17 +7,84 @@ const academicSkills = [
   {
     key: 'MEc',
     title: 'M.Econ. in Economics',
-    content: 'Instituto Superior de Economia e Gestão',
+    content: (
+      <>
+        <strong>Institution</strong>
+        <br />
+        Lisbon School of Economics & Management — Universidade de Lisboa
+        {' '}
+        <i>(Portugal)</i>
+        <br />
+        <br />
+        <strong>Years attended</strong>
+        <br />
+        2014 — 2018
+        <br />
+        <br />
+        <strong>Topics addressed</strong>
+        <br />
+        Econometrics, Macroeconomics, Microeconomics, Economic Growth,
+        Labour Economics, Monetary Theory, Finance, Banking & Insurance,
+        Behavioural Economics, Mathematics, Computational Economics
+        <br />
+        <br />
+        <strong>Thesis</strong>
+        <br />
+        <a
+          href="https://www.repository.utl.pt/handle/10400.5/15048"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Modeling stock markets through the reconstruction of market processes
+        </a>
+      </>
+    ),
   },
   {
     key: 'BPh',
     title: 'B.Sc. in Physics',
-    content: 'Faculdade de Ciências da Universidade do Porto',
+    content: (
+      <>
+        <strong>Institution</strong>
+        <br />
+        Faculdade de Ciências da Universidade do Porto
+        {' '}
+        <i>(Portugal)</i>
+        <br />
+        <br />
+        <strong>Years attended</strong>
+        <br />
+        2011 — 2014
+        <br />
+        <br />
+        <strong>Topics addressed</strong>
+        <br />
+        ...
+      </>
+    ),
   },
   {
     key: 'BEn',
     title: 'B.Eng. in Electrical Engineering',
-    content: 'Escola Superior de Tecnologia e Gestão de Viseu',
+    content: (
+      <>
+        <strong>Institution</strong>
+        <br />
+        Escola Superior de Tecnologia e Gestão de Viseu
+        {' '}
+        <i>(Portugal)</i>
+        <br />
+        <br />
+        <strong>Years attended</strong>
+        <br />
+        2008 — 2011
+        <br />
+        <br />
+        <strong>Topics addressed</strong>
+        <br />
+        ...
+      </>
+    ),
   },
   {
     key: 'Sec',
