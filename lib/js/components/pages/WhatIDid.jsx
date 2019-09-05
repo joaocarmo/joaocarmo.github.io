@@ -59,7 +59,7 @@ const academicSkills = [
         <br />
         <strong>Topics addressed</strong>
         <br />
-        ...
+        Physics, Mathematics, Programming, Physics Laboratory
       </>
     ),
   },
@@ -82,14 +82,36 @@ const academicSkills = [
         <br />
         <strong>Topics addressed</strong>
         <br />
-        ...
+        Mathematics, Physics, Programming, Circuit Theory, Microelectronics,
+        Power Electronics, Electrical Installations, Electrical Machines,
+        Robotics, Control Systems, Digital Systems, Automation, Networks,
+        Signal Processing
       </>
     ),
   },
   {
     key: 'Sec',
-    title: 'Portuguese Secondary School',
-    content: 'Escola Secundária Alves Martins',
+    title: 'Sciences and Technologies (Secondary)',
+    content: (
+      <>
+        <strong>Institution</strong>
+        <br />
+        Escola Secundária Alves Martins
+        {' '}
+        <i>(Portugal)</i>
+        <br />
+        <br />
+        <strong>Years attended</strong>
+        <br />
+        2004 — 2007
+        <br />
+        <br />
+        <strong>Topics addressed</strong>
+        <br />
+        Mathematics, Physics, Chemistry, Biology, Geology, English, Portuguese,
+        Philosophy
+      </>
+    ),
   },
 ]
 
