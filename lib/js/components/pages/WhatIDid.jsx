@@ -1,6 +1,7 @@
 // Imports
 import React from 'react'
 import Accordion from '../Accordion'
+import { scrollToElement } from '../../functions'
 import '../../../scss/pages/what-i-did.scss'
 
 const academicSkills = [
@@ -123,7 +124,15 @@ const WhatIDid = () => (
       All I can say is that I&apos;m very passionate about learning and figuring
       out how stuff works. My education has been a long road through many
       different, and often distant, places. Regardless, it brought me here and
-      made me what I am today. Ask me anything !
+      made me what I am today.
+      {' '}
+      <a
+        href="#what-i-like"
+        onClick={(e) => scrollToElement(e, 'what-i-like')}
+      >
+        Ask me anything
+      </a>
+      !
     </p>
     <div className="mid-spacer" />
     <div id="academic">

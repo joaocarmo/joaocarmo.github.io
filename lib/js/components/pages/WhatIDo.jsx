@@ -1,7 +1,7 @@
 // Imports
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDatabase, faGlobe, faServer } from '@fortawesome/free-solid-svg-icons'
+import { faGlobe, faServer, faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { scrollToElement } from '../../functions'
 import '../../../scss/pages/what-i-do.scss'
 
@@ -75,7 +75,7 @@ const WhatIDo = () => (
       a
       {' '}
       <a
-        href="#second-date"
+        href="#what-i-did"
         onClick={(e) => scrollToElement(e, 'what-i-did')}
       >
         second date
@@ -100,7 +100,7 @@ const WhatIDo = () => (
       </div>
       <div className="backend">
         <div className="skill-box red">
-          <FontAwesomeIcon icon={faDatabase} />
+          <FontAwesomeIcon icon={faServer} />
           <h6>Back-end</h6>
           <div className="skill-box-content">
             <ul className="skill-list">
@@ -113,7 +113,7 @@ const WhatIDo = () => (
       </div>
       <div className="unix">
         <div className="skill-box yellow">
-          <FontAwesomeIcon icon={faServer} />
+          <FontAwesomeIcon icon={faTerminal} />
           <h6>Unix</h6>
           <div className="skill-box-content">
             <ul className="skill-list">

@@ -1,0 +1,46 @@
+section#what-i-like {
+  div.top-spacer {
+    height: 60px;
+  }
+  div.mid-spacer {
+    height: 40px;
+  }
+}
+
+div#interests {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "opensource science facts music"
+    "cinema writing photography diy"
+  ;
+  .opensource {
+    grid-area: opensource;
+  }
+  .science {
+    grid-area: science;
+  }
+  .facts {
+    grid-area: facts;
+  }
+  .music {
+    grid-area: music;
+  }
+  .cinema {
+    grid-area: cinema;
+  }
+  .writing {
+    grid-area: writing;
+  }
+  .photography {
+    grid-area: photography;
+  }
+  .diy {
+    grid-area: diy;
+  }
+}
+
+div.interest-box {
+  text-align: center;
+}

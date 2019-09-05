@@ -41,7 +41,7 @@ const Pages = () => {
         <NavBar activeIndex={activeIndex} />
       </div>
       <div className="grid-content">
-        <Content />
+        <Content activeIndex={activeIndex} />
       </div>
     </div>
   )
