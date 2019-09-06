@@ -13,7 +13,7 @@ div#interests {
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     "opensource science facts music"
-    "cinema writing photography diy"
+    "cinema writing photography coffee"
   ;
   .opensource {
     grid-area: opensource;
@@ -36,11 +36,18 @@ div#interests {
   .photography {
     grid-area: photography;
   }
-  .diy {
-    grid-area: diy;
+  .coffee {
+    grid-area: coffee;
   }
 }
 
 div.interest-box {
   text-align: center;
+  padding: 10px;
+  div.interest-icon {
+    margin: 1em 0;
+  }
+  h6.interest-title {
+    margin: 1em 0;
+  }
 }

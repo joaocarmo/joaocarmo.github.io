@@ -2,7 +2,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faCode, faHeadphones, faLightbulb, faMicroscope,
+  faCameraRetro, faCode, faCoffee, faFilm, faHeadphones, faLightbulb,
+  faMicroscope, faSignature,
 } from '@fortawesome/free-solid-svg-icons'
 import '../../../scss/pages/what-i-like.scss'
 
@@ -34,54 +35,66 @@ const WhatILike = () => (
     <div id="interests">
       <div className="opensource">
         <div className="interest-box">
-          <FontAwesomeIcon icon={faCode} size="3x" />
-          <br />
-          <br />
-          <h6>Open Source</h6>
+          <div className="interest-icon">
+            <FontAwesomeIcon icon={faCode} size="3x" />
+          </div>
+          <h6 className="interest-title">Open Source</h6>
         </div>
       </div>
       <div className="science">
         <div className="interest-box">
-          <FontAwesomeIcon icon={faMicroscope} size="3x" />
-          <br />
-          <br />
-          <h6>Science</h6>
+          <div className="interest-icon">
+            <FontAwesomeIcon icon={faMicroscope} size="3x" />
+          </div>
+          <h6 className="interest-title">Science</h6>
         </div>
       </div>
       <div className="facts">
         <div className="interest-box">
-          <FontAwesomeIcon icon={faLightbulb} size="3x" />
-          <br />
-          <br />
-          <h6>Fun Facts</h6>
+          <div className="interest-icon">
+            <FontAwesomeIcon icon={faLightbulb} size="3x" />
+          </div>
+          <h6 className="interest-title">Fun Facts</h6>
         </div>
       </div>
       <div className="music">
         <div className="interest-box">
-          <FontAwesomeIcon icon={faHeadphones} size="3x" />
-          <br />
-          <br />
-          <h6>Music</h6>
+          <div className="interest-icon">
+            <FontAwesomeIcon icon={faHeadphones} size="3x" />
+          </div>
+          <h6 className="interest-title">Music</h6>
         </div>
       </div>
       <div className="cinema">
         <div className="interest-box">
-          Cinema
+          <div className="interest-icon">
+            <FontAwesomeIcon icon={faFilm} size="3x" />
+          </div>
+          <h6 className="interest-title">Cinema</h6>
         </div>
       </div>
       <div className="writing">
         <div className="interest-box">
-          Writing
+          <div className="interest-icon">
+            <FontAwesomeIcon icon={faSignature} size="3x" />
+          </div>
+          <h6 className="interest-title">Writing</h6>
         </div>
       </div>
       <div className="photography">
         <div className="interest-box">
-          Photography
+          <div className="interest-icon">
+            <FontAwesomeIcon icon={faCameraRetro} size="3x" />
+          </div>
+          <h6 className="interest-title">Photography</h6>
         </div>
       </div>
       <div className="diy">
         <div className="interest-box">
-          DIY
+          <div className="interest-icon">
+            <FontAwesomeIcon icon={faCoffee} size="3x" />
+          </div>
+          <h6 className="interest-title">Coffee</h6>
         </div>
       </div>
     </div>
