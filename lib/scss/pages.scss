@@ -30,7 +30,7 @@ main#pages {
   width: 100vw;
   max-width: var(--page-max-width);
   margin: 0 auto;
-  background-color: hsl(0, 0%, 95%);
+  background-color: var(--bg-pages-color);
   box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.2);
 }
 

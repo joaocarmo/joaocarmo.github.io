@@ -1,6 +1,7 @@
 // Imports
 import React from 'react'
 import Accordion from '../Accordion'
+import Timeline from '../Timeline'
 import { scrollToElement } from '../../functions'
 import '../../../scss/pages/what-i-did.scss'
 
@@ -116,6 +117,23 @@ const academicSkills = [
   },
 ]
 
+const experience = [
+  {
+    key: 'two',
+    title: 'Sexy man',
+    time: '2009-2019',
+    content: 'Hell yeah, baby !',
+    color: 'red',
+  },
+  {
+    key: 'one',
+    title: 'Sexy boy',
+    time: '1989-2009',
+    content: 'Cool !',
+    color: 'purple',
+  },
+]
+
 const WhatIDid = () => (
   <>
     <h2>...and our second date</h2>
@@ -138,6 +156,7 @@ const WhatIDid = () => (
     <div id="academic">
       <div className="leftcol" />
       <div className="middlecol">
+        <h4 className="academic-title">Education</h4>
         <Accordion.Container>
           {academicSkills.map(({ key, title, content }) => (
             <Accordion.Item title={title} key={key}>
@@ -145,6 +164,21 @@ const WhatIDid = () => (
             </Accordion.Item>
           ))}
         </Accordion.Container>
+        <h4 className="academic-title">Experience</h4>
+        <Timeline.Container>
+          {experience.map(({
+            key, title, time, content, color,
+          }) => (
+            <Timeline.Content
+              title={title}
+              time={time}
+              key={key}
+              color={color}
+            >
+              {content}
+            </Timeline.Content>
+          ))}
+        </Timeline.Container>
       </div>
       <div className="rightcol" />
     </div>
