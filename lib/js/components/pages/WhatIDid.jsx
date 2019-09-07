@@ -119,18 +119,65 @@ const academicSkills = [
 
 const experience = [
   {
+    key: 'four',
+    title: 'Full Stack Engineer / UNIX Systems Admin',
+    time: '2017-now',
+    content: (
+      <>
+        Develops internal applications and automations as a full-stack developer integrating server/database maintenance and security protocol standards.
+        Defines, designs and implements network communications and solution improvements using the UNIX platform.
+        Proposes and implements system enhancements (software and hardware updates) that will improve the performance and reliability of the system.
+        Manages the load configuration of a central data communication processor and makes recommendations for purchase or upgrade of data networks.
+        Coordinates terminal orders and cable installation, network system planning, upgrading, monitoring, testing and servicing.
+        Approves action requests and specifies purchase requirements.
+        Negotiates and places orders with common carriers.
+      </>
+    ),
+    color: '',
+    icon: '',
+  },
+  {
+    key: 'three',
+    title: 'Full Stack Engineer',
+    time: '2016-2017',
+    content: (
+      <>
+        Design, implement and manage internal IT support web portal and knowledge base.
+        Work with IT teams on planning, organizing, writing, editing and publishing instructional and operational documents related to IT services and products.
+        Implement self-service web apps for IT support process automation as a full-stack web developer.
+        Create programs to perform data analysis and generate system reports.
+      </>
+    ),
+    color: '',
+    icon: '',
+  },
+  {
     key: 'two',
-    title: 'Sexy man',
-    time: '2009-2019',
-    content: 'Hell yeah, baby !',
-    color: 'red',
+    title: 'IT Logistics',
+    time: '2015-2016',
+    content: (
+      <>
+        Monitoring and responding to the IT Logistics support queues;
+        <br />
+        Assist in the SAP PC asset audit;
+        <br />
+        Work with global IT team on the technology refresh (TR) process;
+        <br />
+        Monitoring and recording employee termination activities;
+        <br />
+        Development of Excel Macros in VBA
+      </>
+    ),
+    color: '',
+    icon: '',
   },
   {
     key: 'one',
-    title: 'Sexy boy',
-    time: '1989-2009',
-    content: 'Cool !',
-    color: 'purple',
+    title: 'Academic Research Internship',
+    time: '2012-2013',
+    content: 'Statistical study on the atmospheric properties of transiting planets.',
+    color: '',
+    icon: '',
   },
 ]
 
