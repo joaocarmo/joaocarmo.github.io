@@ -95,6 +95,27 @@ div.timeline {
           margin-top: 1em;
           font-size: 0.85em;
           opacity: 0.8;
+          div.timeline-element-extra {
+            margin-top: 1.5em;
+            button.timeline-extra {
+              display: block;
+              background: none;
+              border: none;
+              padding: 0;
+              color: #069;
+              text-decoration: underline;
+              cursor: pointer;
+              &:focus {
+                outline-style: dotted;
+                outline-width: 1px;
+                outline-color: hsl(0, 0%, 40%);
+                outline-offset: 0.2em;
+              }
+            }
+            div.timeline-element-extra-text {
+              margin-top: 1.5em;
+            }
+          }
         }
       }
     }

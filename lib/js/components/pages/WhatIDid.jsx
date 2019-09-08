@@ -138,8 +138,10 @@ const experience = [
         <br />
         Development of several micro service utilities such as Python Libraries / Modules,
         CLI applications (POSIX compliant) and system maintenance scripts.
-        <br />
-        <br />
+      </>
+    ),
+    extra: (
+      <>
         Other duties included developing internal applications and automations as a full stack engineer integrating server/database maintenance and security protocol standards.
         Defining, designing and implementing network communications and solution improvements using the UNIX platform.
         Propose and implement system enhancements (software and hardware updates) that would improve the performance and reliability of the system.
@@ -164,8 +166,10 @@ const experience = [
         <br />
         Development of an internal web application for personnel directory.
         Technologies used included React.js, Semantic UI, Webpack, Ruby, Ruby on Rails, SQL Server, ElasticSearch.
-        <br />
-        <br />
+      </>
+    ),
+    extra: (
+      <>
         Other duties included design, implement and manage internal IT support web portal and knowledge base.
         Work with IT teams on planning, organizing, writing, editing and publishing instructional and operational documents related to IT services and products.
         Implement self-service web apps for IT support process automation as a full-stack web developer.
@@ -190,6 +194,7 @@ const experience = [
         Monitoring and recording employee termination activities.
       </>
     ),
+    extra: '',
     color: 'hsl(300, 40%, 45%)',
     icon: <FontAwesomeIcon icon={faRobot} color="white" />,
     where: 'Synopsys, Inc.',
@@ -199,6 +204,7 @@ const experience = [
     title: 'Academic Research Internship',
     time: '2012-2013',
     content: 'Statistical study on data compiled from several published papers on selected atmospheric properties of transiting planets.',
+    extra: '',
     color: 'hsl(180, 25%, 36%)',
     icon: <FontAwesomeIcon icon={faUniversity} color="white" />,
     where: 'Centro de Astrofísica da Universidade do Porto',
@@ -227,18 +233,10 @@ const WhatIDid = () => (
     <div id="academic">
       <div className="leftcol" />
       <div className="middlecol">
-        <h4 className="academic-title">Education</h4>
-        <Accordion.Container>
-          {academicSkills.map(({ key, title, content }) => (
-            <Accordion.Item title={title} key={key}>
-              {content}
-            </Accordion.Item>
-          ))}
-        </Accordion.Container>
         <h4 className="academic-title">Experience</h4>
         <Timeline.Container>
           {experience.map(({
-            key, title, time, content, where, icon, color,
+            key, title, time, content, extra, where, icon, color,
           }) => (
             <Timeline.Content
               key={key}
@@ -247,11 +245,20 @@ const WhatIDid = () => (
               where={where}
               icon={icon}
               color={color}
+              extra={extra}
             >
               {content}
             </Timeline.Content>
           ))}
         </Timeline.Container>
+        <h4 className="academic-title">Education</h4>
+        <Accordion.Container>
+          {academicSkills.map(({ key, title, content }) => (
+            <Accordion.Item title={title} key={key}>
+              {content}
+            </Accordion.Item>
+          ))}
+        </Accordion.Container>
       </div>
       <div className="rightcol" />
     </div>
