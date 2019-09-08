@@ -1,5 +1,9 @@
 // Imports
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGlobe, faLaptopCode, faRobot, faUniversity,
+} from '@fortawesome/free-solid-svg-icons'
 import Accordion from '../Accordion'
 import Timeline from '../Timeline'
 import { scrollToElement } from '../../functions'
@@ -30,7 +34,7 @@ const academicSkills = [
         Behavioural Economics, Mathematics, Computational Economics
         <br />
         <br />
-        <strong>Thesis</strong>
+        <strong>Dissertation</strong>
         <br />
         <a
           href="https://www.repository.utl.pt/handle/10400.5/15048"
@@ -124,17 +128,29 @@ const experience = [
     time: '2017-now',
     content: (
       <>
-        Develops internal applications and automations as a full-stack developer integrating server/database maintenance and security protocol standards.
-        Defines, designs and implements network communications and solution improvements using the UNIX platform.
-        Proposes and implements system enhancements (software and hardware updates) that will improve the performance and reliability of the system.
-        Manages the load configuration of a central data communication processor and makes recommendations for purchase or upgrade of data networks.
-        Coordinates terminal orders and cable installation, network system planning, upgrading, monitoring, testing and servicing.
-        Approves action requests and specifies purchase requirements.
-        Negotiates and places orders with common carriers.
+        Development of an internal web application for asset management.
+        Technologies used included React.js, Semantic UI, Webpack, Python, Flask, MongoDB.
+        <br />
+        <br />
+        Maintaining several legacy internal web applications.
+        Technologies used included jQuery, CSS, Perl, MS SharePoint (API).
+        <br />
+        <br />
+        Development of several micro service utilities such as Python Libraries / Modules,
+        CLI applications (POSIX compliant) and system maintenance scripts.
+        <br />
+        <br />
+        Other duties included developing internal applications and automations as a full stack engineer integrating server/database maintenance and security protocol standards.
+        Defining, designing and implementing network communications and solution improvements using the UNIX platform.
+        Propose and implement system enhancements (software and hardware updates) that would improve the performance and reliability of the system.
+        Coordinating terminal orders and cable installation, network system planning, upgrading, monitoring, testing and servicing.
+        Approve action requests and specify purchase requirements.
+        Negotiate and place orders with common carriers.
       </>
     ),
-    color: '',
-    icon: '',
+    color: 'hsl(300, 100%, 25%)',
+    icon: <FontAwesomeIcon icon={faLaptopCode} color="white" />,
+    where: 'Synopsys, Inc.',
   },
   {
     key: 'three',
@@ -142,14 +158,23 @@ const experience = [
     time: '2016-2017',
     content: (
       <>
-        Design, implement and manage internal IT support web portal and knowledge base.
+        Development of an internal web application for asset inventory.
+        Technologies used included React.js, Bootstrap, Webpack, Node.js, Express.js, MongoDB.
+        <br />
+        <br />
+        Development of an internal web application for personnel directory.
+        Technologies used included React.js, Semantic UI, Webpack, Ruby, Ruby on Rails, SQL Server, ElasticSearch.
+        <br />
+        <br />
+        Other duties included design, implement and manage internal IT support web portal and knowledge base.
         Work with IT teams on planning, organizing, writing, editing and publishing instructional and operational documents related to IT services and products.
         Implement self-service web apps for IT support process automation as a full-stack web developer.
         Create programs to perform data analysis and generate system reports.
       </>
     ),
-    color: '',
-    icon: '',
+    color: 'hsl(300, 60%, 35%)',
+    icon: <FontAwesomeIcon icon={faGlobe} color="white" />,
+    where: 'Synopsys, Inc.',
   },
   {
     key: 'two',
@@ -157,27 +182,26 @@ const experience = [
     time: '2015-2016',
     content: (
       <>
-        Monitoring and responding to the IT Logistics support queues;
-        <br />
-        Assist in the SAP PC asset audit;
-        <br />
-        Work with global IT team on the technology refresh (TR) process;
-        <br />
-        Monitoring and recording employee termination activities;
-        <br />
-        Development of Excel Macros in VBA
+        Development of MS Excel Macros in VBA to automate repetitive administrative
+        tasks.
+        Monitoring and responding to the IT Logistics support queues.
+        Assist in the SAP PC asset audit process.
+        Work with the global IT teams on the technology refresh (TR) process.
+        Monitoring and recording employee termination activities.
       </>
     ),
-    color: '',
-    icon: '',
+    color: 'hsl(300, 40%, 45%)',
+    icon: <FontAwesomeIcon icon={faRobot} color="white" />,
+    where: 'Synopsys, Inc.',
   },
   {
     key: 'one',
     title: 'Academic Research Internship',
     time: '2012-2013',
-    content: 'Statistical study on the atmospheric properties of transiting planets.',
-    color: '',
-    icon: '',
+    content: 'Statistical study on data compiled from several published papers on selected atmospheric properties of transiting planets.',
+    color: 'hsl(180, 25%, 36%)',
+    icon: <FontAwesomeIcon icon={faUniversity} color="white" />,
+    where: 'Centro de Astrofísica da Universidade do Porto',
   },
 ]
 
@@ -214,12 +238,14 @@ const WhatIDid = () => (
         <h4 className="academic-title">Experience</h4>
         <Timeline.Container>
           {experience.map(({
-            key, title, time, content, color,
+            key, title, time, content, where, icon, color,
           }) => (
             <Timeline.Content
+              key={key}
               title={title}
               time={time}
-              key={key}
+              where={where}
+              icon={icon}
               color={color}
             >
               {content}

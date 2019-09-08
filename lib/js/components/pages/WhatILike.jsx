@@ -17,15 +17,9 @@ const WhatILike = () => (
       {' '}
       <i>mIRC</i>
       {' '}
-      and scripting then. From the era of console emulators and ROMs,
+      and scripting them. From the era of console emulators and ROMs,
       peer-to-peer and floppy disks. When games and apps were easy to hack and
-      crack and everyone used the same license key by adding the app&apos;s
-      license server host name to the system&apos;s
-      {' '}
-      <i>hosts</i>
-      {' '}
-      file so it couldn&apos;t verify its authenticity. And now, we no longer
-      use
+      crack... And now, we no longer use
       {' '}
       <i>Adobe Flash</i>
       {' '}

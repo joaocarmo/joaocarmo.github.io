@@ -21,7 +21,7 @@ Container.propTypes = {
 }
 
 const Content = ({
-  children, color, icon, time, title,
+  children, color, icon, time, title, where,
 }) => (
   <article className="timeline-element">
     <div className="timeline-element-inner">
@@ -40,6 +40,9 @@ const Content = ({
             {time}
           </span>
         </div>
+        <div className="timeline-element-where">
+          {where}
+        </div>
         <div className="timeline-element-text">
           {children}
         </div>
@@ -54,11 +57,13 @@ Content.propTypes = {
   icon: PropTypes.node,
   time: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  where: PropTypes.string,
 }
 
 Content.defaultProps = {
   color: null,
   icon: '',
+  where: '',
 }
 
 Timeline.Container = Container

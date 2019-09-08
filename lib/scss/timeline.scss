@@ -64,6 +64,7 @@ div.timeline {
           margin-left: -9px;
         }
         div.timeline-element-header {
+          display: flex;
           width: 100%;
           span.timeline-element-title {
             display: inline-block;
@@ -83,6 +84,11 @@ div.timeline {
             font-size: 0.8em;
             opacity: 0.6;
           }
+        }
+        div.timeline-element-where {
+          font-size: 0.7em;
+          font-weight: 600;
+          border-top: 1px dotted hsl(0, 0%, 70%);
         }
         div.timeline-element-text {
           text-align: justify;
