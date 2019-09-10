@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import Social from './Social'
 import { scrollToElement, getAppVersion, getBuildTime } from '../functions'
-import me from '../../img/not-me.jpg'
+import me from '../../img/avatar-me.jpg'
 import '../../scss/navbar.scss'
 
 const menuItems = [
@@ -18,7 +18,7 @@ const menuItems = [
 const NavBar = ({ activeIndex } = {}) => (
   <div className="navbar">
     <div className="navbar avatar">
-      <img src={me} alt="My photograph" />
+      <img src={me} alt="My photograph" className="navbar-avatar" />
     </div>
     <div className="navbar name">
       <h3 className="navbar-name">João Carmo</h3>

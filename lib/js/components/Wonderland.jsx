@@ -13,7 +13,7 @@ class Wonderland extends React.Component {
     super()
 
     this.state = {
-      showPages: true,
+      showPages: false,
     }
 
     this.wheelTimer = null

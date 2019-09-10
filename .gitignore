@@ -91,4 +91,5 @@ typings/
 .DS_Store
 
 # me
-lib/img/about-bg.jpg
+# lib/img/about-bg.jpg
+# lib/img/avatar-me.jpg
