@@ -1,3 +1,3 @@
-# joaocarmo.github.io
+# joaocarmo.com
 
-Johnny Eyelash's guide to surviving life... and so much more !
+A showcase of skill.

@@ -44,14 +44,14 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         loader: 'file-loader',
         options: {
-          outputPath: 'img',
+          outputPath: '/img',
         },
       },
       {
         test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/,
         loader: 'file-loader',
         options: {
-          outputPath: 'fonts',
+          outputPath: '/fonts',
         },
       },
     ],
