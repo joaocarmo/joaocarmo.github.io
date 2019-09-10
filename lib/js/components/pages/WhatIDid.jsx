@@ -213,7 +213,7 @@ const experience = [
 
 const WhatIDid = () => (
   <>
-    <h2>...and our second date</h2>
+    <h2>...and a cold beer</h2>
     <div className="top-spacer" />
     <p className="idented smaller justified">
       All I can say is that I&apos;m very passionate about learning and figuring

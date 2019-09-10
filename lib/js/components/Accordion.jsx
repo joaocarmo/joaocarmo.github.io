@@ -18,7 +18,7 @@ const AccordionItem = ({ title, children }) => (
     <input type="checkbox" defaultChecked className="accordion" />
     <i className="accordion" />
     <h4 className="accordion">{title}</h4>
-    <p className="accordion">{children}</p>
+    <article className="accordion">{children}</article>
   </li>
 )
 

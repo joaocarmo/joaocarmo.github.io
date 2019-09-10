@@ -36,7 +36,7 @@ ul.accordion {
       z-index: 1;
       opacity: 0;
       &:checked {
-        &~p.accordion {
+        &~article.accordion {
           margin-top: 0;
           max-height: 0;
           opacity: 0;
@@ -54,7 +54,6 @@ ul.accordion {
         &~h4.accordion {
           color: hsl(0, 0%, 95%);
           background-color: hsl(22, 62%, 58%);
-          border-color: hsl(7, 62%, 58%);
         }
       }
     }
@@ -69,10 +68,9 @@ ul.accordion {
       letter-spacing: 0.1em;
       margin: 0;
       background-color: hsl(22, 87%, 56%);
-      border: 1px solid hsl(7, 87%, 56%);
       transition: all 0.25s ease-in-out;
     }
-    p.accordion {
+    article.accordion {
       font-weight: 400;
       font-size: 0.9em;
       position: relative;

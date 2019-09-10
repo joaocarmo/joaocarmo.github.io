@@ -31,7 +31,7 @@ const unixSkills = [
 
 const WhatIDo = () => (
   <>
-    <h2>About that coffee...</h2>
+    <h2>Let&apos;s go for coffee...</h2>
     <div className="top-spacer" />
     <p className="idented smaller justified">
       Hi! I&apos;m
@@ -71,14 +71,14 @@ const WhatIDo = () => (
       to me!
     </p>
     <p className="idented smaller justified">
-      After a series of (un)fortunate events — which we can discuss in detail on
-      a
+      After a series of (un)fortunate events — which we can discuss in detail
+      over a
       {' '}
       <a
         href="#what-i-did"
         onClick={(e) => scrollToElement(e, 'what-i-did')}
       >
-        second date
+        beer
       </a>
       , perhaps? — I ended up doing it for a living and I enjoy it enough to do
       it in my spare time as well.

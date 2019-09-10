@@ -9,7 +9,7 @@ import me from '../../img/not-me.jpg'
 import '../../scss/navbar.scss'
 
 const menuItems = [
-  { key: 'about-me', title: 'About me', action: '' },
+  { key: 'about-me', title: 'Hello, there !', action: '' },
   { key: 'what-i-do', title: 'What I do', action: '' },
   { key: 'what-i-did', title: 'What I did', action: '' },
   { key: 'what-i-like', title: 'What I like', action: '' },
