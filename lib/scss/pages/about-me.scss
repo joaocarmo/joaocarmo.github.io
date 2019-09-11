@@ -11,37 +11,43 @@ section#about-me {
   /* This is what makes the background image rescale based
      on the container's size */
   background-size: cover;
-  div.top-spacer {
-    height: 300px;
-  }
-  h1 {
-    color: var(--text-color);
-    text-align: left;
-    text-transform: uppercase;
-    span {
-      opacity: 0;
-      animation: aboutheader;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      &.first {
-        animation-delay: 1s;
-      }
-      &.second {
-        animation-delay: 1.5s;
+  div.starter {
+    position: absolute;
+    bottom: 15%;
+    left: 60px;
+    h1 {
+      color: var(--text-color);
+      text-align: left;
+      text-transform: uppercase;
+      span {
+        opacity: 0;
+        animation: aboutheader;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        &.first {
+          animation-delay: 1s;
+        }
+        &.second {
+          animation-delay: 1.5s;
+        }
       }
     }
-  }
-  h5 {
-    color: hsl(0, 0%, 85%);
-    font-style: italic;
-    text-transform: lowercase;
-    letter-spacing: 0.1em;
-    margin-left: 3em;
-    opacity: 0;
-    animation: aboutsubheader;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
+    h5 {
+      color: hsl(0, 0%, 85%);
+      font-style: italic;
+      text-transform: lowercase;
+      letter-spacing: 0.1em;
+      margin-left: 3em;
+      opacity: 0;
+      animation: aboutsubheader;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 3s;
+    }
+    @media only screen and (max-device-width: 640px),
+    only screen and (max-width: 768px) {
+      left: 120px;
+    }
   }
 }
 

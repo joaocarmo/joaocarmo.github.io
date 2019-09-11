@@ -2,6 +2,7 @@ div.content {
   height: 100vh;
   overflow-y: auto;
   section {
+    position: relative;
     min-height: 100vh;
     padding: 2em;
     h1 {
