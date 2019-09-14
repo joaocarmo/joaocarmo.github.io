@@ -39,6 +39,17 @@ div#interests {
   .coffee {
     grid-area: coffee;
   }
+  @media only screen and (max-device-width: 640px),
+  only screen and (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "opensource science"
+      "facts music"
+      "cinema writing"
+      "photography coffee"
+    ;
+  }
 }
 
 div.interest-box {

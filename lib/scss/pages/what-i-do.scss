@@ -1,5 +1,5 @@
-$skillBoxHeight: 100px;
-$skillBoxHoverHeight: 240px;
+$skillBoxHeight: 5em;
+$skillBoxHoverHeight: 14em;
 $skillBoxMargin: 10px;
 
 section#what-i-do {
@@ -69,7 +69,7 @@ div.skill-box {
   &:hover {
     height: $skillBoxHoverHeight;
     div.skill-box-content {
-      max-height: $skillBoxHoverHeight - $skillBoxHeight;
+      max-height: calc(#{$skillBoxHoverHeight} - #{$skillBoxHeight});
       visibility: visible;
     }
   }

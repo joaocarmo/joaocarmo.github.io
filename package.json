@@ -1,7 +1,7 @@
 {
   "name": "joaocarmo",
-  "version": "1.0.1",
-  "description": "own website",
+  "version": "1.0.2",
+  "description": "own personal website",
   "main": "lib/js/index.js",
   "private": true,
   "directories": {
@@ -40,7 +40,7 @@
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
-    "eslint": "^6.3.0",
+    "eslint": "^6.4.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -62,7 +62,7 @@
     "typography": "^0.16.19",
     "typography-inject-fonts": "0.0.0",
     "typography-theme-alton": "^0.16.19",
-    "webpack": "^4.39.3",
+    "webpack": "^4.40.2",
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0"
   },

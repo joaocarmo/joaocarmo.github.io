@@ -219,13 +219,13 @@ const WhatIDid = () => (
       All I can say is that I&apos;m very passionate about learning and figuring
       out how stuff works. My education has been a long road through many
       different, and often distant, places. Regardless, it brought me here and
-      made me what I am today.
+      made me what I am today. It shaped
       {' '}
       <a
         href="#what-i-like"
         onClick={(e) => scrollToElement(e, 'what-i-like')}
       >
-        Ask me anything
+        what I like to do
       </a>
       !
     </p>

@@ -9,6 +9,7 @@ const options = require('./babel.config')
 
 const mode = process.env.NODE_ENV
 const styleLoader = mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader'
+const relPathFix = mode === 'production' ? '' : '.'
 
 module.exports = {
   mode,
@@ -44,14 +45,14 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         loader: 'file-loader',
         options: {
-          outputPath: '/img',
+          outputPath: `${relPathFix}/img`,
         },
       },
       {
         test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/,
         loader: 'file-loader',
         options: {
-          outputPath: '/fonts',
+          outputPath: `${relPathFix}/fonts`,
         },
       },
     ],
@@ -66,7 +67,7 @@ module.exports = {
       filename: 'css/[name].css',
     }),
     new webpack.DefinePlugin({
-      VERSION: JSON.stringify('1.0.1'),
+      VERSION: JSON.stringify('1.0.2'),
       BUILDTIME: JSON.stringify(new Date().toISOString().substring(0, 10)),
     }),
   ],
