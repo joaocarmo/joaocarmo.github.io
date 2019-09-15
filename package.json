@@ -1,6 +1,6 @@
 {
   "name": "joaocarmo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "own personal website",
   "main": "lib/js/index.js",
   "private": true,

@@ -67,7 +67,7 @@ module.exports = {
       filename: 'css/[name].css',
     }),
     new webpack.DefinePlugin({
-      VERSION: JSON.stringify('1.0.2'),
+      VERSION: JSON.stringify('1.0.3'),
       BUILDTIME: JSON.stringify(new Date().toISOString().substring(0, 10)),
     }),
   ],
