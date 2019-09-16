@@ -37,7 +37,11 @@
           width: inherit;
           background-color: inherit;
         }
-        .loader {
+        .loader:empty, .loader:empty::before, .loader:empty::after {
+          content: "";
+          animation: none;
+        }
+        .loader:empty {
           content: " ";
         }
         html, body, pre, code, kbd, samp {
@@ -68,11 +72,11 @@
         }
         header {
           padding-bottom: 1rem;
-          border-bottom: dashed 1px black;
+          border-bottom: dashed 3px black;
         }
         footer {
           padding: 1rem 0;
-          border-top: dashed 1px black;
+          border-top: dashed 3px black;
           text-align: center;
         }
         main {
@@ -123,7 +127,7 @@
                 <!-- Balloon -->
                 <div class="nes-balloon from-left">
                   <p>
-                    I heard you don&apos;t like <u>JavaScript</u> !
+                    I heard you don&apos;t like JavaScript !
                     That&apos;s totally fine. We can still have retro fun ! :)
                   </p>
                 </div>
