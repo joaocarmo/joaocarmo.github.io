@@ -67,8 +67,9 @@ module.exports = {
       filename: 'css/[name].css',
     }),
     new webpack.DefinePlugin({
-      VERSION: JSON.stringify('1.0.3'),
+      VERSION: JSON.stringify('1.0.4'),
       BUILDTIME: JSON.stringify(new Date().toISOString().substring(0, 10)),
+      ENVIRONMENT: JSON.stringify(mode),
     }),
   ],
   optimization: {
