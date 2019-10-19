@@ -7,7 +7,7 @@ const TerserJSPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const { GenerateSW } = require('workbox-webpack-plugin')
 const options = require('./babel.config')
-const package = require('./package.json')
+const packageOpts = require('./package.json')
 
 const mode = process.env.NODE_ENV
 const styleLoader = mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader'
@@ -69,7 +69,7 @@ module.exports = {
       filename: 'css/[name].css',
     }),
     new webpack.DefinePlugin({
-      VERSION: JSON.stringify(package.version),
+      VERSION: JSON.stringify(packageOpts.version),
       BUILDTIME: JSON.stringify(new Date().toISOString().substring(0, 10)),
       ENVIRONMENT: JSON.stringify(mode),
     }),
