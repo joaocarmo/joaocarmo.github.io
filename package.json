@@ -8,7 +8,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "clean": "rm -rf css/ js/ img/ fonts/ favicon.ico index.html",
+    "clean": "rm -rf css/ js/ img/ fonts/ favicon.ico index.html precache*",
     "start": "NODE_ENV=development webpack-dev-server --mode development --port 3000",
     "build": "NODE_ENV=production webpack --mode production",
     "build-dev": "NODE_ENV=development webpack --mode development",
