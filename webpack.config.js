@@ -73,9 +73,7 @@ module.exports = {
       BUILDTIME: JSON.stringify(new Date().toISOString().substring(0, 10)),
       ENVIRONMENT: JSON.stringify(mode),
     }),
-    new GenerateSW({
-      swDest: path.join(__dirname, 'js', 'service-worker.js'),
-    }),
+    new GenerateSW(),
   ],
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
