@@ -71,6 +71,7 @@ module.exports = {
     new webpack.DefinePlugin({
       VERSION: JSON.stringify(package.version),
       BUILDTIME: JSON.stringify(new Date().toISOString().substring(0, 10)),
+      ENVIRONMENT: JSON.stringify(mode),
     }),
     new GenerateSW({
       swDest: path.join(__dirname, 'js', 'service-worker.js'),

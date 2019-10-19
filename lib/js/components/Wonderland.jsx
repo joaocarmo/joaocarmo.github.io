@@ -6,6 +6,7 @@ import NextButton from './NextButton'
 import BackButton from './BackButton'
 import Social from './Social'
 import Copyright from './Copyright'
+import { getAppVersion, getEnv, styledConsole } from '../functions'
 import '../../scss/wonderland.scss'
 
 class Wonderland extends React.Component {
@@ -20,6 +21,17 @@ class Wonderland extends React.Component {
 
     this.handleOnClick = this.handleOnClick.bind(this)
     this.handleOnWheel = this.handleOnWheel.bind(this)
+  }
+
+  componentDidMount() {
+    styledConsole(`
+> whoami
+joaocarmo
+> echo $VERSION
+${getAppVersion()}
+> echo $ENVIRONMENT
+${getEnv()}
+`)
   }
 
   handleOnClick() {

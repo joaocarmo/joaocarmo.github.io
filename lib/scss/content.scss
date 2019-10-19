@@ -36,7 +36,7 @@ div.mobile {
 only screen and (max-width: 768px) {
   div.mobile {
     div.social {
-      background-color: hsl(0, 0%, 30%);
+      background-color: var(--bg-color);
       font-size: 1.6em;
       padding: 0.5em 0em;
       visibility: visible;

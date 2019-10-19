@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145755611-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-145755611-1');
+  </script>
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/js/service-worker.js');
+      });
+    }
+  </script>
+  <meta charset="utf-8">
+  <title>João Carmo - WebMagician</title>
+  <meta name="description" content="Joao Carmo">
+  <meta name="author" content="Joao Carmo">
+<link rel="shortcut icon" href="favicon.ico"><link href="css/main.css" rel="stylesheet"></head>
+  <body>
+    <div id="blackout">
+      <div id="main" class="loader"></div>
+    </div>
+    <noscript>
+      <!-- latest NES.css -->
+      <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+      <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+      <style type="text/css">
+        body {
+          background: none;
+        }
+        #blackout {
+          position: inherit;
+          top: inherit;
+          left: inherit;
+          height: inherit;
+          width: inherit;
+          background-color: inherit;
+        }
+        .loader:empty, .loader:empty::before, .loader:empty::after {
+          content: "";
+          animation: none;
+        }
+        .loader:empty {
+          content: " ";
+        }
+        html, body, pre, code, kbd, samp {
+            font-family: "Press Start 2P";
+        }
+        @media only screen and (max-device-width: 640px),
+        only screen and (max-width: 768px) {
+          html, body {
+            font-size: calc(1em + 1vw);
+          }
+          button {
+            font-size: inherit;
+          }
+          input {
+            font-size: inherit;
+          }
+        }
+        div.container {
+          max-width: 768px;
+          margin: 0 auto;
+        }
+        @media only screen and (max-device-width: 640px),
+        only screen and (max-width: 768px) {
+          div.container {
+            max-width: inherit;
+            margin: 0.5rem 1rem;
+          }
+        }
+        header {
+          padding-bottom: 1rem;
+          border-bottom: dashed 3px black;
+        }
+        footer {
+          padding: 1rem 0;
+          border-top: dashed 3px black;
+          text-align: center;
+        }
+        main {
+          margin: 2.5rem 0;
+        }
+        /* Balloon */
+        section.message-list {
+          display: flex;
+          flex-direction: column;
+        }
+        .message-list > .message {
+          display: flex;
+          margin-top: 2rem;
+        }
+        .message-list > .message > .nes-balloon {
+          max-width: 550px;
+        }
+        .message-list > .message i {
+          align-self: flex-end;
+        }
+        .message-list > .message.-left {
+          align-self: flex-start;
+        }
+        .message-list > .message.-right {
+          align-self: flex-end;
+        }
+        .message-list > .message.-left i {
+          margin-right: 2rem;
+        }
+        .message-list > .message.-right i {
+          margin-left: 2rem;
+        }
+        section.main-content {
+          margin: 5rem 0;
+        }
+      </style>
+      <div class="container">
+        <header>
+          <h1>Jo&atilde;o Carmo</h1>
+          <h4>WebMagician</h4>
+        </header>
+        <main>
+          <section>
+            <section class="message-list">
+              <section class="message -left">
+                <!-- octocat -->
+                <i class="nes-octocat animate"></i>
+                <!-- Balloon -->
+                <div class="nes-balloon from-left">
+                  <p>
+                    I heard you don&apos;t like JavaScript !
+                    That&apos;s totally fine. We can still have retro fun ! :)
+                  </p>
+                </div>
+              </section>
+            </section>
+          </section>
+          <section class="main-content">
+            <h2>About</h2>
+            <p>
+              Hi ! I&apos;m Jo&atilde;o from Portugal. I&apos;m a Front End Engineer, Back End
+              developer and many other amazing things that sound like magic.
+            </p>
+            <p>
+              I constructed this page to demonstrate part of my set of skills.
+              If you can trust me and
+              <a href="https://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">enable JavaScript</a>,
+              I assure you it will be an amazing experience !
+            </p>
+          </section>
+        </main>
+        <footer>
+          <section class="icon-list">
+            <!-- linkedin -->
+            <a href="https://linkedin.com/in/ojoaocarmo" target="_blank" rel="noopener noreferrer"><i class="nes-icon linkedin is-large"></i></a>
+            <!-- github -->
+            <a href="https://github.com/joaocarmo" target="_blank" rel="noopener noreferrer"><i class="nes-icon github is-large"></i></a>
+            <!-- instagram -->
+            <a href="https://www.instagram.com/johnnypestana/" target="_blank" rel="noopener noreferrer"><i class="nes-icon instagram is-large"></i></a>
+          </section>
+        </footer>
+      </div>
+    </noscript>
+  <script type="text/javascript" src="./js/main.js"></script></body>
+</html>
