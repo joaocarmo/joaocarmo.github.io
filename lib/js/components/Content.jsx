@@ -5,6 +5,7 @@ import AboutMe from './pages/AboutMe'
 import WhatIDo from './pages/WhatIDo'
 import WhatIDid from './pages/WhatIDid'
 import WhatILike from './pages/WhatILike'
+import Social from './Social'
 import '../../scss/content.scss'
 
 const Content = ({ activeIndex }) => (
@@ -21,6 +22,9 @@ const Content = ({ activeIndex }) => (
     <section id="what-i-like">
       <WhatILike activeIndex={activeIndex} />
     </section>
+    <div className="mobile social">
+      <Social />
+    </div>
   </div>
 )
 

@@ -25,3 +25,21 @@ span.emoji {
   font-style: normal;
   margin-left: 0.5em;
 }
+
+div.mobile {
+  div.social {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-device-width: 640px),
+only screen and (max-width: 768px) {
+  div.mobile {
+    div.social {
+      background-color: hsl(0, 0%, 30%);
+      font-size: 1.6em;
+      padding: 0.5em 0em;
+      visibility: visible;
+    }
+  }
+}
