@@ -83,6 +83,7 @@ module.exports = {
   plugins: [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
+      hash: true,
       title,
       favicon: path.join(__dirname, 'lib', 'img', 'favicon.ico'),
       template: path.join(__dirname, 'lib', 'index.hbs'),

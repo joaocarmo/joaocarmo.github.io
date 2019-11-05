@@ -4,7 +4,7 @@ $mainSectionSize: 10em;
 
 #brandname {
   @include no-scrollbar;
-  height: 100vh;
+  height: 100%;
   color: var(--text-color);
 }
 
@@ -12,11 +12,11 @@ $mainSectionSize: 10em;
   position: absolute;
   top: calc(50% - #{($mainSectionSize / 2)});
   height: $mainSectionSize;
-  width: 100vw;
+  width: 100%;
   text-align: center;
   header {
     display: inline-block;
-    width: 90vw;
+    width: 90%;
     h1 {
       text-transform: uppercase;
       letter-spacing: 0.4em;
@@ -54,13 +54,13 @@ $mainSectionSize: 10em;
 
 footer.brandname {
   color: var(--text-color);
-  width: 100vw;
+  width: 100%;
   position: fixed;
   bottom: 0;
   p {
     position: relative;
     top: 0.9em;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     font-size: 0.7em;
     color: hsl(0, 0%, 95%);
