@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.76f7a8f573c42b76a57083f9f46bb0c8.js"
+  "precache-manifest.aac0b92b63d69d0a9749d16eed756ae9.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -30,3 +30,6 @@ self.addEventListener('message', (event) => {
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerRoute(/^https:\/\/fonts.googleapis.com/, new workbox.strategies.StaleWhileRevalidate({ "cacheName":"google-fonts-stylesheets", plugins: [new workbox.cacheableResponse.Plugin({ statuses: [ 0, 200 ] })] }), 'GET');
+workbox.routing.registerRoute(/^https:\/\/fonts.gstatic.com/, new workbox.strategies.CacheFirst({ "cacheName":"google-fonts-webfonts", plugins: [new workbox.cacheableResponse.Plugin({ statuses: [ 0, 200 ] }), new workbox.expiration.Plugin({ maxAgeSeconds: 31536000, maxEntries: 30, purgeOnQuotaError: false })] }), 'GET');

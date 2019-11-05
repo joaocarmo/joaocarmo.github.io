@@ -44,10 +44,6 @@ section#about-me {
       animation-fill-mode: forwards;
       animation-delay: 3s;
     }
-    @media only screen and (max-device-width: 640px),
-    only screen and (max-width: 768px) {
-      left: 120px;
-    }
   }
 }
 

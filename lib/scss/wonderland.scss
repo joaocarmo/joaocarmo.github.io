@@ -1,6 +1,9 @@
+@import 'mixins';
+
 $mainSectionSize: 10em;
 
 #brandname {
+  @include no-scrollbar;
   height: 100vh;
   color: var(--text-color);
 }
@@ -9,11 +12,11 @@ $mainSectionSize: 10em;
   position: absolute;
   top: calc(50% - #{($mainSectionSize / 2)});
   height: $mainSectionSize;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   header {
     display: inline-block;
-    width: 100%;
+    width: 90vw;
     h1 {
       text-transform: uppercase;
       letter-spacing: 0.4em;
@@ -51,13 +54,13 @@ $mainSectionSize: 10em;
 
 footer.brandname {
   color: var(--text-color);
-  width: 100%;
+  width: 100vw;
   position: fixed;
   bottom: 0;
   p {
     position: relative;
     top: 0.9em;
-    width: 100%;
+    width: 100vw;
     text-align: center;
     font-size: 0.7em;
     color: hsl(0, 0%, 95%);

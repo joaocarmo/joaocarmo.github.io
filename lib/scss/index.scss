@@ -15,19 +15,6 @@
   --navbar-size: 240px;
 }
 
-@media only screen and (max-device-width: 640px),
-only screen and (max-width: 768px) {
-  html, body {
-    font-size: calc(1em + 1vw);
-  }
-  button {
-    font-size: inherit;
-  }
-  input {
-    font-size: inherit;
-  }
-}
-
 body {
   /* Location of the image */
   background-image: var(--bg-image);

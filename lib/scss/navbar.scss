@@ -1,3 +1,5 @@
+@import 'mixins';
+
 $avatarHeight: 240px;
 $avatarImgSize: 200px;
 $nameTitleHeight: 100px;
@@ -7,6 +9,7 @@ $buttonHeight: 3.5em;
 
 div {
   &.navbar {
+    @include no-scrollbar;
     height: 100vh;
     background-color: var(--bg-color);
     overflow-y: auto;

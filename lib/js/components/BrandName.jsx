@@ -3,9 +3,9 @@ import React from 'react'
 
 const brandName = 'João Carmo'
 const tagLines = [
-  'Front-end Engineer',
-  'Back-end developer',
-  'Open-source contributor',
+  'Frontend Engineer',
+  'Backend developer',
+  'Open-Source contributor',
   'Photographer',
   'Poet',
   'Knower of things',
