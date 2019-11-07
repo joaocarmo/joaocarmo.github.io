@@ -6,7 +6,12 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import '../../scss/backbutton.scss'
 
 const BackButton = ({ onClick = () => null }) => (
-  <button type="button" className="back" onClick={onClick}>
+  <button
+    type="button"
+    className="back"
+    onClick={onClick}
+    aria-label="back"
+  >
     <FontAwesomeIcon icon={faTimes} />
   </button>
 )

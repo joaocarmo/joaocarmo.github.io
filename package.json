@@ -1,6 +1,6 @@
 {
   "name": "joaocarmo",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "own personal website",
   "main": "lib/js/index.js",
   "private": true,
@@ -32,9 +32,9 @@
   },
   "homepage": "https://github.com/joaocarmo/joaocarmo.github.io#readme",
   "dependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
+    "@babel/core": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
@@ -69,8 +69,9 @@
     "workbox-webpack-plugin": "^4.3.1"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^5.0.4",
-    "core-js": "^3.3.6",
+    "copy-webpack-plugin": "^5.0.5",
+    "core-js": "^3.4.0",
+    "eslint-loader": "^3.0.2",
     "regenerator-runtime": "^0.13.3",
     "resolve-url-loader": "^3.1.0",
     "webpack-pwa-manifest": "^4.1.1"

@@ -44,10 +44,19 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options,
-        },
+        use: [
+          {
+            loader: 'babel-loader',
+            options,
+          },
+          {
+            loader: 'eslint-loader',
+            options: {
+              fix: true,
+              cache: true,
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,
