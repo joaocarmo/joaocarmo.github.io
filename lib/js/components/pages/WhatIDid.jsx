@@ -2,7 +2,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faGlobe, faLaptopCode, faRobot, faUniversity,
+  faGlobe, faLaptopCode, faProjectDiagram, faRobot, faUniversity,
 } from '@fortawesome/free-solid-svg-icons'
 import Accordion from '../Accordion'
 import Timeline from '../Timeline'
@@ -123,9 +123,22 @@ const academicSkills = [
 
 const experience = [
   {
+    key: 'five',
+    title: 'Front End Engineer',
+    time: '2019-now',
+    content: (
+      <>
+        Member of the InterNations GO! engineering team.
+      </>
+    ),
+    color: 'hsl(300, 100%, 25%)',
+    icon: <FontAwesomeIcon icon={faProjectDiagram} color="white" />,
+    where: 'InterNations',
+  },
+  {
     key: 'four',
     title: 'Full Stack Engineer / UNIX Systems Admin',
-    time: '2017-now',
+    time: '2017-2019',
     content: (
       <>
         Development of an internal web application for asset management.
@@ -150,7 +163,7 @@ const experience = [
         Negotiate and place orders with common carriers.
       </>
     ),
-    color: 'hsl(300, 100%, 25%)',
+    color: 'hsl(300, 80%, 25%)',
     icon: <FontAwesomeIcon icon={faLaptopCode} color="white" />,
     where: 'Synopsys, Inc.',
   },
