@@ -15,6 +15,10 @@
   --navbar-size: 240px;
 }
 
+html {
+  overflow: auto;
+}
+
 body {
   /* Location of the image */
   background-image: var(--bg-image);
