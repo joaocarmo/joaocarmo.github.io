@@ -6,6 +6,18 @@ $mainSectionSize: 10em;
   @include no-scrollbar;
   height: 100%;
   color: var(--text-color);
+  &.no-animation {
+    #brandname-section {
+      header {
+        h1 {
+          @include visible-no-animation;
+        }
+        h4 {
+          @include visible-no-animation;
+        }
+      }
+    }
+  }
 }
 
 #brandname-section {

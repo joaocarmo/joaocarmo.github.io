@@ -11,16 +11,20 @@ const observableElementIds = [
 const Pages = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
+  const observerOpts = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.0,
+  }
+
+  const observerFn = (elementId, idx) => (entries) => {
+    const [{ isIntersecting }] = entries
+    if (isIntersecting) {
+      setActiveIndex(idx)
+    }
+  }
+
   useEffect(() => {
-    const observerOpts = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.0,
-    }
-    const observerFn = (elementId, idx) => (entries) => {
-      const [{ isIntersecting }] = entries
-      if (isIntersecting) setActiveIndex(idx)
-    }
     observableElementIds.forEach((elementId, idx) => {
       const observer = new IntersectionObserver(observerFn(elementId, idx), observerOpts)
       let target = document.querySelector(`#${elementId} h1`)
@@ -30,6 +34,7 @@ const Pages = () => {
       try {
         observer.observe(target)
       } catch (error) {
+        /* eslint-disable-next-line no-console */
         console.log(error.message)
       }
     })

@@ -14,6 +14,7 @@ class Wonderland extends React.Component {
     super()
 
     this.state = {
+      initialRender: true,
       showPages: false,
     }
 
@@ -36,41 +37,41 @@ ${getEnv()}
 
   handleOnClick() {
     const { showPages } = this.state
-    this.setState({ showPages: !showPages })
+    this.setState({ showPages: !showPages, initialRender: false })
   }
 
   handleOnWheel(event) {
     const { showPages } = this.state
     if (!showPages) {
       if (event.nativeEvent.wheelDelta < 0 && event.nativeEvent.deltaY > 100) {
-        if (this.wheelTimer) clearTimeout(this.wheelTimer)
+        if (this.wheelTimer) {
+          clearTimeout(this.wheelTimer)
+        }
         this.wheelTimer = setTimeout(() => this.setState({ showPages: true }), 0)
       }
     }
   }
 
   render() {
-    const { showPages } = this.state
+    const { initialRender, showPages } = this.state
     return (
       <>
-        {!showPages && (
-          <>
-            <main id="brandname" onWheel={this.handleOnWheel}>
-              <BrandName />
-              <NextButton onClick={this.handleOnClick} />
-            </main>
-            <footer className="brandname">
-              <Social />
-              <Copyright />
-            </footer>
-          </>
-        )}
-        {showPages && (
-          <main id="pages">
-            <Pages />
-            <BackButton onClick={this.handleOnClick} />
-          </main>
-        )}
+        <main
+          id="brandname"
+          onWheel={this.handleOnWheel}
+          className={initialRender ? '' : 'no-animation'}
+        >
+          <BrandName />
+          <NextButton onClick={this.handleOnClick} />
+        </main>
+        <footer className="brandname">
+          <Social />
+          <Copyright />
+        </footer>
+        <main id="pages" className={showPages ? 'show' : 'hide'}>
+          <Pages />
+          <BackButton onClick={this.handleOnClick} />
+        </main>
       </>
     )
   }

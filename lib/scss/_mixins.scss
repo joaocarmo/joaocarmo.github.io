@@ -2,6 +2,11 @@
   ::-webkit-scrollbar {
     display: none;  /* Chrome Safari */
   }
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE 10+ */
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+@mixin visible-no-animation {
+  opacity: 1;
+  animation: none;
 }
