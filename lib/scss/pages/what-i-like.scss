@@ -2,6 +2,7 @@ section#what-i-like {
   div.top-spacer {
     height: 60px;
   }
+
   div.mid-spacer {
     height: 40px;
   }
@@ -13,51 +14,60 @@ div#interests {
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     "opensource science facts music"
-    "cinema writing photography coffee"
-  ;
+    "cinema writing photography coffee";
+
   .opensource {
     grid-area: opensource;
   }
+
   .science {
     grid-area: science;
   }
+
   .facts {
     grid-area: facts;
   }
+
   .music {
     grid-area: music;
   }
+
   .cinema {
     grid-area: cinema;
   }
+
   .writing {
     grid-area: writing;
   }
+
   .photography {
     grid-area: photography;
   }
+
   .coffee {
     grid-area: coffee;
   }
+
   @media only screen and (max-device-width: 640px),
-  only screen and (max-width: 600px) {
+    only screen and (max-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
       "opensource science"
       "facts music"
       "cinema writing"
-      "photography coffee"
-    ;
+      "photography coffee";
   }
 }
 
 div.interest-box {
   text-align: center;
   padding: 10px;
+
   div.interest-icon {
     margin: 1em 0;
   }
+
   h6.interest-title {
     margin: 1em 0;
   }

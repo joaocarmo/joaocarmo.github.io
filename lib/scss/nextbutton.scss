@@ -28,6 +28,8 @@ button {
   button {
     &.next {
       @include visible-no-animation;
+
+      bottom: 15%;
     }
   }
 }
@@ -37,6 +39,7 @@ button {
     bottom: 13%;
     opacity: 0;
   }
+
   to {
     bottom: 15%;
     opacity: 1;

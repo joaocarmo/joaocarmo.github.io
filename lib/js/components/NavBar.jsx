@@ -1,6 +1,7 @@
 // Imports
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import Social from './Social'
@@ -39,7 +40,9 @@ const NavBar = ({ activeIndex } = {}) => (
       {menuItems.map(({ key, title }, idx) => (
         <button
           type="button"
-          className={activeIndex === idx ? 'navbar active item' : 'navbar item'}
+          className={classNames('navbar', {
+            active: activeIndex === idx,
+          }, 'item')}
           onClick={(event) => scrollToElement(event, key)}
           key={key}
         >

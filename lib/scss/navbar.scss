@@ -10,15 +10,18 @@ $buttonHeight: 3.5em;
 div {
   &.navbar {
     @include no-scrollbar;
+
     height: 100vh;
     background-color: var(--bg-color);
     overflow-y: auto;
+
     &.avatar {
       display: flex;
       height: $avatarHeight;
       justify-content: center;
       align-items: center;
       background: linear-gradient(var(--bg-dark-color), var(--bg-color));
+
       img.navbar-avatar {
         width: $avatarImgSize;
         height: $avatarImgSize;
@@ -27,26 +30,31 @@ div {
         padding: 0;
         opacity: 0.7;
         transition: opacity 0.5s ease-in-out;
+
         &:hover {
           opacity: 1;
         }
       }
     }
+
     &.menu {
       height: calc(100vh - #{$avatarHeight} - #{$nameTitleHeight} - #{$socialHeight} - #{$copyrightHeight});
       min-height: (4  * $buttonHeight);
       padding-top: 1em;
       padding-bottom: 1em;
     }
+
     &.name {
       height: $nameTitleHeight;
       color: var(--text-color);
+
       .navbar-name {
         margin-top: 0.1em;
         margin-bottom: 0.1em;
         text-align: center;
         letter-spacing: 0.1em;
       }
+
       .navbar-title {
         margin-top: 0.1em;
         margin-bottom: 0.1em;
@@ -54,28 +62,34 @@ div {
         text-transform: uppercase;
         letter-spacing: -0.05em;
       }
+
       .navbar-location {
         margin-top: 1.4em;
         font-size: 0.7em;
         text-align: center;
+
         .navbar-location-text {
           margin: 0;
           padding: 0;
         }
       }
     }
+
     &.social {
       display: flex;
       height: $socialHeight;
       justify-content: center;
       align-items: center;
+
       a:hover {
         color: var(--text-color);
       }
     }
+
     &.copyright {
       height: $copyrightHeight;
       text-align: center;
+
       .copyright-version {
         color: hsl(0, 0%, 60%);
         margin: 0;
@@ -103,41 +117,54 @@ button {
     font-size: 0.8em;
     margin-bottom: -1px;
     transition: all 0.2s ease-in-out;
+
     &:hover {
       padding-left: 0.6em;
       color: hsl(0, 0%, 95%);
     }
+
     &.active {
       border-right: solid 4px;
     }
+
     &:nth-child(1) {
       &:hover {
         background-color: hsl(80, 20%, 40%);
       }
+
       &.active {
         border-right-color: hsl(80, 20%, 60%);
       }
     }
+
+    /* stylelint-disable-next-line no-descending-specificity */
     &:nth-child(2) {
       &:hover {
         background-color: hsl(60, 20%, 40%);
       }
+
       &.active {
         border-right-color: hsl(60, 20%, 60%);
       }
     }
+
+    /* stylelint-disable-next-line no-descending-specificity */
     &:nth-child(3) {
       &:hover {
         background-color: hsl(40, 20%, 40%);
       }
+
       &.active {
         border-right-color: hsl(40, 20%, 60%);
       }
     }
+
+    /* stylelint-disable-next-line no-descending-specificity */
     &:nth-child(4) {
       &:hover {
         background-color: hsl(20, 20%, 40%);
       }
+
       &.active {
         border-right-color: hsl(20, 20%, 60%);
       }

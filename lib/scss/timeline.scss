@@ -3,6 +3,7 @@ $timelineColor: hsl(0, 0%, 90%);
 div.timeline {
   position: relative;
   margin-bottom: 30px;
+
   &::before {
     content: "";
     position: absolute;
@@ -13,20 +14,24 @@ div.timeline {
     bottom: 20px;
     margin-left: 29px;
   }
+
   &::after {
     content: " ";
     display: table;
     clear: both;
   }
+
   article.timeline-element {
     position: relative;
     margin-top: 5px;
     margin-left: 30px;
     margin-bottom: 10px;
     clear: both;
+
     div.timeline-element-inner {
       position: relative;
       margin-left: -20px;
+
       div.timeline-element-icon {
         display: block;
         width: 40px;
@@ -37,6 +42,7 @@ div.timeline {
         box-shadow: 0 0 0 5px $timelineColor;
         line-height: 40px;
         float: left;
+
         &:last-of-type {
           width: 16px;
           height: 16px;
@@ -44,12 +50,14 @@ div.timeline {
           background: var(--bg-pages-color);
         }
       }
+
       div.timeline-element-content {
         position: relative;
         background-color: $timelineColor;
         padding: 1.5em;
         margin-left: 60px;
         background-clip: padding-box;
+
         &::after {
           content: "";
           display: block;
@@ -63,9 +71,11 @@ div.timeline {
           top: 10px;
           margin-left: -9px;
         }
+
         div.timeline-element-header {
           display: flex;
           width: 100%;
+
           span.timeline-element-title {
             display: inline-block;
             width: 70%;
@@ -74,6 +84,7 @@ div.timeline {
             font-size: 0.9em;
             opacity: 0.9;
           }
+
           span.timeline-element-time {
             display: inline-block;
             width: 30%;
@@ -85,18 +96,22 @@ div.timeline {
             opacity: 0.6;
           }
         }
+
         div.timeline-element-where {
           font-size: 0.7em;
           font-weight: 600;
           border-top: 1px dotted hsl(0, 0%, 70%);
         }
+
         div.timeline-element-text {
           text-align: justify;
           margin-top: 1em;
           font-size: 0.85em;
           opacity: 0.8;
+
           div.timeline-element-extra {
             margin-top: 1.5em;
+
             button.timeline-extra {
               display: block;
               background: none;
@@ -105,6 +120,7 @@ div.timeline {
               color: #069;
               text-decoration: underline;
               cursor: pointer;
+
               &:focus {
                 outline-style: dotted;
                 outline-width: 1px;
@@ -112,6 +128,7 @@ div.timeline {
                 outline-offset: 0.2em;
               }
             }
+
             div.timeline-element-extra-text {
               margin-top: 1.5em;
             }

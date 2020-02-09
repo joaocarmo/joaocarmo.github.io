@@ -2,6 +2,7 @@ section#what-i-did {
   div.top-spacer {
     height: 60px;
   }
+
   div.mid-spacer {
     height: 40px;
   }
@@ -11,28 +12,27 @@ div#academic {
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
   grid-template-rows: auto;
-  grid-template-areas:
-    "leftcol middlecol rightcol"
-  ;
+  grid-template-areas: "leftcol middlecol rightcol";
+
   .leftcol {
     grid-area: leftcol;
   }
+
   .middlecol {
     grid-area: middlecol;
   }
+
   .rightcol {
     grid-area: rightcol;
   }
 }
 
 @media only screen and (max-device-width: 640px),
-only screen and (max-width: 768px) {
+  only screen and (max-width: 768px) {
   div#academic {
     grid-template-columns: 0fr 1fr 0fr;
     grid-template-rows: auto;
-    grid-template-areas:
-      "leftcol middlecol rightcol"
-    ;
+    grid-template-areas: "leftcol middlecol rightcol";
   }
 }
 
@@ -44,6 +44,7 @@ h4.academic-title {
   width: 100%;
   border-bottom: 1px solid hsl(0, 0%, 40%);
   user-select: none;
+
   &:not(:first-of-type) {
     margin-top: 3em;
   }

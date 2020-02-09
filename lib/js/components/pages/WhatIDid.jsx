@@ -17,7 +17,7 @@ const academicSkills = [
       <>
         <strong>Institution</strong>
         <br />
-        Lisbon School of Economics & Management — Universidade de Lisboa
+        Lisbon School of Economics &amp; Management — Universidade de Lisboa
         {' '}
         <i>(Portugal)</i>
         <br />
@@ -30,7 +30,7 @@ const academicSkills = [
         <strong>Topics addressed</strong>
         <br />
         Econometrics, Macroeconomics, Microeconomics, Economic Growth,
-        Labour Economics, Monetary Theory, Finance, Banking & Insurance,
+        Labour Economics, Monetary Theory, Finance, Banking &amp; Insurance,
         Behavioural Economics, Mathematics, Computational Economics
         <br />
         <br />

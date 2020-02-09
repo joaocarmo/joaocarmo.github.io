@@ -2,21 +2,26 @@
 
 div.content {
   @include no-scrollbar;
+
   height: 100vh;
   overflow-y: auto;
+
   section {
     position: relative;
     min-height: 100vh;
     padding: 2em;
+
     h1 {
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
+
     h2 {
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
   }
+
   p {
     a {
       text-decoration: underline;
@@ -36,12 +41,12 @@ div.mobile {
 }
 
 @media only screen and (max-device-width: 640px),
-only screen and (max-width: 768px) {
+  only screen and (max-width: 768px) {
   div.mobile {
     div.social {
       background-color: var(--bg-color);
       font-size: 1.6em;
-      padding: 0.5em 0em;
+      padding: 0.5em 0;
       visibility: visible;
     }
   }

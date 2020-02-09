@@ -8,7 +8,8 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 const { GenerateSW } = require('workbox-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-const options = require('./babel.config')
+const StylelintPlugin = require('stylelint-webpack-plugin')
+const babelOptions = require('./babel.config')
 const packageOpts = require('./package.json')
 
 const mode = process.env.NODE_ENV
@@ -20,6 +21,7 @@ const title = 'Joao Carmo - WebMagician'
 const author = 'Joao Carmo'
 const description = 'Help Joao in his great quest for web adventure !'
 const serviceWorker = 'service-worker.js'
+const appIcon = 'lib/img/my-icon.png'
 const appleTouchIcon = '/img/my-icon-192.png'
 const appleTouchIconFrom = path.resolve(path.join(__dirname, 'lib', appleTouchIcon))
 const appleTouchIconTo = path.resolve(path.join(__dirname, 'img'))
@@ -43,11 +45,11 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         use: [
           {
             loader: 'babel-loader',
-            options,
+            options: babelOptions,
           },
           {
             loader: 'eslint-loader',
@@ -59,11 +61,22 @@ module.exports = {
         ],
       },
       {
-        test: /\.scss$/,
+        test: /\.(s|p)?(c|a)ss$/,
         use: [
           styleLoader,
-          'css-loader',
-          'resolve-url-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          // 'resolve-url-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
           {
             loader: 'sass-loader',
             options: {
@@ -114,13 +127,17 @@ module.exports = {
       crossorigin: 'use-credentials',
       icons: [
         {
-          src: path.resolve('lib/img/my-icon.png'),
+          src: path.resolve(appIcon),
           sizes: [96, 128, 192, 256, 384, 512],
         },
       ],
       start_url: '/',
       scope: '/',
       display: 'standalone',
+    }),
+    new StylelintPlugin({
+      context: path.join(__dirname, 'lib', 'scss'),
+      fix: true,
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',

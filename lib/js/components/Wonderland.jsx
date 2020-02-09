@@ -1,5 +1,6 @@
 // Imports
 import React from 'react'
+import classNames from 'classnames'
 import BrandName from './BrandName'
 import Pages from './Pages'
 import NextButton from './NextButton'
@@ -59,7 +60,9 @@ ${getEnv()}
         <main
           id="brandname"
           onWheel={this.handleOnWheel}
-          className={initialRender ? '' : 'no-animation'}
+          className={classNames({
+            'no-animation': !initialRender,
+          })}
         >
           <BrandName />
           <NextButton onClick={this.handleOnClick} />
@@ -68,7 +71,13 @@ ${getEnv()}
           <Social />
           <Copyright />
         </footer>
-        <main id="pages" className={showPages ? 'show' : 'hide'}>
+        <main
+          id="pages"
+          className={classNames({
+            show: showPages,
+            hide: !showPages,
+          })}
+        >
           <Pages />
           <BackButton onClick={this.handleOnClick} />
         </main>

@@ -1,5 +1,6 @@
 // Imports
 import React, { useState } from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import '../../scss/popup.scss'
 
@@ -15,7 +16,11 @@ const Popup = ({ content, children }) => {
       tabIndex="0"
     >
       {children}
-      <span className={`popup-content${isVisible ? ' show' : ''}`}>
+      <span
+        className={classNames('popup-content', {
+          show: isVisible,
+        })}
+      >
         {content}
       </span>
     </span>

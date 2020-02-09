@@ -7,7 +7,7 @@ import '../../../scss/pages/what-i-do.scss'
 
 const frontEndSkills = [
   'JavaScript (ES)',
-  'React.js',
+  'React.js | Vue.js',
   'HTML5',
   'CSS | SCSS',
   'Webpack',
