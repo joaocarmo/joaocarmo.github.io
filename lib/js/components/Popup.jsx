@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import '../../scss/popup.scss'
+import '@scss/popup'
 
 const Popup = ({ content, children }) => {
   const [isVisible, setIsVisible] = useState(false)

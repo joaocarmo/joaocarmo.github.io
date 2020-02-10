@@ -1,8 +1,8 @@
 // Imports
 import React, { useState, useEffect } from 'react'
-import NavBar from './NavBar'
-import Content from './Content'
-import '../../scss/pages.scss'
+import NavBar from '@js/components/NavBar'
+import Content from '@js/components/Content'
+import '@scss/pages'
 
 const observableElementIds = [
   'about-me', 'what-i-do', 'what-i-did', 'what-i-like',

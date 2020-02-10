@@ -39,7 +39,12 @@ module.exports = {
     filename: './js/[name].js',
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.scss'],
+    alias: {
+      '@js': path.resolve(__dirname, 'lib', 'js'),
+      '@scss': path.resolve(__dirname, 'lib', 'scss'),
+      '@img': path.resolve(__dirname, 'lib', 'img'),
+    },
   },
   module: {
     rules: [

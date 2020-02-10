@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
-import Social from './Social'
-import { scrollToElement, getAppVersion, getBuildTime } from '../functions'
-import me from '../../img/avatar-me.jpg'
-import '../../scss/navbar.scss'
+import Social from '@js/components/Social'
+import { scrollToElement, getAppVersion, getBuildTime } from '@js/functions'
+import me from '@img/avatar-me.jpg'
+import '@scss/navbar'
 
 const menuItems = [
   { key: 'about-me', title: 'Hello, there !', action: '' },

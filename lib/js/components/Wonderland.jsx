@@ -1,14 +1,14 @@
 // Imports
 import React from 'react'
 import classNames from 'classnames'
-import BrandName from './BrandName'
-import Pages from './Pages'
-import NextButton from './NextButton'
-import BackButton from './BackButton'
-import Social from './Social'
-import Copyright from './Copyright'
-import { getAppVersion, getEnv, styledConsole } from '../functions'
-import '../../scss/wonderland.scss'
+import BrandName from '@js/components/BrandName'
+import Pages from '@js/components/Pages'
+import NextButton from '@js/components/NextButton'
+import BackButton from '@js/components/BackButton'
+import Social from '@js/components/Social'
+import Copyright from '@js/components/Copyright'
+import { getAppVersion, getEnv, styledConsole } from '@js/functions'
+import '@scss/wonderland'
 
 class Wonderland extends React.Component {
   constructor() {

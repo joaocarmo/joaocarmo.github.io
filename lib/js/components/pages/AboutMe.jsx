@@ -1,8 +1,8 @@
 // Imports
 import React from 'react'
-import MoreButton from '../MoreButton'
-import { scrollToElement } from '../../functions'
-import '../../../scss/pages/about-me.scss'
+import MoreButton from '@js/components/MoreButton'
+import { scrollToElement } from '@js/functions'
+import '@scss/pages/about-me'
 
 const AboutMe = () => (
   <>

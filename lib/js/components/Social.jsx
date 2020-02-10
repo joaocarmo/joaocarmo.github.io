@@ -5,7 +5,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {
   faLinkedin, faGithub, faStackOverflow, faInstagram, faFlickr,
 } from '@fortawesome/free-brands-svg-icons'
-import '../../scss/social.scss'
+import '@scss/social'
 
 const socialLinks = [
   {

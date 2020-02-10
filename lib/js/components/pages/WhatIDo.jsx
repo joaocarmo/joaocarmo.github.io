@@ -2,8 +2,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe, faServer, faTerminal } from '@fortawesome/free-solid-svg-icons'
-import { scrollToElement } from '../../functions'
-import '../../../scss/pages/what-i-do.scss'
+import { scrollToElement } from '@js/functions'
+import '@scss/pages/what-i-do'
 
 const frontEndSkills = [
   'JavaScript (ES)',

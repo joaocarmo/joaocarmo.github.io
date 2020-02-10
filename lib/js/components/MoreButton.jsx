@@ -1,7 +1,7 @@
 // Imports
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../../scss/morebutton.scss'
+import '@scss/morebutton'
 
 const MoreButton = ({ onClick = () => null }) => (
   <button type="button" className="more" onClick={onClick}>

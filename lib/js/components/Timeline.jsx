@@ -1,7 +1,7 @@
 // Imports
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import '../../scss/timeline.scss'
+import '@scss/timeline'
 
 const Timeline = {}
 

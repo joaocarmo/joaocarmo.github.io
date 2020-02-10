@@ -1,12 +1,12 @@
 // Imports
 import React from 'react'
 import PropTypes from 'prop-types'
-import AboutMe from './pages/AboutMe'
-import WhatIDo from './pages/WhatIDo'
-import WhatIDid from './pages/WhatIDid'
-import WhatILike from './pages/WhatILike'
-import Social from './Social'
-import '../../scss/content.scss'
+import AboutMe from '@js/components/pages/AboutMe'
+import WhatIDo from '@js/components/pages/WhatIDo'
+import WhatIDid from '@js/components/pages/WhatIDid'
+import WhatILike from '@js/components/pages/WhatILike'
+import Social from '@js/components/Social'
+import '@scss/content'
 
 const Content = ({ activeIndex }) => (
   <div className="content">

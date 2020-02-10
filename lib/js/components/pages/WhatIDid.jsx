@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faGlobe, faLaptopCode, faProjectDiagram, faRobot, faUniversity,
 } from '@fortawesome/free-solid-svg-icons'
-import Accordion from '../Accordion'
-import Timeline from '../Timeline'
-import { scrollToElement } from '../../functions'
-import '../../../scss/pages/what-i-did.scss'
+import Accordion from '@js/components/Accordion'
+import Timeline from '@js/components/Timeline'
+import { scrollToElement } from '@js/functions'
+import '@scss/pages/what-i-did'
 
 const academicSkills = [
   {

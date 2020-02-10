@@ -24,5 +24,15 @@
   "rules": {
     "semi": ["error", "never"],
     "max-len": ["off"]
-  }
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@js", "./lib/js"],
+          ["@scss", "./lib/scss"],
+          ["@img", "./lib/img"]
+        ]
+      }
+    }
 }

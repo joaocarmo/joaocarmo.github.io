@@ -5,7 +5,7 @@ import {
   faCameraRetro, faCode, faCoffee, faFilm, faHeadphones, faLightbulb,
   faMicroscope, faSignature,
 } from '@fortawesome/free-solid-svg-icons'
-import '../../../scss/pages/what-i-like.scss'
+import '@scss/pages/what-i-like'
 
 const WhatILike = () => (
   <>

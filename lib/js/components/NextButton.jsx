@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import '../../scss/nextbutton.scss'
+import '@scss/nextbutton'
 
 const NextButton = ({ onClick = () => null }) => (
   <button
