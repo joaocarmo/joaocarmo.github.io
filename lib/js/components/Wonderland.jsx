@@ -8,6 +8,7 @@ import BackButton from '@js/components/BackButton'
 import Social from '@js/components/Social'
 import Copyright from '@js/components/Copyright'
 import { getAppVersion, getEnv, styledConsole } from '@js/functions'
+import WonderlandContext from '@js/components/utils/wonderland-context'
 import '@scss/wonderland'
 
 class Wonderland extends React.Component {
@@ -78,8 +79,10 @@ ${getEnv()}
             hide: !showPages,
           })}
         >
-          <Pages />
-          <BackButton onClick={this.handleOnClick} />
+          <WonderlandContext.Provider value={{ initialRender, showPages }}>
+            <Pages />
+            <BackButton onClick={this.handleOnClick} />
+          </WonderlandContext.Provider>
         </main>
       </>
     )
