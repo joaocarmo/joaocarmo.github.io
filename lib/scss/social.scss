@@ -11,5 +11,14 @@ div {
     a {
       outline-color: var(--outline-color);
     }
+
+    &.mobile {
+      display: none;
+
+      @media only screen and (max-device-width: 640px),
+        only screen and (max-width: 768px) {
+        display: inherit;
+      }
+    }
   }
 }

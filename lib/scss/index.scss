@@ -4,8 +4,8 @@
   --outline-color: #ff5700;
   --bg-dark-color: hsl(0, 0%, 17%);
   --bg-color: hsl(0, 0%, 27%);
-  --bg-image: url('../img/background.jpg');
-  --bg-about-image: url('../img/about-bg.jpg');
+  --bg-image: url('~@img/background.jpg');
+  --bg-about-image: url('~@img/about-bg.jpg');
   --bg-opacity: rgba(0, 0, 0, 0.4);
   --bg-pages-color: hsl(0, 0%, 95%);
   --loader-color: hsl(0, 0%, 95%);
@@ -41,6 +41,12 @@ body {
   /* Set a background color that will be displayed
      while the background image is loading */
   background-color: var(--bg-color);
+
+  /* Preload the next background */
+  &::after {
+    content: var(--bg-image);
+    display: none;
+  }
 }
 
 #blackout {

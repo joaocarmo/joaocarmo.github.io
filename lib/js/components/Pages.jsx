@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import NavBar from '@js/components/NavBar'
 import Content from '@js/components/Content'
+import { debugPrint } from '@js/functions'
 import '@scss/pages'
 
 const observableElementIds = [
@@ -14,7 +15,7 @@ const Pages = () => {
   const observerOpts = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.0,
+    threshold: 1.0,
   }
 
   const observerFn = (elementId, idx) => (entries) => {
@@ -34,8 +35,7 @@ const Pages = () => {
       try {
         observer.observe(target)
       } catch (error) {
-        /* eslint-disable-next-line no-console */
-        console.log(error.message)
+        debugPrint(error.message)
       }
     })
   }, [])
