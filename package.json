@@ -19,7 +19,7 @@
     "url": "git+https://github.com/joaocarmo/joaocarmo.github.io.git"
   },
   "license": "MIT",
-  "author": "Joao Carmo",
+  "author": "Joao Carmo (https://joaocarmo.com)",
   "main": "lib/js/index.js",
   "directories": {
     "lib": "lib"
@@ -30,7 +30,14 @@
     "build-prd": "NODE_ENV=production webpack --mode production",
     "clean": "rm -rf css/ js/ img/ fonts/ favicon.ico index.html service* precache* icon* manifest* workbox*",
     "start": "NODE_ENV=development webpack-dev-server --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --passWithNoTests",
+    "no-non-ascii": "scripts/no-non-ascii",
+    "add-all": "git add ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run no-non-ascii && npm run build && npm test && npm run add-all"
+    }
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -65,6 +72,8 @@
     "handlebars": "^4.7.3",
     "handlebars-loader": "^1.7.1",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
