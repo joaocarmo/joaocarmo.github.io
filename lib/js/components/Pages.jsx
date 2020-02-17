@@ -18,10 +18,19 @@ const Pages = () => {
     threshold: 1.0,
   }
 
+  let previousY = 0
+
   const observerFn = (elementId, idx) => (entries) => {
-    const [{ isIntersecting }] = entries
+    const [{ isIntersecting, boundingClientRect: { y: currentY } }] = entries
+    let scrollingUp = false
+    if (previousY < currentY) {
+      scrollingUp = true
+    }
+    previousY = currentY
     if (isIntersecting) {
       setActiveIndex(idx)
+    } else if (scrollingUp && idx === 1) {
+      setActiveIndex(idx - 1)
     }
   }
 

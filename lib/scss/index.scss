@@ -47,6 +47,8 @@ body {
     content: var(--bg-image);
     display: none;
   }
+
+  overscroll-behavior: none;
 }
 
 #blackout {

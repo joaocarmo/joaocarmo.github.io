@@ -11,6 +11,7 @@ main#pages {
   transition-duration: 0.2s;
   transition-delay: 0.2s;
   transition-timing-function: ease-in-out;
+  overscroll-behavior: none;
 
   &.show {
     height: 100vh;
