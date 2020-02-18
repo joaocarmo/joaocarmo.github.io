@@ -5,11 +5,17 @@ div {
     text-align: center;
 
     .spacer {
-      margin-left: 0.7em;
+      margin-left: 0.5em;
     }
 
     a {
       outline-color: var(--outline-color);
+      padding: 0.2em;
+      border-radius: 0.2em;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
     }
 
     &.mobile {

@@ -18,6 +18,7 @@
 
 html {
   overflow: auto;
+  overscroll-behavior: none;
 }
 
 body {
@@ -47,8 +48,6 @@ body {
     content: var(--bg-image);
     display: none;
   }
-
-  overscroll-behavior: none;
 }
 
 #blackout {
