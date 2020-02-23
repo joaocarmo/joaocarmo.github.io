@@ -1,4 +1,5 @@
 // Imports
+import 'intersection-observer'
 import React, { useState, useEffect } from 'react'
 import NavBar from '@js/components/NavBar'
 import Content from '@js/components/Content'
@@ -18,26 +19,20 @@ const Pages = () => {
     threshold: 1.0,
   }
 
-  let previousY = 0
-
   const observerFn = (elementId, idx) => (entries) => {
-    const [{ isIntersecting, boundingClientRect: { y: currentY } }] = entries
-    let scrollingUp = false
-    if (previousY < currentY) {
-      scrollingUp = true
-    }
-    previousY = currentY
+    const [{ isIntersecting }] = entries
     if (isIntersecting) {
       setActiveIndex(idx)
-    } else if (scrollingUp && idx === 1) {
-      setActiveIndex(idx - 1)
     }
   }
 
   useEffect(() => {
     observableElementIds.forEach((elementId, idx) => {
       const observer = new IntersectionObserver(observerFn(elementId, idx), observerOpts)
-      let target = document.querySelector(`#${elementId} h1`)
+      let target = document.querySelector(`#${elementId} .observer`)
+      if (!target) {
+        target = document.querySelector(`#${elementId} h1`)
+      }
       if (!target) {
         target = document.querySelector(`#${elementId} h2`)
       }

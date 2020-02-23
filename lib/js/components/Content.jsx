@@ -10,15 +10,19 @@ import '@scss/content'
 const Content = () => (
   <div className="content">
     <section id="about-me">
+      <div className="observer" />
       <AboutMe />
     </section>
     <section id="what-i-do">
+      <div className="observer" />
       <WhatIDo />
     </section>
     <section id="what-i-did">
+      <div className="observer" />
       <WhatIDid />
     </section>
     <section id="what-i-like">
+      <div className="observer" />
       <WhatILike />
     </section>
     <div className="mobile social">
