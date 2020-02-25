@@ -10,6 +10,7 @@ const { GenerateSW } = require('workbox-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 const babelOptions = require('./babel.config')
+const postCssOptions = require('./postcss.config')
 const packageOpts = require('./package.json')
 
 const mode = process.env.NODE_ENV
@@ -73,14 +74,12 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
+              importLoaders: 2,
             },
           },
-          // 'resolve-url-loader',
           {
             loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-            },
+            options: postCssOptions,
           },
           {
             loader: 'sass-loader',

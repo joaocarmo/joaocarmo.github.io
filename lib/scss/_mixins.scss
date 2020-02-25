@@ -1,3 +1,45 @@
+/// Browser hacks
+/// Source: browser strangeness
+///         https://browserstrangeness.github.io/css_hacks.html
+///         Jeff Clayton
+/// @access public
+/// @param {String} $browser
+/// @param {String} $selector
+/// @param {String} $property
+/// @param {*} $value
+///
+/// @example usage:
+///   @include browser-hack-for('safari', 'body', 'color', black);
+@mixin browser-hack-for($browser, $selector, $property, $value) {
+  @if $browser == 'safari' {
+    // Safari 7.1+ CSS Hack
+    _::-webkit-full-page-media, _:future, :root #{$selector} {
+      #{$property}: $value;
+    }
+  }
+
+  @else if $browser == 'firefox' {
+    // Firefox 1.5+ CSS Hack
+    _:-moz-only-whitespace, :root #{$selector} {
+      #{$property}: $value;
+    }
+  }
+
+  @else if $browser == 'edge' {
+    // MS Edge 12+ CSS Hack
+    _:-ms-lang(x), _:-webkit-full-screen, #{$selector} {
+      #{$property}: $value;
+    }
+  }
+
+  @else if $browser == 'ie' {
+    // MS IE 10-11 CSS Hack
+    _:-ms-input-placeholder, :root #{$selector} {
+      #{$property}: $value;
+    }
+  }
+}
+
 @mixin me-background {
   /* Location of the image */
   background-image: var(--bg-about-image);

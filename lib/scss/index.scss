@@ -1,20 +1,7 @@
-:root,
-[data-theme="default"] {
-  --text-color: hsl(0, 0%, 95%);
-  --outline-color: #ff5700;
-  --bg-dark-color: hsl(0, 0%, 17%);
-  --bg-color: hsl(0, 0%, 27%);
-  --bg-image: url('~@img/background.jpg');
-  --bg-about-image: url('~@img/about-bg.jpg');
-  --bg-opacity: rgba(0, 0, 0, 0.4);
-  --bg-pages-color: hsl(0, 0%, 95%);
-  --loader-color: hsl(0, 0%, 95%);
-  --loader-positon: 50%;
-  --loader-size: 4px;
-  --page-max-width: 1440px;
-  --section-min-height: 1060px;
-  --navbar-size: 240px;
-}
+@import 'settings';
+@import 'mixins';
+
+$bg-opacity: 0.4;
 
 html {
   overflow: auto;
@@ -45,7 +32,7 @@ body {
 
   /* Preload the next background */
   &::after {
-    content: var(--bg-image);
+    content: var(--bg-about-image);
     display: none;
   }
 }
@@ -56,7 +43,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 1);
   animation: fadeout;
   animation-duration: 2s;
   animation-delay: 5s;
@@ -70,7 +57,7 @@ body {
   }
 
   to {
-    background-color: var(--bg-opacity);
+    background-color: rgba(0, 0, 0, $bg-opacity);
   }
 }
 
