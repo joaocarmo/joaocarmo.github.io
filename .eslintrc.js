@@ -22,6 +22,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'jest',
   ],
   rules: {
     semi: ['error', 'never'],
