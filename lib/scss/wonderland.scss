@@ -1,8 +1,6 @@
 @import 'settings';
 @import 'mixins';
 
-$mainSectionSize: 10em;
-
 #brandname {
   @include no-scrollbar;
 
@@ -67,7 +65,22 @@ $mainSectionSize: 10em;
 @media only screen and (min-width: 768px) {
   #brandname-section {
     header {
-      width: 750px;
+      width: $brandHeaderSizeMobile;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 640px),
+  only screen and (max-width: 768px) {
+  #brandname-section {
+    header {
+      h1 {
+        font-size: $brandHeaderFontSizeMobileH1;
+      }
+
+      h4 {
+        font-size: $brandHeaderFontSizeMobileH4;
+      }
     }
   }
 }
