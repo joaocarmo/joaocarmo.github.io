@@ -6,7 +6,7 @@ import { scrollToElement } from '@js/functions'
 import '@scss/pages/what-i-do'
 
 const frontEndSkills = [
-  'JavaScript (ES)',
+  'JavaScript (ES) | TypeScript (TS)',
   'React.js | Vue.js',
   'HTML5',
   'CSS | SCSS',
