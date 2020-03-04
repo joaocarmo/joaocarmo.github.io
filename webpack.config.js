@@ -9,6 +9,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest')
 const { GenerateSW } = require('workbox-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
+const sharp = require('responsive-loader/sharp')
 const babelOptions = require('./babel.config')
 const postCssOptions = require('./postcss.config')
 const packageOpts = require('./package.json')
@@ -91,7 +92,18 @@ module.exports = {
       },
       { test: /\.hbs$/, use: ['handlebars-loader'] },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(jpe?g|png)$/i,
+        loader: 'responsive-loader',
+        options: {
+          adapter: sharp,
+          outputPath: `${relPathFix}/img`,
+          sizes: [200, 800, 1200],
+          placeholder: true,
+          placeholderSize: 50,
+        },
+      },
+      {
+        test: /\.(gif)$/i,
         loader: 'file-loader',
         options: {
           outputPath: `${relPathFix}/img`,

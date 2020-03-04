@@ -22,13 +22,18 @@ $bannerDuration: 2.5s;
   border-radius: 6px;
   z-index: 1;
   animation: showUp 0.3s ease-in-out $bannerDelay 1 normal forwards, showUp 0.3s ease-in-out ($bannerDelay + $bannerDuration) 1 reverse forwards;
+  transform: translate3d(0, 0, 0);
 }
 
 @media only screen and (max-device-width: 640px),
   only screen and (max-width: 768px) {
   #blackout::before {
-    width: $bannerWidthMobile;
-    margin-left: - $bannerWidthMobile / 2;
+    display: none;
+
+    /*
+      width: $bannerWidthMobile;
+      margin-left: - $bannerWidthMobile / 2;
+    */
   }
 }
 
