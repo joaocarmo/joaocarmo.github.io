@@ -128,7 +128,10 @@ const experience = [
     time: '2019-now',
     content: (
       <>
-        Member of the InterNations GO! engineering team.
+        Member of the IT Engineering Team behind the InterNations GO! project working as a front-end engineer on the public facing web application.
+        <br />
+        <br />
+        Technologies used included Vue.js, SCSS, Twig, Swagger UI, Site- Spect, Docker, AWS, CircleCI, PHP, Symfony, MySQL, GitHub, Bash, Python, ElasticSearch, TrackJS, Zeplin and Jira.
       </>
     ),
     color: 'hsl(300, 100%, 25%)',

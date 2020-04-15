@@ -23,7 +23,7 @@ const backEndSkills = [
 
 const unixSkills = [
   'Bash | Perl',
-  'Git',
+  'Git | Docker',
   'Apache',
   'npm.js | yarn',
   'LDAP',
