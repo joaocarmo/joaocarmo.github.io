@@ -195,9 +195,11 @@ module.exports = {
         },
       ],
     }),
-    new CopyPlugin([
-      { from: appleTouchIconFrom, to: appleTouchIconTo },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        { from: appleTouchIconFrom, to: appleTouchIconTo },
+      ],
+    }),
   ],
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],

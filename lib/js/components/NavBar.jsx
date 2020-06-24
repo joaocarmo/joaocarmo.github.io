@@ -24,9 +24,9 @@ const NavBar = ({ activeIndex } = {}) => (
     <div className="navbar name">
       <h3 className="navbar-name">João Carmo</h3>
       <h6 className="navbar-title">
-        Front-end engineer
+        Frontend engineer
         <br />
-        Back-end developer
+        Backend developer
       </h6>
       <div className="navbar-location">
         <p className="navbar-location-text">

@@ -124,11 +124,11 @@ const academicSkills = [
 const experience = [
   {
     key: 'five',
-    title: 'Front End Engineer',
-    time: '2019-now',
+    title: 'Frontend Engineer',
+    time: 'Dec 2019 - Jun 2020',
     content: (
       <>
-        Member of the IT Engineering Team behind the InterNations GO! project working as a front-end engineer on the public facing web application.
+        Member of the IT Engineering Team behind the InterNations GO! project working as a frontend engineer on the public facing web application.
         <br />
         <br />
         Technologies used included Vue.js, SCSS, Twig, Swagger UI, Site- Spect, Docker, AWS, CircleCI, PHP, Symfony, MySQL, GitHub, Bash, Python, ElasticSearch, TrackJS, Zeplin and Jira.
@@ -141,7 +141,7 @@ const experience = [
   {
     key: 'four',
     title: 'Full Stack Engineer / UNIX Systems Admin',
-    time: '2017-2019',
+    time: 'Aug 2017 - Dec 2019',
     content: (
       <>
         Development of an internal web application for asset management.
@@ -173,7 +173,7 @@ const experience = [
   {
     key: 'three',
     title: 'Full Stack Engineer',
-    time: '2016-2017',
+    time: 'Mar 2016 - Aug 2017',
     content: (
       <>
         Development of an internal web application for asset inventory.
@@ -199,7 +199,7 @@ const experience = [
   {
     key: 'two',
     title: 'IT Logistics',
-    time: '2015-2016',
+    time: 'Aug 2015 - Jan 2016',
     content: (
       <>
         Development of MS Excel Macros in VBA to automate repetitive administrative

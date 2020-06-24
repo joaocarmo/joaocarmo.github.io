@@ -88,7 +88,7 @@ const WhatIDo = () => (
       <div className="frontend">
         <div className="skill-box blue">
           <FontAwesomeIcon icon={faGlobe} />
-          <h6>Front-end</h6>
+          <h6>Frontend</h6>
           <div className="skill-box-content">
             <ul className="skill-list">
               {frontEndSkills.map((skill) => (
@@ -101,7 +101,7 @@ const WhatIDo = () => (
       <div className="backend">
         <div className="skill-box red">
           <FontAwesomeIcon icon={faServer} />
-          <h6>Back-end</h6>
+          <h6>Backend</h6>
           <div className="skill-box-content">
             <ul className="skill-list">
               {backEndSkills.map((skill) => (
