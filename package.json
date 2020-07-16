@@ -1,6 +1,6 @@
 {
   "name": "joaocarmo",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "private": true,
   "description": "my own personal website",
   "keywords": [
@@ -25,7 +25,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "build": "npm run clean && npm run build-prd",
+    "build": "yarn clean && yarn build-prd",
     "build-dev": "NODE_ENV=development webpack --mode development",
     "build-prd": "NODE_ENV=production webpack --mode production",
     "clean": "rm -rf css/ js/ img/ fonts/ favicon.ico index.html service* precache* icon* manifest* workbox*",
@@ -36,13 +36,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run no-non-ascii && npm run build && npm test && npm run add-all"
+      "pre-commit": "yarn no-non-ascii && yarn build && npm test && yarn add-all"
     }
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.29",
-    "@fortawesome/free-brands-svg-icons": "^5.13.1",
-    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "classnames": "^2.2.6",
     "intersection-observer": "^0.11.0",
@@ -54,24 +54,24 @@
     "typography-theme-alton": "^0.16.19"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/preset-env": "^7.10.3",
-    "@babel/preset-react": "^7.10.1",
-    "autoprefixer": "^9.8.4",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "autoprefixer": "^9.8.5",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
-    "copy-webpack-plugin": "^6.0.2",
+    "copy-webpack-plugin": "^6.0.3",
     "core-js": "^3.6.5",
     "css-loader": "^3.6.0",
-    "eslint": "^7.3.1",
+    "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jest": "^23.17.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.18.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
     "file-loader": "^6.0.0",
     "handlebars": "^4.7.6",
     "handlebars-loader": "^1.7.1",
@@ -87,13 +87,13 @@
     "postcss-scss": "^2.1.1",
     "regenerator-runtime": "^0.13.5",
     "responsive-loader": "^1.2.0",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^9.0.2",
     "sharp": "^0.25.4",
     "style-loader": "^1.2.1",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-webpack-plugin": "^2.1.0",
-    "terser-webpack-plugin": "^3.0.6",
+    "terser-webpack-plugin": "^3.0.7",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",

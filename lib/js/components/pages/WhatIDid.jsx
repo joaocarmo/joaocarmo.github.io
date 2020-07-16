@@ -2,7 +2,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faGlobe, faLaptopCode, faProjectDiagram, faRobot, faUniversity,
+  faFlask, faGlobe, faLaptopCode, faProjectDiagram, faRobot, faUniversity,
 } from '@fortawesome/free-solid-svg-icons'
 import Accordion from '@js/components/Accordion'
 import Timeline from '@js/components/Timeline'
@@ -123,6 +123,19 @@ const academicSkills = [
 
 const experience = [
   {
+    key: 'six',
+    title: 'Senior Software Engineer',
+    time: 'Jun 2020 - now',
+    content: (
+      <>
+        Member of the IT Engineering Team behind several internal software projects.
+      </>
+    ),
+    color: 'hsl(300, 100%, 25%)',
+    icon: <FontAwesomeIcon icon={faFlask} color="white" />,
+    where: 'Amyris, Inc.',
+  },
+  {
     key: 'five',
     title: 'Frontend Engineer',
     time: 'Dec 2019 - Jun 2020',
@@ -134,7 +147,7 @@ const experience = [
         Technologies used included Vue.js, SCSS, Twig, Swagger UI, Site- Spect, Docker, AWS, CircleCI, PHP, Symfony, MySQL, GitHub, Bash, Python, ElasticSearch, TrackJS, Zeplin and Jira.
       </>
     ),
-    color: 'hsl(300, 100%, 25%)',
+    color: 'hsl(300, 80%, 35%)',
     icon: <FontAwesomeIcon icon={faProjectDiagram} color="white" />,
     where: 'InterNations',
   },
@@ -166,7 +179,7 @@ const experience = [
         Negotiate and place orders with common carriers.
       </>
     ),
-    color: 'hsl(300, 80%, 25%)',
+    color: 'hsl(300, 60%, 45%)',
     icon: <FontAwesomeIcon icon={faLaptopCode} color="white" />,
     where: 'Synopsys, Inc.',
   },
@@ -192,7 +205,7 @@ const experience = [
         Create programs to perform data analysis and generate system reports.
       </>
     ),
-    color: 'hsl(300, 60%, 35%)',
+    color: 'hsl(300, 40%, 45%)',
     icon: <FontAwesomeIcon icon={faGlobe} color="white" />,
     where: 'Synopsys, Inc.',
   },
@@ -211,7 +224,7 @@ const experience = [
       </>
     ),
     extra: '',
-    color: 'hsl(300, 40%, 45%)',
+    color: 'hsl(300, 20%, 45%)',
     icon: <FontAwesomeIcon icon={faRobot} color="white" />,
     where: 'Synopsys, Inc.',
   },

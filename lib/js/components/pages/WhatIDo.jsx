@@ -7,10 +7,10 @@ import '@scss/pages/what-i-do'
 
 const frontEndSkills = [
   'JavaScript (ES) | TypeScript (TS)',
-  'React.js | Vue.js',
+  'React.js | React Native | Vue.js',
   'HTML5',
   'CSS | SCSS',
-  'Webpack',
+  'Webpack | Jest',
 ]
 
 const backEndSkills = [
