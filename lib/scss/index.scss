@@ -1,13 +1,9 @@
+@import 'globals';
 @import 'settings';
 @import 'mixins';
 @import 'banner';
 
 $bg-opacity: 0.4;
-
-html {
-  overflow: auto;
-  overscroll-behavior: none;
-}
 
 body {
   /* Location of the image */

@@ -127,9 +127,9 @@ const experience = [
     title: 'Senior Software Engineer',
     time: 'Jun 2020 - now',
     content: (
-      <>
+      <p>
         Member of the IT Engineering Team behind several internal software projects.
-      </>
+      </p>
     ),
     color: 'hsl(300, 100%, 25%)',
     icon: <FontAwesomeIcon icon={faFlask} color="white" />,
@@ -141,10 +141,12 @@ const experience = [
     time: 'Dec 2019 - Jun 2020',
     content: (
       <>
-        Member of the IT Engineering Team behind the InterNations GO! project working as a frontend engineer on the public facing web application.
-        <br />
-        <br />
-        Technologies used included Vue.js, SCSS, Twig, Swagger UI, Site- Spect, Docker, AWS, CircleCI, PHP, Symfony, MySQL, GitHub, Bash, Python, ElasticSearch, TrackJS, Zeplin and Jira.
+        <p>
+          Member of the IT Engineering Team behind the InterNations GO! project working as a frontend engineer on the public facing web application.
+        </p>
+        <p>
+          Technologies used included Vue.js, SCSS, Twig, Swagger UI, Site- Spect, Docker, AWS, CircleCI, PHP, Symfony, MySQL, GitHub, Bash, Python, ElasticSearch, TrackJS, Zeplin and Jira.
+        </p>
       </>
     ),
     color: 'hsl(300, 80%, 35%)',
@@ -157,27 +159,29 @@ const experience = [
     time: 'Aug 2017 - Dec 2019',
     content: (
       <>
-        Development of an internal web application for asset management.
-        Technologies used included React.js, Semantic UI, Webpack, Python, Flask, MongoDB.
-        <br />
-        <br />
-        Maintaining several legacy internal web applications.
-        Technologies used included jQuery, CSS, Perl, MS SharePoint (API).
-        <br />
-        <br />
-        Development of several micro service utilities such as Python Libraries / Modules,
-        CLI applications (POSIX compliant) and system maintenance scripts.
+        <p>
+          Development of an internal web application for asset management.
+          Technologies used included React.js, Semantic UI, Webpack, Python, Flask, MongoDB.
+        </p>
+        <p>
+          Maintaining several legacy internal web applications.
+          Technologies used included jQuery, CSS, Perl, MS SharePoint (API).
+        </p>
+        <p>
+          Development of several micro service utilities such as Python Libraries / Modules,
+          CLI applications (POSIX compliant) and system maintenance scripts.
+        </p>
       </>
     ),
     extra: (
-      <>
+      <p>
         Other duties included developing internal applications and automations as a full stack engineer integrating server/database maintenance and security protocol standards.
         Defining, designing and implementing network communications and solution improvements using the UNIX platform.
         Propose and implement system enhancements (software and hardware updates) that would improve the performance and reliability of the system.
         Coordinating terminal orders and cable installation, network system planning, upgrading, monitoring, testing and servicing.
         Approve action requests and specify purchase requirements.
         Negotiate and place orders with common carriers.
-      </>
+      </p>
     ),
     color: 'hsl(300, 60%, 45%)',
     icon: <FontAwesomeIcon icon={faLaptopCode} color="white" />,
@@ -189,21 +193,23 @@ const experience = [
     time: 'Mar 2016 - Aug 2017',
     content: (
       <>
-        Development of an internal web application for asset inventory.
-        Technologies used included React.js, Bootstrap, Webpack, Node.js, Express.js, MongoDB.
-        <br />
-        <br />
-        Development of an internal web application for personnel directory.
-        Technologies used included React.js, Semantic UI, Webpack, Ruby, Ruby on Rails, SQL Server, ElasticSearch.
+        <p>
+          Development of an internal web application for asset inventory.
+          Technologies used included React.js, Bootstrap, Webpack, Node.js, Express.js, MongoDB.
+        </p>
+        <p>
+          Development of an internal web application for personnel directory.
+          Technologies used included React.js, Semantic UI, Webpack, Ruby, Ruby on Rails, SQL Server, ElasticSearch.
+        </p>
       </>
     ),
     extra: (
-      <>
+      <p>
         Other duties included design, implement and manage internal IT support web portal and knowledge base.
         Work with IT teams on planning, organizing, writing, editing and publishing instructional and operational documents related to IT services and products.
         Implement self-service web apps for IT support process automation as a full-stack web developer.
         Create programs to perform data analysis and generate system reports.
-      </>
+      </p>
     ),
     color: 'hsl(300, 40%, 45%)',
     icon: <FontAwesomeIcon icon={faGlobe} color="white" />,
@@ -214,14 +220,14 @@ const experience = [
     title: 'IT Logistics',
     time: 'Aug 2015 - Jan 2016',
     content: (
-      <>
+      <p>
         Development of MS Excel Macros in VBA to automate repetitive administrative
         tasks.
         Monitoring and responding to the IT Logistics support queues.
         Assist in the SAP PC asset audit process.
         Work with the global IT teams on the technology refresh (TR) process.
         Monitoring and recording employee termination activities.
-      </>
+      </p>
     ),
     extra: '',
     color: 'hsl(300, 20%, 45%)',
