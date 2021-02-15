@@ -1,5 +1,5 @@
 :root,
-[data-theme="default"] {
+[data-theme='default'] {
   --text-color: hsl(0, 0%, 95%);
   --outline-color: #ff5700;
   --bg-dark-color: hsl(0, 0%, 17%);
@@ -19,7 +19,7 @@
 @media only screen and (max-device-width: 640px),
   only screen and (max-width: 768px) {
   :root,
-  [data-theme="default"] {
+  [data-theme='default'] {
     --bg-image: url('~@img/background.jpg?size=800');
     --bg-about-image: url('~@img/about-bg.jpg?size=800');
   }

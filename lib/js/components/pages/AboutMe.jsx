@@ -1,5 +1,4 @@
-// Imports
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import MoreButton from '@js/components/MoreButton'
 import { scrollToElement } from '@js/functions'
 import WonderlandContext from '@js/components/utils/wonderland-context'
@@ -22,8 +21,12 @@ const AboutMe = () => {
         </h1>
         <h5>
           ...and a coffee addict
-          <span role="img" aria-label="coffee" className="emoji">☕</span>
-          <span role="img" aria-label="love" className="emoji">♥️</span>
+          <span role="img" aria-label="coffee" className="emoji">
+            ☕
+          </span>
+          <span role="img" aria-label="love" className="emoji">
+            ♥️
+          </span>
         </h5>
         <MoreButton onClick={(e) => scrollToElement(e, 'what-i-do')} />
       </div>

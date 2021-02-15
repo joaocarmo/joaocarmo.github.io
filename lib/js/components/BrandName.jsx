@@ -1,15 +1,13 @@
-// Imports
-import React from 'react'
+import { Fragment } from 'react'
 
 const brandName = 'João Carmo'
 const tagLines = [
-  'Frontend Engineer',
-  'Backend developer',
-  'Open-Source contributor',
+  'Senior Software Engineer',
+  'Open-Source Enthusiast',
   'Photographer',
   'Poet',
-  'Knower of things',
-  'Coffee drinker',
+  'Knower Of things',
+  'Coffee Drinker',
 ]
 
 const BrandName = () => (
@@ -20,9 +18,7 @@ const BrandName = () => (
       </h1>
       <h4>
         {tagLines.map((tag) => (
-          <React.Fragment key={tag}>
-            {`${tag}. `}
-          </React.Fragment>
+          <Fragment key={tag}>{`${tag}. `}</Fragment>
         ))}
       </h4>
     </header>

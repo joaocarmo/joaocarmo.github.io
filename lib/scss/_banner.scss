@@ -12,7 +12,7 @@ $bannerDuration: 2.5s;
   top: 0;
   opacity: 0;
   left: 50%;
-  margin-left: - $bannerWidth / 2;
+  margin-left: -$bannerWidth / 2;
   width: $bannerWidth;
   height: $bannerHeight;
   line-height: $bannerHeight;
@@ -21,7 +21,9 @@ $bannerDuration: 2.5s;
   text-align: center;
   border-radius: 6px;
   z-index: 1;
-  animation: showUp 0.3s ease-in-out $bannerDelay 1 normal forwards, showUp 0.3s ease-in-out ($bannerDelay + $bannerDuration) 1 reverse forwards;
+  animation:
+    showUp 0.3s ease-in-out $bannerDelay 1 normal forwards,
+    showUp 0.3s ease-in-out ($bannerDelay + $bannerDuration) 1 reverse forwards;
   transform: translate3d(0, 0, 0);
 }
 

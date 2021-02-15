@@ -1,6 +1,5 @@
-// Imports
-import React from 'react'
-import classNames from 'classnames'
+import { Component } from 'react'
+import cx from 'classnames'
 import BrandName from '@js/components/BrandName'
 import Pages from '@js/components/Pages'
 import NextButton from '@js/components/NextButton'
@@ -11,7 +10,7 @@ import { getAppVersion, getEnv, styledConsole } from '@js/functions'
 import WonderlandContext from '@js/components/utils/wonderland-context'
 import '@scss/wonderland'
 
-class Wonderland extends React.Component {
+class Wonderland extends Component {
   constructor() {
     super()
 
@@ -49,7 +48,10 @@ ${getEnv()}
         if (this.wheelTimer) {
           clearTimeout(this.wheelTimer)
         }
-        this.wheelTimer = setTimeout(() => this.setState({ showPages: true }), 0)
+        this.wheelTimer = setTimeout(
+          () => this.setState({ showPages: true }),
+          0,
+        )
       }
     }
   }
@@ -61,7 +63,7 @@ ${getEnv()}
         <main
           id="brandname"
           onWheel={this.handleOnWheel}
-          className={classNames({
+          className={cx({
             'no-animation': !initialRender,
           })}
         >
@@ -74,7 +76,7 @@ ${getEnv()}
         </footer>
         <main
           id="pages"
-          className={classNames({
+          className={cx({
             show: showPages,
             hide: !showPages,
           })}

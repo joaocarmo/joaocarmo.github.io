@@ -48,7 +48,7 @@ ul.accordion {
 
       &::before,
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         width: 3px;
         height: 9px;
@@ -65,7 +65,7 @@ ul.accordion {
       }
     }
 
-    input[type=checkbox].accordion {
+    input[type='checkbox'].accordion {
       position: absolute;
       cursor: pointer;
       width: 100%;

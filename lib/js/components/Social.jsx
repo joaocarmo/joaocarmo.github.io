@@ -1,9 +1,12 @@
-// Imports
-import React from 'react'
+import { Fragment } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {
-  faLinkedin, faGithub, faStackOverflow, faInstagram, faFlickr,
+  faLinkedin,
+  faGithub,
+  faStackOverflow,
+  faInstagram,
+  faFlickr,
 } from '@fortawesome/free-brands-svg-icons'
 import '@scss/social'
 
@@ -54,10 +57,8 @@ const socialLinks = [
 
 const Social = () => (
   <div className="social">
-    {socialLinks.map(({
-      icon, name, url, ariaLabel,
-    }) => (
-      <React.Fragment key={name}>
+    {socialLinks.map(({ icon, name, url, ariaLabel }) => (
+      <Fragment key={name}>
         <a
           href={url}
           target="_blank"
@@ -68,7 +69,7 @@ const Social = () => (
           <FontAwesomeIcon icon={icon} />
         </a>
         <span className="spacer" />
-      </React.Fragment>
+      </Fragment>
     ))}
   </div>
 )

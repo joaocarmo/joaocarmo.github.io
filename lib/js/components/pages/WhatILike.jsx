@@ -1,9 +1,13 @@
-// Imports
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faCameraRetro, faCode, faCoffee, faFilm, faHeadphones, faLightbulb,
-  faMicroscope, faSignature,
+  faCameraRetro,
+  faCode,
+  faCoffee,
+  faFilm,
+  faHeadphones,
+  faLightbulb,
+  faMicroscope,
+  faSignature,
 } from '@fortawesome/free-solid-svg-icons'
 import '@scss/pages/what-i-like'
 
@@ -13,17 +17,11 @@ const WhatILike = () => (
     <div className="top-spacer" />
     <p className="idented smaller justified">
       I like to program, obviously. I always did, from a very young age, from
-      the times of IRC programs like
-      {' '}
-      <i>mIRC</i>
-      {' '}
-      and scripting them. From the era of console emulators and ROMs,
-      peer-to-peer and floppy disks. When games and apps were easy to hack and
-      crack... And now, we no longer use
-      {' '}
-      <i>Adobe Flash</i>
-      {' '}
-      to make corny web introductions and buttons. What an achievement!
+      the times of IRC programs like <i>mIRC</i> and scripting them. From the
+      era of console emulators and ROMs, peer-to-peer and floppy disks. When
+      games and apps were easy to hack and crack... And now, we no longer use{' '}
+      <i>Adobe Flash</i> to make corny web introductions and buttons. What an
+      achievement!
     </p>
     <div className="mid-spacer" />
     <div id="interests">

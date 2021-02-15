@@ -1,4 +1,3 @@
-// Import modules
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -12,10 +11,9 @@ const babelOptions = require('./babel.config')
 const postCssOptions = require('./postcss.config')
 const packageOpts = require('./package.json')
 
-const mode = process.env.NODE_ENV
-const styleLoader = (
+const mode = process.env.NODE_ENV || 'development'
+const styleLoader =
   mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader'
-)
 const relPathFix = mode === 'production' ? '' : '.'
 const title = 'Joao Carmo - WebMagician'
 const author = 'Joao Carmo'
@@ -23,20 +21,19 @@ const description = 'Help Joao in his great quest for web adventure !'
 const serviceWorker = 'service-worker.js'
 const appIcon = 'lib/img/my-icon.png'
 const appleTouchIcon = '/img/my-icon-192.png'
-const appleTouchIconFrom = path.resolve(path.join(__dirname, 'lib', appleTouchIcon))
+const appleTouchIconFrom = path.resolve(
+  path.join(__dirname, 'lib', appleTouchIcon),
+)
 const appleTouchIconTo = path.resolve(path.join(__dirname, 'img'))
 
 module.exports = {
   mode,
   context: path.join(__dirname, 'lib', 'js'),
-  entry: [
-    'core-js/stable',
-    'regenerator-runtime/runtime',
-    './index.jsx',
-  ],
+  entry: ['core-js/stable', 'regenerator-runtime/runtime', './index.jsx'],
   output: {
     path: __dirname,
     filename: './js/[name].js',
+    publicPath: '',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],
@@ -194,9 +191,7 @@ module.exports = {
       ],
     }),
     new CopyPlugin({
-      patterns: [
-        { from: appleTouchIconFrom, to: appleTouchIconTo },
-      ],
+      patterns: [{ from: appleTouchIconFrom, to: appleTouchIconTo }],
     }),
   ],
   devServer: {

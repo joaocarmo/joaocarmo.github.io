@@ -1,5 +1,4 @@
-// Imports
-import React, { useState } from 'react'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 import '@scss/timeline'
@@ -21,9 +20,7 @@ Container.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-const Content = ({
-  children, color, icon, time, title, where, extra,
-}) => {
+const Content = ({ children, color, icon, time, title, where, extra }) => {
   const [showExtra, setShowExtra] = useState(false)
 
   return (
@@ -37,16 +34,10 @@ const Content = ({
         </div>
         <div className="timeline-element-content">
           <div className="timeline-element-header">
-            <span className="timeline-element-title">
-              {title}
-            </span>
-            <span className="timeline-element-time">
-              {time}
-            </span>
+            <span className="timeline-element-title">{title}</span>
+            <span className="timeline-element-time">{time}</span>
           </div>
-          <div className="timeline-element-where">
-            {where}
-          </div>
+          <div className="timeline-element-where">{where}</div>
           <div className="timeline-element-text">
             {children}
             {extra && (

@@ -1,5 +1,3 @@
-// Imports
-import React from 'react'
 import AboutMe from '@js/components/pages/AboutMe'
 import WhatIDo from '@js/components/pages/WhatIDo'
 import WhatIDid from '@js/components/pages/WhatIDid'

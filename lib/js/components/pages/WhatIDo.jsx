@@ -1,7 +1,9 @@
-// Imports
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobe, faServer, faTerminal } from '@fortawesome/free-solid-svg-icons'
+import {
+  faGlobe,
+  faServer,
+  faTerminal,
+} from '@fortawesome/free-solid-svg-icons'
 import { scrollToElement } from '@js/functions'
 import '@scss/pages/what-i-do'
 
@@ -34,50 +36,44 @@ const WhatIDo = () => (
     <h2>Let&apos;s go for coffee...</h2>
     <div className="top-spacer" />
     <p className="idented smaller justified">
-      Hi! I&apos;m
-      {' '}
-      <strong>João</strong>
-      , born and raised in Portugal — where I currently reside.
-      My first contact with a computer was in the late 90s and I&apos;ve been
-      hooked ever since. When I was 15, I taught myself how to program and
-      design web pages using
-      {' '}
+      Hi! I&apos;m <strong>João</strong>, born and raised in Portugal — where I
+      currently reside. My first contact with a computer was in the late 90s and
+      I&apos;ve been hooked ever since. When I was 15, I taught myself how to
+      program and design web pages using{' '}
       <a href="https://www.php.net/" target="_blank" rel="noopener noreferrer">
         PHP
       </a>
-      . I also learned how to setup my local
-      {' '}
-      <a href="https://httpd.apache.org/" target="_blank" rel="noopener noreferrer">
+      . I also learned how to setup my local{' '}
+      <a
+        href="https://httpd.apache.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Apache
-      </a>
-      {' '}
-      server with a
-      {' '}
-      <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer">
+      </a>{' '}
+      server with a{' '}
+      <a
+        href="https://www.mysql.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         MySQL
-      </a>
-      {' '}
+      </a>{' '}
       instance, because I couldn&apos;t afford a server. Oh! And I remember, at
-      the time,
-      {' '}
-      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
+      the time,{' '}
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         JavaScript
-      </a>
-      {' '}
-      was
-      {' '}
-      <i>witchcraft</i>
-      {' '}
-      to me!
+      </a>{' '}
+      was <i>witchcraft</i> to me!
     </p>
     <p className="idented smaller justified">
       After a series of (un)fortunate events — which we can discuss in detail
-      over a
-      {' '}
-      <a
-        href="#what-i-did"
-        onClick={(e) => scrollToElement(e, 'what-i-did')}
-      >
+      over a{' '}
+      <a href="#what-i-did" onClick={(e) => scrollToElement(e, 'what-i-did')}>
         beer
       </a>
       , perhaps? — I ended up doing it for a living and I enjoy it enough to do

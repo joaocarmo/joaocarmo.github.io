@@ -1,6 +1,5 @@
-// Imports
-import React, { useState } from 'react'
-import classNames from 'classnames'
+import { useState } from 'react'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 import '@scss/popup'
 
@@ -17,7 +16,7 @@ const Popup = ({ content, children }) => {
     >
       {children}
       <span
-        className={classNames('popup-content', {
+        className={cx('popup-content', {
           show: isVisible,
         })}
       >

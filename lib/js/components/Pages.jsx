@@ -1,13 +1,15 @@
-// Imports
 import 'intersection-observer'
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import NavBar from '@js/components/NavBar'
 import Content from '@js/components/Content'
 import { debugPrint } from '@js/functions'
 import '@scss/pages'
 
 const observableElementIds = [
-  'about-me', 'what-i-do', 'what-i-did', 'what-i-like',
+  'about-me',
+  'what-i-do',
+  'what-i-did',
+  'what-i-like',
 ]
 
 const Pages = () => {
@@ -28,7 +30,10 @@ const Pages = () => {
 
   useEffect(() => {
     observableElementIds.forEach((elementId, idx) => {
-      const observer = new IntersectionObserver(observerFn(elementId, idx), observerOpts)
+      const observer = new IntersectionObserver(
+        observerFn(elementId, idx),
+        observerOpts,
+      )
       let target = document.querySelector(`#${elementId} .observer`)
       if (!target) {
         target = document.querySelector(`#${elementId} h1`)

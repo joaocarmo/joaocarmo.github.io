@@ -1,7 +1,5 @@
-// Imports
-import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import cx from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import Social from '@js/components/Social'
@@ -10,7 +8,7 @@ import me from '@img/avatar-me.jpg'
 import '@scss/navbar'
 
 const menuItems = [
-  { key: 'about-me', title: 'Hello, there !', action: '' },
+  { key: 'about-me', title: 'Hello there', action: '' },
   { key: 'what-i-do', title: 'What I do', action: '' },
   { key: 'what-i-did', title: 'What I did', action: '' },
   { key: 'what-i-like', title: 'What I like', action: '' },
@@ -30,9 +28,7 @@ const NavBar = ({ activeIndex } = {}) => (
       </h6>
       <div className="navbar-location">
         <p className="navbar-location-text">
-          <FontAwesomeIcon icon={faMapMarkerAlt} />
-          {' '}
-          Portugal
+          <FontAwesomeIcon icon={faMapMarkerAlt} /> Portugal
         </p>
       </div>
     </div>
@@ -40,9 +36,13 @@ const NavBar = ({ activeIndex } = {}) => (
       {menuItems.map(({ key, title }, idx) => (
         <button
           type="button"
-          className={classNames('navbar', {
-            active: activeIndex === idx,
-          }, 'item')}
+          className={cx(
+            'navbar',
+            {
+              active: activeIndex === idx,
+            },
+            'item',
+          )}
           onClick={(event) => scrollToElement(event, key)}
           key={key}
         >

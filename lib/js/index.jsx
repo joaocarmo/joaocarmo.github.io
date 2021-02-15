@@ -1,5 +1,3 @@
-// Imports
-import React from 'react'
 import ReactDOM from 'react-dom'
 import Typography from 'typography'
 import twinPeaksTheme from 'typography-theme-alton'
@@ -11,7 +9,4 @@ const typography = new Typography(twinPeaksTheme)
 typography.injectStyles()
 injectFonts(typography)
 
-ReactDOM.render(
-  <Wonderland />,
-  document.getElementById('main'),
-)
+ReactDOM.render(<Wonderland />, document.getElementById('main'))

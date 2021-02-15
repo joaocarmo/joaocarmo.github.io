@@ -22,7 +22,7 @@ $popupWidth: 200px;
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: - ($popupWidth / 2);
+  margin-left: -($popupWidth / 2);
 }
 
 .popup:focus {
@@ -31,7 +31,7 @@ $popupWidth: 200px;
 
 /* Popup arrow */
 .popup .popup-content::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 100%;
   left: 50%;

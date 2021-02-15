@@ -18,7 +18,7 @@ div#skills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "frontend backend unix";
+  grid-template-areas: 'frontend backend unix';
 
   .frontend {
     grid-area: frontend;
@@ -39,9 +39,9 @@ div#skills {
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
-      "frontend"
-      "backend"
-      "unix";
+      'frontend'
+      'backend'
+      'unix';
   }
 }
 

@@ -14,7 +14,7 @@ div#academic {
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
   grid-template-rows: auto;
-  grid-template-areas: "leftcol middlecol rightcol";
+  grid-template-areas: 'leftcol middlecol rightcol';
 
   .leftcol {
     grid-area: leftcol;
@@ -34,7 +34,7 @@ div#academic {
   div#academic {
     grid-template-columns: 0fr 1fr 0fr;
     grid-template-rows: auto;
-    grid-template-areas: "leftcol middlecol rightcol";
+    grid-template-areas: 'leftcol middlecol rightcol';
   }
 }
 

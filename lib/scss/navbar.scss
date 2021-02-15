@@ -39,8 +39,11 @@ div {
     }
 
     &.menu {
-      height: calc(100vh - #{$avatarHeight} - #{$nameTitleHeight} - #{$socialHeight} - #{$copyrightHeight});
-      min-height: (4  * $buttonHeight);
+      height:
+        calc(
+          100vh - #{$avatarHeight} - #{$nameTitleHeight} - #{$socialHeight} - #{$copyrightHeight}
+        );
+      min-height: (4 * $buttonHeight);
       padding-top: 1em;
       padding-bottom: 1em;
     }
