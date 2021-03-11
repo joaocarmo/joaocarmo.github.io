@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import cx from 'classnames'
+import cx from 'clsx'
 import PropTypes from 'prop-types'
 import '@scss/popup'
 

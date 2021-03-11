@@ -13,7 +13,6 @@ module.exports = {
     'plugin:jest/recommended',
     'airbnb-base',
     'prettier',
-    'prettier/react',
   ],
   parserOptions: {
     ecmaFeatures: {

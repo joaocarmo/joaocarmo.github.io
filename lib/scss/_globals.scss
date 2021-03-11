@@ -2,10 +2,10 @@
 @import '../../node_modules/normalize.css/normalize.css';
 
 html {
-  overflow: auto;
-  overscroll-behavior: none;
   box-sizing: border-box;
   line-height: 1.45;
+  overflow: auto;
+  overscroll-behavior: none;
 }
 
 *,

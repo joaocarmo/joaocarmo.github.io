@@ -1,28 +1,28 @@
 @import 'settings';
 
-$popupWidth: 200px;
+$popup-width: 200px;
 
 /* Popup container */
 .popup {
-  position: relative;
-  display: inline-block;
   cursor: pointer;
+  display: inline-block;
+  position: relative;
 }
 
 /* The actual popup (appears on top) */
 .popup .popup-content {
-  visibility: hidden;
-  width: $popupWidth;
   background-color: #555;
-  color: #fff;
-  text-align: center;
   border-radius: 6px;
+  bottom: 125%;
+  color: #fff;
+  left: 50%;
+  margin-left: -($popup-width / 2);
   padding: 8px 4px;
   position: absolute;
+  text-align: center;
+  visibility: hidden;
+  width: $popup-width;
   z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -($popupWidth / 2);
 }
 
 .popup:focus {
@@ -31,20 +31,20 @@ $popupWidth: 200px;
 
 /* Popup arrow */
 .popup .popup-content::after {
+  border-color: #555 transparent transparent;
+  border-style: solid;
+  border-width: 8px;
   content: '';
-  position: absolute;
-  top: 100%;
   left: 50%;
   margin-left: -5px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  position: absolute;
+  top: 100%;
 }
 
 /* Toggle this class when clicking on the popup container */
 .popup .show {
-  visibility: visible;
   animation: fadeIn 0.5s;
+  visibility: visible;
 }
 
 /* Add animation (fade in the popup) */

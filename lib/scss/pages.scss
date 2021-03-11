@@ -1,19 +1,19 @@
 @import 'settings';
 
 main#pages {
-  position: absolute;
-  z-index: 1;
+  background-color: hsl(0, 0%, 100%);
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  bottom: 0;
   left: 0;
-  width: 100%;
-  background-color: hsl(0, 0%, 100%);
-  transition: height;
-  transition-duration: 0.2s;
-  transition-delay: 0.2s;
-  transition-timing-function: ease-in-out;
   overscroll-behavior: none;
+  position: absolute;
+  transition: height;
+  transition-delay: 0.2s;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  width: 100%;
+  z-index: 1;
 
   &.show {
     height: 100vh;
@@ -27,14 +27,14 @@ main#pages {
 }
 
 .grid {
+  background-color: var(--bg-pages-color);
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-columns: var(--navbar-size) 1fr;
   height: 100vh;
-  width: 100%;
-  max-width: var(--page-max-width);
   margin: 0 auto;
-  background-color: var(--bg-pages-color);
-  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.2);
+  max-width: var(--page-max-width);
+  width: 100%;
 }
 
 @media only screen and (max-device-width: 640px),

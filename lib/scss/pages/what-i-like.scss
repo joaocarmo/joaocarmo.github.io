@@ -12,11 +12,11 @@ section#what-i-like {
 
 div#interests {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     'opensource science facts music'
     'cinema writing photography coffee';
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 
   .opensource {
     grid-area: opensource;
@@ -52,19 +52,19 @@ div#interests {
 
   @media only screen and (max-device-width: 640px),
     only screen and (max-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
       'opensource science'
       'facts music'
       'cinema writing'
       'photography coffee';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 }
 
 div.interest-box {
-  text-align: center;
   padding: 10px;
+  text-align: center;
 
   div.interest-icon {
     margin: 1em 0;

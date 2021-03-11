@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 const { GenerateSW } = require('workbox-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 const sharp = require('responsive-loader/sharp')
 const babelOptions = require('./babel.config')
@@ -52,13 +53,6 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: babelOptions,
-          },
-          {
-            loader: 'eslint-loader',
-            options: {
-              fix: true,
-              cache: true,
-            },
           },
         ],
       },
@@ -145,6 +139,11 @@ module.exports = {
       start_url: '/',
       scope: '/',
       display: 'standalone',
+    }),
+    new ESLintPlugin({
+      context: path.join(__dirname, 'lib', 'js'),
+      extensions: ['js', 'jsx'],
+      fix: true,
     }),
     new StylelintPlugin({
       context: path.join(__dirname, 'lib', 'scss'),

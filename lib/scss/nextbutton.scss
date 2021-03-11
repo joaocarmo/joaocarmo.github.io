@@ -1,28 +1,28 @@
 @import 'settings';
 @import 'mixins';
 
-$buttonWidth: 5em;
+$button-width: 5em;
 
 button {
   &.next {
-    position: absolute;
-    bottom: 10%;
-    left: calc(50% - #{$buttonWidth / 2});
-    height: 3em;
-    width: $buttonWidth;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: var(--text-color);
-    outline-color: var(--outline-color);
-    opacity: 0;
     animation: fadeinbtn;
-    animation-duration: 0.5s;
     animation-delay: 6s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
+    background: none;
+    border: 0;
+    bottom: 10%;
+    color: var(--text-color);
+    cursor: pointer;
+    height: 3em;
+    left: calc(50% - #{$button-width / 2});
+    opacity: 0;
+    outline-color: var(--outline-color);
+    padding: 0;
+    position: absolute;
     transition: transform 0.3s ease-out;
+    width: $button-width;
 
     &:hover {
       transform: translate(0, -5px);

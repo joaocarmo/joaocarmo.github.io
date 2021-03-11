@@ -1,8 +1,8 @@
 @import '../settings';
 
-$skillBoxHeight: 5em;
-$skillBoxHoverHeight: 14em;
-$skillBoxMargin: 10px;
+$skill-box-height: 5em;
+$skill-box-hover-height: 14em;
+$skill-box-margin: 10px;
 
 section#what-i-do {
   div.top-spacer {
@@ -16,9 +16,9 @@ section#what-i-do {
 
 div#skills {
   display: grid;
+  grid-template-areas: 'frontend backend unix';
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: 'frontend backend unix';
 
   .frontend {
     grid-area: frontend;
@@ -36,48 +36,48 @@ div#skills {
 @media only screen and (max-device-width: 640px),
   only screen and (max-width: 600px) {
   div#skills {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
     grid-template-areas:
       'frontend'
       'backend'
       'unix';
+    grid-template-columns: auto;
+    grid-template-rows: auto;
   }
 }
 
 div.skill-box {
-  height: $skillBoxHeight;
   background-color: hsl(0, 0%, 100%);
-  margin: $skillBoxMargin;
-  padding: 10px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #000;
   box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+  height: $skill-box-height;
+  margin: $skill-box-margin;
+  padding: 10px;
   transition: 0.4s;
 
   div.skill-box-content {
-    max-height: 0;
     color: hsl(0, 0%, 0%);
-    visibility: hidden;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s;
+    visibility: hidden;
 
     ul.skill-list {
       margin-left: 1.25em;
 
       li {
         font-size: 0.8em;
-        padding: 0.2em;
         line-height: 1em;
+        padding: 0.2em;
         user-select: none;
       }
     }
   }
 
   &:hover {
-    height: $skillBoxHoverHeight;
+    height: $skill-box-hover-height;
 
     div.skill-box-content {
-      max-height: calc(#{$skillBoxHoverHeight} - #{$skillBoxHeight});
+      max-height: calc(#{$skill-box-hover-height} - #{$skill-box-height});
       visibility: visible;
     }
   }

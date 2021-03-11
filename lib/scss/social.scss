@@ -3,17 +3,17 @@
 div {
   &.social {
     position: relative;
-    width: 100%;
     text-align: center;
+    width: 100%;
 
     .spacer {
       margin-left: 0.5em;
     }
 
     a {
+      border-radius: 0.2em;
       outline-color: var(--outline-color);
       padding: 0.2em;
-      border-radius: 0.2em;
 
       &:hover {
         background-color: rgba(255, 255, 255, 0.8);

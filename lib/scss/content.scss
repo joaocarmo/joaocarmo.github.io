@@ -9,18 +9,18 @@ div.content {
   overflow-y: auto;
 
   section {
-    position: relative;
     min-height: 100vh;
     padding: 2em;
+    position: relative;
 
     h1 {
-      text-transform: uppercase;
       letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
     h2 {
-      text-transform: uppercase;
       letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
   }
 

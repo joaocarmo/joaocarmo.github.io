@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import clsx from 'clsx'
+import cx from 'clsx'
 import '@scss/timeline'
 
 const Timeline = {}
@@ -50,7 +50,7 @@ const Content = ({ children, color, icon, time, title, where, extra }) => {
                   {showExtra ? 'show less' : 'show more'}
                 </button>
                 <div
-                  className={clsx(
+                  className={cx(
                     'timeline-element-extra-text',
                     !showExtra && 'element-hidden',
                     showExtra && 'element-visible',

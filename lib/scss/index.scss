@@ -6,6 +6,13 @@
 $bg-opacity: 0.4;
 
 body {
+  /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: var(--bg-color);
   /* Location of the image */
   background-image: var(--bg-image);
 
@@ -15,17 +22,9 @@ body {
   /* Background image doesn't tile */
   background-repeat: no-repeat;
 
-  /* Background image is fixed in the viewport so that it doesn't move when
-     the content's height is greater than the image's height */
-  background-attachment: fixed;
-
   /* This is what makes the background image rescale based
      on the container's size */
   background-size: cover;
-
-  /* Set a background color that will be displayed
-     while the background image is loading */
-  background-color: var(--bg-color);
 
   /* Preload the next background */
   &::after {
@@ -35,17 +34,17 @@ body {
 }
 
 #blackout {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 1);
   animation: fadeout;
-  animation-duration: 2s;
   animation-delay: 5s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
+  background-color: rgba(0, 0, 0, 1);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 @keyframes fadeout {
@@ -61,22 +60,22 @@ body {
 .loader:empty,
 .loader:empty::before,
 .loader:empty::after {
-  border-radius: 50%;
-  width: 2.5em;
-  height: 2.5em;
   animation: loadanim 1.8s infinite ease-in-out;
   animation-fill-mode: both;
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
 }
 
 .loader:empty {
-  position: absolute;
-  top: var(--loader-positon);
-  left: var(--loader-positon);
+  animation-delay: -0.16s;
   color: var(--loader-color);
   font-size: var(--loader-size);
+  left: var(--loader-positon);
+  position: absolute;
   text-indent: -9999em;
+  top: var(--loader-positon);
   transform: translateZ(0);
-  animation-delay: -0.16s;
 }
 
 .loader:empty::before,
@@ -87,8 +86,8 @@ body {
 }
 
 .loader:empty::before {
-  left: -3.5em;
   animation-delay: -0.32s;
+  left: -3.5em;
 }
 
 .loader:empty::after {

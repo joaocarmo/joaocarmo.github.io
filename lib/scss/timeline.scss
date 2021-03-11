@@ -1,77 +1,77 @@
 @import 'settings';
 
-$timelineColor: hsl(0, 0%, 90%);
+$timeline-color: hsl(0, 0%, 90%);
 
 div.timeline {
-  position: relative;
   margin-bottom: 30px;
+  position: relative;
 
   &::before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 4px;
-    background-color: $timelineColor;
-    top: 20px;
+    background-color: $timeline-color;
     bottom: 20px;
+    content: '';
+    display: block;
     margin-left: 29px;
+    position: absolute;
+    top: 20px;
+    width: 4px;
   }
 
   &::after {
+    clear: both;
     content: ' ';
     display: table;
-    clear: both;
   }
 
   article.timeline-element {
-    position: relative;
-    margin-top: 5px;
-    margin-left: 30px;
-    margin-bottom: 10px;
     clear: both;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-top: 5px;
+    position: relative;
 
     div.timeline-element-inner {
-      position: relative;
       margin-left: -20px;
+      position: relative;
 
       div.timeline-element-icon {
-        display: block;
-        width: 40px;
-        height: 40px;
-        background-color: $timelineColor;
+        background-color: $timeline-color;
         border-radius: 50%;
-        text-align: center;
-        box-shadow: 0 0 0 5px $timelineColor;
-        line-height: 40px;
+        box-shadow: 0 0 0 5px $timeline-color;
+        display: block;
         float: left;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        width: 40px;
 
         &:last-of-type {
-          width: 16px;
+          background: var(--bg-pages-color);
           height: 16px;
           margin-left: 13px;
-          background: var(--bg-pages-color);
+          width: 16px;
         }
       }
 
       div.timeline-element-content {
-        position: relative;
-        background-color: $timelineColor;
-        padding: 1.5em;
-        margin-left: 60px;
         background-clip: padding-box;
+        background-color: $timeline-color;
+        margin-left: 60px;
+        padding: 1.5em;
+        position: relative;
 
         &::after {
-          content: '';
-          display: block;
-          position: absolute;
-          width: 0;
-          height: 0;
+          border-color: transparent $timeline-color transparent transparent;
           border-style: solid;
           border-width: 9px 9px 9px 0;
-          border-color: transparent $timelineColor transparent transparent;
+          content: '';
+          display: block;
+          height: 0;
           left: 0;
-          top: 10px;
           margin-left: -9px;
+          position: absolute;
+          top: 10px;
+          width: 0;
         }
 
         div.timeline-element-header {
@@ -80,54 +80,54 @@ div.timeline {
 
           span.timeline-element-title {
             display: inline-block;
-            width: 70%;
-            text-align: left;
-            font-weight: 500;
             font-size: 0.9em;
+            font-weight: 500;
             opacity: 0.9;
+            text-align: left;
+            width: 70%;
           }
 
           span.timeline-element-time {
             display: inline-block;
-            width: 30%;
+            font-size: 0.8em;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            opacity: 0.6;
             text-align: right;
             text-transform: lowercase;
-            letter-spacing: 0.1em;
-            font-weight: 400;
-            font-size: 0.8em;
-            opacity: 0.6;
+            width: 30%;
           }
         }
 
         div.timeline-element-where {
+          border-top: 1px dotted hsl(0, 0%, 70%);
           font-size: 0.7em;
           font-weight: 600;
-          border-top: 1px dotted hsl(0, 0%, 70%);
         }
 
         div.timeline-element-text {
-          text-align: justify;
-          margin-top: 1em;
           font-size: 0.85em;
+          margin-top: 1em;
           opacity: 0.8;
+          text-align: justify;
 
           div.timeline-element-extra {
             margin-top: 1.5em;
 
             button.timeline-extra {
-              display: block;
               background: none;
-              border: none;
-              padding: 0;
+              border: 0;
               color: #069;
-              text-decoration: underline;
               cursor: pointer;
+              display: block;
+              padding: 0;
+              text-decoration: underline;
 
               &:focus {
-                outline-style: dotted;
-                outline-width: 1px;
                 outline-color: hsl(0, 0%, 40%);
                 outline-offset: 0.2em;
+                outline-style: dotted;
+                outline-width: 1px;
               }
             }
 

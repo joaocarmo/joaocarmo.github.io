@@ -2,23 +2,23 @@
 
 button {
   &.more {
-    color: var(--text-color);
-    height: 3em;
-    width: 17em;
+    animation: fadeinbtn;
+    animation-delay: 4s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
     background: none;
     border: 2px solid;
     border-radius: 4px;
-    text-transform: uppercase;
-    padding: 0;
+    color: var(--text-color);
     cursor: pointer;
+    height: 3em;
+    opacity: 0;
     outline-color: var(--outline-color);
     overflow-x: hidden;
-    opacity: 0;
-    animation: fadeinbtn;
-    animation-duration: 0.5s;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+    padding: 0;
+    text-transform: uppercase;
+    width: 17em;
 
     &:hover {
       border: 1px solid;

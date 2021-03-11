@@ -3,49 +3,47 @@
 
 #brandname {
   @include no-scrollbar;
+  color: var(--text-color);
 
   height: 100%;
-  color: var(--text-color);
   overscroll-behavior: none;
 }
 
 #brandname-section {
+  height: $main-section-size;
   position: absolute;
-  top: calc(50% - #{($mainSectionSize / 2)});
-  height: $mainSectionSize;
-  width: 100%;
   text-align: center;
+  top: calc(50% - #{($main-section-size / 2)});
+  width: 100%;
 
   header {
     display: inline-block;
     width: 90%;
 
     h1 {
-      text-transform: uppercase;
-      letter-spacing: 0.4em;
-      opacity: 0;
-
       /* Fade in animation */
       animation: fadeinbrand;
-      animation-duration: 2s;
       animation-delay: 1s;
-      animation-timing-function: ease-in-out;
+      animation-duration: 2s;
       animation-fill-mode: forwards;
       animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+      letter-spacing: 0.4em;
+      opacity: 0;
+      text-transform: uppercase;
     }
 
     h4 {
-      line-height: 2em;
-      text-transform: uppercase;
-      opacity: 0;
-
       /* Fade in animation */
       animation: fadeintext;
-      animation-duration: 4s;
       animation-delay: 3s;
-      animation-timing-function: ease-out;
+      animation-duration: 4s;
       animation-fill-mode: forwards;
       animation-iteration-count: 1;
+      animation-timing-function: ease-out;
+      line-height: 2em;
+      opacity: 0;
+      text-transform: uppercase;
     }
   }
 
@@ -65,7 +63,7 @@
 @media only screen and (min-width: 768px) {
   #brandname-section {
     header {
-      width: $brandHeaderSizeMobile;
+      width: $brand-header-size-mobile;
     }
   }
 }
@@ -75,50 +73,50 @@
   #brandname-section {
     header {
       h1 {
-        font-size: $brandHeaderFontSizeMobileH1;
+        font-size: $brand-header-font-size-hobile-h1;
       }
 
       h4 {
-        font-size: $brandHeaderFontSizeMobileH4;
+        font-size: $brand-header-font-size-mobile-h4;
       }
     }
   }
 }
 
 footer.brandname {
-  color: var(--text-color);
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-
-  p {
-    position: relative;
-    top: 0.9em;
-    width: 100%;
-    text-align: center;
-    font-size: 0.7em;
-    color: hsl(0, 0%, 95%);
-  }
-
-  opacity: 0;
 
   /* Fade in animation */
   animation: fadeintext;
-  animation-duration: 2s;
   animation-delay: 4s;
-  animation-timing-function: ease-out;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  bottom: 0;
+  color: var(--text-color);
+
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+
+  p {
+    color: hsl(0, 0%, 95%);
+    font-size: 0.7em;
+    position: relative;
+    text-align: center;
+    top: 0.9em;
+    width: 100%;
+  }
 }
 
 @keyframes fadeinbrand {
   from {
-    opacity: 0;
     letter-spacing: 0.3em;
+    opacity: 0;
   }
 
   to {
-    opacity: 1;
     letter-spacing: 0.4em;
+    opacity: 1;
   }
 }
 

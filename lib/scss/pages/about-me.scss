@@ -2,9 +2,9 @@
 
 section#about-me {
   div.starter {
-    position: absolute;
     bottom: 15%;
     left: 60px;
+    position: absolute;
 
     h1 {
       color: var(--text-color);
@@ -12,10 +12,10 @@ section#about-me {
       text-transform: uppercase;
 
       span {
-        opacity: 0;
         animation: aboutheader;
         animation-duration: 1s;
         animation-fill-mode: forwards;
+        opacity: 0;
 
         &.first {
           animation-delay: 1s;
@@ -28,29 +28,29 @@ section#about-me {
     }
 
     h5 {
+      animation: aboutsubheader;
+      animation-delay: 3s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
       color: hsl(0, 0%, 85%);
       font-style: italic;
-      text-transform: lowercase;
       letter-spacing: 0.1em;
       margin-left: 3em;
       opacity: 0;
-      animation: aboutsubheader;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-delay: 3s;
+      text-transform: lowercase;
     }
   }
 }
 
 @keyframes aboutheader {
   from {
-    opacity: 0;
     letter-spacing: inherit;
+    opacity: 0;
   }
 
   to {
-    opacity: 1;
     letter-spacing: 0.1em;
+    opacity: 1;
   }
 }
 

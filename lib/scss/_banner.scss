@@ -1,30 +1,30 @@
-$bannerContent: 'Try me with JavaScript disabled !';
-$bannerWidth: 40vw;
-$bannerWidthMobile: 80vw;
-$bannerHeight: 50px;
-$bannerTopPos: 40px;
-$bannerDelay: 7.5s;
-$bannerDuration: 2.5s;
+$banner-content: 'Try me with JavaScript disabled !';
+$banner-width: 40vw;
+$banner-width-mobile: 80vw;
+$banner-height: 50px;
+$banner-top-pos: 40px;
+$banner-delay: 7.5s;
+$banner-duration: 2.5s;
 
 #blackout::before {
-  content: $bannerContent;
-  position: fixed;
-  top: 0;
-  opacity: 0;
-  left: 50%;
-  margin-left: -$bannerWidth / 2;
-  width: $bannerWidth;
-  height: $bannerHeight;
-  line-height: $bannerHeight;
-  background-color: rgba(255, 255, 255, 0);
-  color: var(--text-color);
-  text-align: center;
-  border-radius: 6px;
-  z-index: 1;
   animation:
-    showUp 0.3s ease-in-out $bannerDelay 1 normal forwards,
-    showUp 0.3s ease-in-out ($bannerDelay + $bannerDuration) 1 reverse forwards;
+    showUp 0.3s ease-in-out $banner-delay 1 normal forwards,
+    showUp 0.3s ease-in-out ($banner-delay + $banner-duration) 1 reverse forwards;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 6px;
+  color: var(--text-color);
+  content: $banner-content;
+  height: $banner-height;
+  left: 50%;
+  line-height: $banner-height;
+  margin-left: -$banner-width / 2;
+  opacity: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
   transform: translate3d(0, 0, 0);
+  width: $banner-width;
+  z-index: 1;
 }
 
 @media only screen and (max-device-width: 640px),
@@ -33,22 +33,22 @@ $bannerDuration: 2.5s;
     display: none;
 
     /*
-      width: $bannerWidthMobile;
-      margin-left: - $bannerWidthMobile / 2;
+      width: $banner-width-mobile;
+      margin-left: - $banner-width-mobile / 2;
     */
   }
 }
 
 @keyframes showUp {
   from {
-    top: 0;
-    opacity: 0;
     background-color: rgba(255, 255, 255, 0);
+    opacity: 0;
+    top: 0;
   }
 
   to {
-    top: $bannerTopPos;
-    opacity: 1;
     background-color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    top: $banner-top-pos;
   }
 }

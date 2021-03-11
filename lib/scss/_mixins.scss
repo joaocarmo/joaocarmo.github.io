@@ -47,6 +47,9 @@
 }
 
 @mixin me-background {
+  /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
   /* Location of the image */
   background-image: var(--bg-about-image);
 
@@ -56,25 +59,20 @@
   /* Background image doesn't tile */
   background-repeat: no-repeat;
 
-  /* Background image is fixed in the viewport so that it doesn't move when
-     the content's height is greater than the image's height */
-  background-attachment: fixed;
-
   /* This is what makes the background image rescale based
      on the container's size */
   background-size: cover;
 }
 
 @mixin no-scrollbar {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
   ::-webkit-scrollbar {
     display: none; /* Chrome Safari */
   }
-
-  -ms-overflow-style: none; /* IE 10+ */
-  scrollbar-width: none; /* Firefox */
 }
 
 @mixin visible-no-animation {
-  opacity: 1;
   animation: none;
+  opacity: 1;
 }

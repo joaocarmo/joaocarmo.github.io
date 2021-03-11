@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import cx from 'classnames'
+import cx from 'clsx'
 import BrandName from '@js/components/BrandName'
 import Pages from '@js/components/Pages'
 import NextButton from '@js/components/NextButton'
@@ -38,13 +38,15 @@ ${getEnv()}
 
   handleOnClick() {
     const { showPages } = this.state
+
     this.setState({ showPages: !showPages, initialRender: false })
   }
 
-  handleOnWheel(event) {
+  handleOnWheel({ nativeEvent: { wheelDelta, deltaY } }) {
     const { showPages } = this.state
+
     if (!showPages) {
-      if (event.nativeEvent.wheelDelta < 0 && event.nativeEvent.deltaY > 100) {
+      if (wheelDelta < 0 && deltaY > 100) {
         if (this.wheelTimer) {
           clearTimeout(this.wheelTimer)
         }
@@ -58,6 +60,7 @@ ${getEnv()}
 
   render() {
     const { initialRender, showPages } = this.state
+
     return (
       <>
         <main
