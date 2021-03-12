@@ -1,0 +1,89 @@
+$app-size: 24vw;
+$max-app-size: 160px;
+$blur-duration: 0.25s;
+$width-duration: 0.25s;
+$opacity-duration: 0.25s;
+
+.background-blur {
+  align-items: center;
+  backdrop-filter: blur(0);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all $blur-duration ease-out;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1;
+}
+
+.launchpad-open {
+  backdrop-filter: blur(20px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.launchpad-apps {
+  align-items: center;
+  background-color: hsla(360, 100%, 100%, 0.6);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow: auto;
+  padding: 2em;
+  transition: width $width-duration ease-out $blur-duration;
+  width: 60%;
+}
+
+.launchpad-apps-open {
+  width: 80%;
+}
+
+.launchpad-app {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  padding: 1.2em;
+  transition: opacity $opacity-duration ease-out ($blur-duration + $width-duration);
+}
+
+.launchpad-app-open {
+  opacity: 1;
+}
+
+.launchpad-app-img {
+  height: $app-size;
+  max-height: $max-app-size;
+  max-width: $max-app-size;
+  width: $app-size;
+}
+
+.launchpad-app-label {
+  color: hsl(360, 100%, 100%);
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+@media only screen and (max-device-width: 640px),
+  only screen and (max-width: 768px) {
+  .launchpad-apps {
+    height: 60%;
+    transition: height $width-duration ease-out $blur-duration;
+    width: 80%;
+  }
+
+  .launchpad-apps-open {
+    height: 80%;
+  }
+}

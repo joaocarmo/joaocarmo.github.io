@@ -9,9 +9,9 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
+    'airbnb-base',
     'plugin:react-hooks/recommended',
     'plugin:jest/recommended',
-    'airbnb-base',
     'prettier',
   ],
   parserOptions: {

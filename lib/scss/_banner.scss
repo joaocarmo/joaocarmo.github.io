@@ -24,7 +24,7 @@ $banner-duration: 2.5s;
   top: 0;
   transform: translate3d(0, 0, 0);
   width: $banner-width;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media only screen and (max-device-width: 640px),

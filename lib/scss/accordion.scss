@@ -31,7 +31,7 @@ ul.accordion {
     padding: 25px;
     position: relative;
     transition: margin-top 0.25s ease-in-out;
-    z-index: 2;
+    z-index: 3;
   }
 
   li.accordion {
@@ -71,7 +71,7 @@ ul.accordion {
       opacity: 0;
       position: absolute;
       width: 100%;
-      z-index: 1;
+      z-index: 2;
 
       &:checked {
         ~ article.accordion {

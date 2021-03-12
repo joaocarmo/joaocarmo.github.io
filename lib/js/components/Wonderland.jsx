@@ -1,13 +1,14 @@
 import { Component } from 'react'
 import cx from 'clsx'
-import BrandName from '@js/components/BrandName'
-import Pages from '@js/components/Pages'
-import NextButton from '@js/components/NextButton'
 import BackButton from '@js/components/BackButton'
-import Social from '@js/components/Social'
+import BrandName from '@js/components/BrandName'
 import Copyright from '@js/components/Copyright'
-import { getAppVersion, getEnv, styledConsole } from '@js/functions'
+import Launchpad from '@js/components/Launchpad'
+import NextButton from '@js/components/NextButton'
+import Pages from '@js/components/Pages'
+import Social from '@js/components/Social'
 import WonderlandContext from '@js/components/utils/wonderland-context'
+import { getAppVersion, getEnv, styledConsole } from '@js/functions'
 import '@scss/wonderland'
 
 class Wonderland extends Component {
@@ -16,13 +17,15 @@ class Wonderland extends Component {
 
     this.state = {
       initialRender: true,
+      launchpadOpen: false,
       showPages: false,
     }
 
     this.wheelTimer = null
 
-    this.handleOnClick = this.handleOnClick.bind(this)
     this.handleOnWheel = this.handleOnWheel.bind(this)
+    this.toggleLaunchpad = this.toggleLaunchpad.bind(this)
+    this.togglePages = this.togglePages.bind(this)
   }
 
   componentDidMount() {
@@ -36,7 +39,13 @@ ${getEnv()}
 `)
   }
 
-  handleOnClick() {
+  toggleLaunchpad() {
+    const { launchpadOpen } = this.state
+
+    this.setState({ launchpadOpen: !launchpadOpen })
+  }
+
+  togglePages() {
     const { showPages } = this.state
 
     this.setState({ showPages: !showPages, initialRender: false })
@@ -59,7 +68,7 @@ ${getEnv()}
   }
 
   render() {
-    const { initialRender, showPages } = this.state
+    const { initialRender, launchpadOpen, showPages } = this.state
 
     return (
       <>
@@ -71,7 +80,7 @@ ${getEnv()}
           })}
         >
           <BrandName />
-          <NextButton onClick={this.handleOnClick} />
+          <NextButton onClick={this.toggleLaunchpad} />
         </main>
         <footer className="brandname">
           <Social />
@@ -86,9 +95,14 @@ ${getEnv()}
         >
           <WonderlandContext.Provider value={{ initialRender, showPages }}>
             <Pages />
-            <BackButton onClick={this.handleOnClick} />
+            <BackButton onClick={this.togglePages} />
           </WonderlandContext.Provider>
         </main>
+        <Launchpad
+          open={launchpadOpen}
+          onClickPages={this.togglePages}
+          onClose={this.toggleLaunchpad}
+        />
       </>
     )
   }

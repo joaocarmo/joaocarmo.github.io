@@ -13,7 +13,7 @@ main#pages {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 
   &.show {
     height: 100vh;
