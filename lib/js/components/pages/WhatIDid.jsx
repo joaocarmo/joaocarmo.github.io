@@ -3,6 +3,7 @@ import {
   faFlask,
   faGlobe,
   faLaptopCode,
+  faMicroscope,
   faProjectDiagram,
   faRobot,
   faUniversity,
@@ -119,9 +120,22 @@ const academicSkills = [
 
 const experience = [
   {
+    key: 'seven',
+    title: 'Senior Software Engineer',
+    time: 'Jun 2021 - now',
+    content: (
+      <>
+        <p>Member of the Frontend Engineering team.</p>
+      </>
+    ),
+    color: 'hsl(0, 0%, 0%)',
+    icon: <FontAwesomeIcon icon={faMicroscope} color="white" />,
+    where: 'ONI (Oxford Nanoimaging Limited)',
+  },
+  {
     key: 'six',
     title: 'Senior Software Engineer',
-    time: 'Jun 2020 - now',
+    time: 'Jun 2020 - Jun 2021',
     content: (
       <>
         <p>

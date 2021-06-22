@@ -18,26 +18,20 @@
     :root #{$selector} {
       #{$property}: $value;
     }
-  }
-
-  @else if $browser == 'firefox' {
+  } @else if $browser == 'firefox' {
     // Firefox 1.5+ CSS Hack
     _:-moz-only-whitespace,
     :root #{$selector} {
       #{$property}: $value;
     }
-  }
-
-  @else if $browser == 'edge' {
+  } @else if $browser == 'edge' {
     // MS Edge 12+ CSS Hack
     _:-ms-lang(x),
     _:-webkit-full-screen,
     #{$selector} {
       #{$property}: $value;
     }
-  }
-
-  @else if $browser == 'ie' {
+  } @else if $browser == 'ie' {
     // MS IE 10-11 CSS Hack
     _:-ms-input-placeholder,
     :root #{$selector} {

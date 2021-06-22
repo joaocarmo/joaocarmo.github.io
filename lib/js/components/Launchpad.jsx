@@ -11,37 +11,42 @@ const Link = ({ children, to }) => {
   }
 
   return (
-    <a href={to} target="_blank" rel="noopener noreferrer">{children}</a>
+    <a href={to} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
   )
 }
 
 const Launchpad = ({ open, onClickPages, onClose }) => {
-  const apps = useMemo(() => [
-    {
-      key: 'cv',
-      icon: cvApp,
-      label: 'About Me',
-      alt: 'My Curriculum Vitae',
-      href: null,
-      onClick: onClickPages,
-    },
-    {
-      key: 'litten',
-      icon: littenApp,
-      label: 'Litten',
-      alt: 'Litten App',
-      href: 'https://litten.app',
-      onClick: null,
-    },
-    {
-      key: 'uyghurs',
-      icon: uyghursApp,
-      label: 'Free The Uyghurs',
-      alt: 'Free The Uyghurs',
-      href: 'https://freetheuyghurs.com',
-      onClick: null,
-    },
-  ], [onClickPages])
+  const apps = useMemo(
+    () => [
+      {
+        key: 'cv',
+        icon: cvApp,
+        label: 'About Me',
+        alt: 'My Curriculum Vitae',
+        href: null,
+        onClick: onClickPages,
+      },
+      {
+        key: 'litten',
+        icon: littenApp,
+        label: 'Litten',
+        alt: 'Litten App',
+        href: 'https://litten.app',
+        onClick: null,
+      },
+      {
+        key: 'uyghurs',
+        icon: uyghursApp,
+        label: 'Free The Uyghurs',
+        alt: 'Free The Uyghurs',
+        href: 'https://freetheuyghurs.com',
+        onClick: null,
+      },
+    ],
+    [onClickPages],
+  )
 
   return (
     <div
