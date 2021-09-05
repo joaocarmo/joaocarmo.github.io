@@ -7,7 +7,6 @@ const { GenerateSW } = require('workbox-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
-const sharp = require('responsive-loader/sharp')
 const babelOptions = require('./babel.config')
 const postCssOptions = require('./postcss.config')
 const packageOpts = require('./package.json')
@@ -15,10 +14,10 @@ const packageOpts = require('./package.json')
 const mode = process.env.NODE_ENV || 'development'
 const styleLoader =
   mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader'
-const relPathFix = mode === 'production' ? '' : '.'
-const title = 'Joao Carmo - WebMagician'
-const author = 'Joao Carmo'
-const description = 'Help Joao in his great quest for web adventure !'
+const relPathFix = '.'
+const title = 'João Carmo - WebMagician'
+const author = 'João Carmo'
+const description = 'Help João in his great quest for web adventure !'
 const serviceWorker = 'service-worker.js'
 const appIcon = 'lib/img/my-icon.png'
 const appleTouchIcon = '/img/my-icon-192.png'
@@ -81,34 +80,22 @@ module.exports = {
       },
       { test: /\.hbs$/, use: ['handlebars-loader'] },
       {
-        test: /\.(jpe?g|png)$/i,
-        loader: 'responsive-loader',
-        options: {
-          adapter: sharp,
-          outputPath: `${relPathFix}/img`,
-          sizes: [200, 800, 1200],
-          placeholder: true,
-          placeholderSize: 50,
+        test: /\.(jpe?g|png|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: `${relPathFix}/img/[hash][ext][query]`,
         },
       },
       {
-        test: /\.(gif)$/i,
-        loader: 'file-loader',
-        options: {
-          outputPath: `${relPathFix}/img`,
-        },
-      },
-      {
-        test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/,
-        loader: 'file-loader',
-        options: {
-          outputPath: `${relPathFix}/fonts`,
+        test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: `${relPathFix}/fonts/[hash][ext][query]`,
         },
       },
     ],
   },
   plugins: [
-    new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
       hash: true,
       title,
@@ -194,8 +181,13 @@ module.exports = {
     }),
   ],
   devServer: {
+    hot: true,
     port: 3000,
+    compress: true,
     historyApiFallback: true,
-    stats: 'errors-only',
+    client: {
+      logging: 'verbose',
+      progress: true,
+    },
   },
 }

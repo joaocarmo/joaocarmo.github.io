@@ -125,7 +125,11 @@ const experience = [
     time: 'Jun 2021 - now',
     content: (
       <>
-        <p>Member of the Frontend Engineering team.</p>
+        <p>
+          Member of the frontend team behind the cloud software application for
+          data sharing and analysis. Working with React, Docker, Go, Python,
+          OpenAPI, Google Cloud (Kubernetes).
+        </p>
       </>
     ),
     color: 'hsl(0, 0%, 0%)',

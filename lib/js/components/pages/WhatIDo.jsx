@@ -11,12 +11,12 @@ const frontEndSkills = [
   'JavaScript (ES) | TypeScript (TS)',
   'React.js | React Native | Vue.js',
   'HTML5',
-  'CSS | SCSS',
-  'Webpack | Jest',
+  'CSS | SCSS | Styled Components',
+  'Webpack | Parcel | Jest | Cypress',
 ]
 
 const backEndSkills = [
-  'Python',
+  'Python | Go',
   'Node.js',
   'Ruby | Ruby On Rails',
   'MongoDB | SQL',
@@ -26,8 +26,8 @@ const backEndSkills = [
 const unixSkills = [
   'Bash | Perl',
   'Git | Docker',
-  'Apache',
-  'npm.js | yarn',
+  'Apache | nginx',
+  'npm | yarn',
   'LDAP',
 ]
 

@@ -31,12 +31,12 @@
       "type": "image/png"
     }
   ],
-  "name": "Joao Carmo - WebMagician",
-  "short_name": "Joao Carmo",
+  "name": "João Carmo - WebMagician",
+  "short_name": "João Carmo",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "/",
-  "description": "Help Joao in his great quest for web adventure !",
+  "description": "Help João in his great quest for web adventure !",
   "theme_color": "#FF5700",
   "background_color": "#454545",
   "scope": "/"

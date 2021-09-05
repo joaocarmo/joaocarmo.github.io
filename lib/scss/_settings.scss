@@ -4,8 +4,8 @@
   --outline-color: #ff5700;
   --bg-dark-color: hsl(0, 0%, 17%);
   --bg-color: hsl(0, 0%, 27%);
-  --bg-image: url('~@img/background.jpg?size=1200');
-  --bg-about-image: url('~@img/about-bg.jpg?size=1200');
+  --bg-image: url('@img/background.jpg?size=1200');
+  --bg-about-image: url('@img/about-bg.jpg?size=1200');
   --bg-opacity: 0.4;
   --bg-pages-color: hsl(0, 0%, 95%);
   --loader-color: hsl(0, 0%, 95%);
@@ -20,8 +20,8 @@
   only screen and (max-width: 768px) {
   :root,
   [data-theme='default'] {
-    --bg-image: url('~@img/background.jpg?size=800');
-    --bg-about-image: url('~@img/about-bg.jpg?size=800');
+    --bg-image: url('@img/background.jpg?size=800');
+    --bg-about-image: url('@img/about-bg.jpg?size=800');
   }
 }
 
