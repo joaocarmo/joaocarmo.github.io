@@ -13,8 +13,12 @@ const packageOpts = require('./package.json')
 
 const mode = process.env.NODE_ENV || 'development'
 const styleLoader =
-  mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader'
-const relPathFix = '.'
+  mode === 'production' ? {
+    loader: MiniCssExtractPlugin.loader,
+    options: {
+      publicPath: '../',
+    }
+  } : 'style-loader'
 const title = 'João Carmo - WebMagician'
 const author = 'João Carmo'
 const description = 'Help João in his great quest for web adventure !'
@@ -83,14 +87,14 @@ module.exports = {
         test: /\.(jpe?g|png|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: `${relPathFix}/img/[hash][ext][query]`,
+          filename: 'img/[hash][ext][query]',
         },
       },
       {
         test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/i,
         type: 'asset/resource',
         generator: {
-          filename: `${relPathFix}/fonts/[hash][ext][query]`,
+          filename: 'fonts/[hash][ext][query]',
         },
       },
     ],
