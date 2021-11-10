@@ -50,7 +50,7 @@ const socialLinks = [
     style: 'solid',
     icon: faEnvelope,
     name: 'Email',
-    url: 'mailto:info@joaocarmo.com',
+    url: 'mailto:esteem.trice.05@icloud.com',
     ariaLabel: 'Send me an e-mail about anything',
   },
 ]

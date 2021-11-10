@@ -13,12 +13,14 @@ const packageOpts = require('./package.json')
 
 const mode = process.env.NODE_ENV || 'development'
 const styleLoader =
-  mode === 'production' ? {
-    loader: MiniCssExtractPlugin.loader,
-    options: {
-      publicPath: '../',
-    }
-  } : 'style-loader'
+  mode === 'production'
+    ? {
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+          publicPath: '../',
+        },
+      }
+    : 'style-loader'
 const title = 'João Carmo - WebMagician'
 const author = 'João Carmo'
 const description = 'Help João in his great quest for web adventure !'
@@ -153,7 +155,7 @@ module.exports = {
         {
           // Cache the Google Fonts stylesheets
           // with a stale-while-revalidate strategy
-          urlPattern: new RegExp('^https://fonts.googleapis.com'),
+          urlPattern: /^https:\/\/fonts.googleapis.com/,
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'google-fonts-stylesheets',
@@ -165,7 +167,7 @@ module.exports = {
         {
           // Cache the underlying font files
           // with a cache-first strategy for 1 year
-          urlPattern: new RegExp('^https://fonts.gstatic.com'),
+          urlPattern: /^https:\/\/fonts.gstatic.com/,
           handler: 'CacheFirst',
           options: {
             cacheName: 'google-fonts-webfonts',
