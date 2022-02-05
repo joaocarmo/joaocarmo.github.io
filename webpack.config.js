@@ -37,7 +37,7 @@ module.exports = {
   context: path.join(__dirname, 'lib', 'js'),
   entry: ['core-js/stable', 'regenerator-runtime/runtime', './index.jsx'],
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'dist'),
     filename: './js/[name].js',
     publicPath: '',
   },
@@ -52,7 +52,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(j|t)sx?$/,
         exclude: /(node_modules)/,
         use: [
           {
@@ -135,7 +135,7 @@ module.exports = {
     }),
     new ESLintPlugin({
       context: path.join(__dirname, 'lib', 'js'),
-      extensions: ['js', 'jsx'],
+      extensions: ['js', 'jsx', 'ts', 'tsx'],
       fix: true,
     }),
     new StylelintPlugin({
@@ -187,13 +187,16 @@ module.exports = {
     }),
   ],
   devServer: {
-    hot: true,
-    port: 3000,
-    compress: true,
-    historyApiFallback: true,
     client: {
       logging: 'verbose',
+      overlay: false,
       progress: true,
     },
+    compress: true,
+    historyApiFallback: true,
+    hot: true,
+    liveReload: false,
+    open: true,
+    port: 3000,
   },
 }

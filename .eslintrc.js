@@ -7,9 +7,8 @@ module.exports = {
     'jest/globals': true,
   },
   extends: [
-    'plugin:react/recommended',
+    'airbnb',
     'plugin:jsx-a11y/recommended',
-    'airbnb-base',
     'plugin:react-hooks/recommended',
     'plugin:jest/recommended',
     'prettier',
@@ -21,11 +20,17 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: 'module',
   },
-  plugins: ['react', 'jest', 'jsx-a11y'],
+  plugins: ['jest', 'jsx-a11y'],
   rules: {
     'max-len': ['off'],
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'arrow-function',
+      },
+    ],
     semi: ['error', 'never'],
   },
   settings: {

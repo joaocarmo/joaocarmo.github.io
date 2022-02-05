@@ -1,6 +1,3 @@
-js/
+dist/
 react-smart-data-table/
 reacy-very-simple-data-table/
-workbox*
-service-worker*
-manifest*

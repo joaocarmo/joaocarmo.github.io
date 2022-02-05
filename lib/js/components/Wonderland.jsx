@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import cx from 'clsx'
 import BackButton from '@js/components/BackButton'
 import BrandName from '@js/components/BrandName'
@@ -11,7 +11,7 @@ import WonderlandContext from '@js/components/utils/wonderland-context'
 import { getAppVersion, getEnv, styledConsole } from '@js/functions'
 import '@scss/wonderland'
 
-class Wonderland extends Component {
+class Wonderland extends PureComponent {
   constructor() {
     super()
 
@@ -39,18 +39,6 @@ ${getEnv()}
 `)
   }
 
-  toggleLaunchpad() {
-    const { launchpadOpen } = this.state
-
-    this.setState({ launchpadOpen: !launchpadOpen })
-  }
-
-  togglePages() {
-    const { showPages } = this.state
-
-    this.setState({ showPages: !showPages, initialRender: false })
-  }
-
   handleOnWheel({ nativeEvent: { wheelDelta, deltaY } }) {
     const { showPages } = this.state
 
@@ -65,6 +53,18 @@ ${getEnv()}
         )
       }
     }
+  }
+
+  togglePages() {
+    const { showPages } = this.state
+
+    this.setState({ showPages: !showPages, initialRender: false })
+  }
+
+  toggleLaunchpad() {
+    const { launchpadOpen } = this.state
+
+    this.setState({ launchpadOpen: !launchpadOpen })
   }
 
   render() {
@@ -93,7 +93,10 @@ ${getEnv()}
             hide: !showPages,
           })}
         >
-          <WonderlandContext.Provider value={{ initialRender, showPages }}>
+          <WonderlandContext.Provider
+            // eslint-disable-next-line react/jsx-no-constructed-context-values
+            value={{ initialRender, showPages }}
+          >
             <Pages />
             <BackButton onClick={this.togglePages} />
           </WonderlandContext.Provider>

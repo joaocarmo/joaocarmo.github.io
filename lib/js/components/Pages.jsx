@@ -47,6 +47,7 @@ const Pages = () => {
         debugPrint(error.message)
       }
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

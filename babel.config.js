@@ -4,7 +4,7 @@ module.exports = {
       '@babel/preset-env',
       {
         useBuiltIns: 'usage',
-        corejs: '3.19',
+        corejs: '3',
         targets: {
           browsers:
             process.env.NODE_ENV === 'development'
