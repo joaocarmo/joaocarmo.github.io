@@ -34,7 +34,7 @@ module.exports = {
   context: path.join(__dirname, 'lib', 'js'),
   entry: ['core-js/stable', 'regenerator-runtime/runtime', './index.jsx'],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'docs'),
     filename: './js/[name].js',
     publicPath: '',
   },
