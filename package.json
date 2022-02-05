@@ -1,8 +1,9 @@
 {
   "name": "joaocarmo",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "private": true,
-  "description": "My own personal website",
+  "title": "João Carmo - WebMagician",
+  "description": "Help João in his great quest for web adventure !",
   "keywords": [
     "web",
     "developer",
@@ -19,7 +20,11 @@
     "url": "git+https://github.com/joaocarmo/joaocarmo.github.io.git"
   },
   "license": "UNLICENSED",
-  "author": "Joao Carmo (https://joaocarmo.com)",
+  "author": {
+    "name": "João Carmo",
+    "email": "esteem.trice.05@icloud.com",
+    "url": "https://joaocarmo.com"
+  },
   "main": "lib/js/index.js",
   "directories": {
     "lib": "lib"

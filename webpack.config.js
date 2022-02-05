@@ -9,7 +9,7 @@ const ESLintPlugin = require('eslint-webpack-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 const babelOptions = require('./babel.config')
 const postCssOptions = require('./postcss.config')
-const packageOpts = require('./package.json')
+const pkg = require('./package.json')
 
 const mode = process.env.NODE_ENV || 'development'
 const styleLoader =
@@ -21,9 +21,6 @@ const styleLoader =
         },
       }
     : 'style-loader'
-const title = 'João Carmo - WebMagician'
-const author = 'João Carmo'
-const description = 'Help João in his great quest for web adventure !'
 const serviceWorker = 'service-worker.js'
 const appIcon = 'lib/img/my-icon.png'
 const appleTouchIcon = '/img/my-icon-192.png'
@@ -104,12 +101,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      title,
+      title: pkg.title,
       favicon: path.join(__dirname, 'lib', 'img', 'favicon.ico'),
       template: path.join(__dirname, 'lib', 'index.hbs'),
       meta: {
-        author,
-        description,
+        author: pkg.author.name,
+        description: pkg.description,
         viewport: 'width=device-width, initial-scale=1',
       },
       useGoogleAnalytics: mode === 'production',
@@ -117,9 +114,9 @@ module.exports = {
       appleTouchIcon,
     }),
     new WebpackPwaManifest({
-      name: title,
-      short_name: author,
-      description,
+      name: pkg.title,
+      short_name: pkg.author.name,
+      description: pkg.description,
       theme_color: '#FF5700',
       background_color: '#454545',
       crossorigin: 'use-credentials',
@@ -146,7 +143,7 @@ module.exports = {
       filename: 'css/[name].css',
     }),
     new webpack.DefinePlugin({
-      VERSION: JSON.stringify(packageOpts.version),
+      VERSION: JSON.stringify(pkg.version),
       BUILDTIME: JSON.stringify(new Date().toISOString().substring(0, 10)),
       ENVIRONMENT: JSON.stringify(mode),
     }),

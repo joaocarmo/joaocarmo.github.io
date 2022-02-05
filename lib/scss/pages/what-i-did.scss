@@ -1,6 +1,8 @@
 @import '../settings';
 
 section#what-i-did {
+  background-color: var(--bg-pages-color);
+
   div.top-spacer {
     height: 60px;
   }

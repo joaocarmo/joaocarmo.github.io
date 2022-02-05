@@ -8,6 +8,7 @@ import {
   faInstagram,
   faFlickr,
 } from '@fortawesome/free-brands-svg-icons'
+import pkg from '../../../package.json'
 import '@scss/social'
 
 const socialLinks = [
@@ -50,7 +51,7 @@ const socialLinks = [
     style: 'solid',
     icon: faEnvelope,
     name: 'Email',
-    url: 'mailto:esteem.trice.05@icloud.com',
+    url: `mailto:${pkg.author.email}`,
     ariaLabel: 'Send me an e-mail about anything',
   },
 ]

@@ -24,10 +24,6 @@ div.content {
     }
   }
 
-  > section:not(:first-child) {
-    background-color: var(--bg-pages-color);
-  }
-
   p {
     a {
       text-decoration: underline;

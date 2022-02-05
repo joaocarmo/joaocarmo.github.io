@@ -1,52 +1,62 @@
 import 'intersection-observer'
-import { useState, useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import NavBar from '@js/components/NavBar'
 import Content from '@js/components/Content'
 import { debugPrint } from '@js/functions'
 import '@scss/pages'
 
-const observableElementIds = [
-  'about-me',
-  'what-i-do',
-  'what-i-did',
-  'what-i-like',
+const observableSelectors = [
+  '#about-me',
+  '#what-i-do',
+  '#what-i-did',
+  '#what-i-like',
 ]
+
+const observerOpts = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 1.0,
+}
+
+const attachObserver = (observerCallback) => (selector, idx) => {
+  const observer = new IntersectionObserver(
+    observerCallback(selector, idx),
+    observerOpts,
+  )
+
+  let target = document.querySelector(`${selector} .observer`)
+
+  if (!target) {
+    target = document.querySelector(`${selector} h1`)
+  }
+
+  if (!target) {
+    target = document.querySelector(`${selector} h2`)
+  }
+
+  try {
+    observer.observe(target)
+  } catch (error) {
+    debugPrint(error.message)
+  }
+}
 
 const Pages = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
-  const observerOpts = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1.0,
-  }
+  const observerCallback = useCallback(
+    (_, idx) => (entries) => {
+      const [{ isIntersecting }] = entries
 
-  const observerFn = (elementId, idx) => (entries) => {
-    const [{ isIntersecting }] = entries
-    if (isIntersecting) {
-      setActiveIndex(idx)
-    }
-  }
+      if (isIntersecting) {
+        setActiveIndex(idx)
+      }
+    },
+    [],
+  )
 
   useEffect(() => {
-    observableElementIds.forEach((elementId, idx) => {
-      const observer = new IntersectionObserver(
-        observerFn(elementId, idx),
-        observerOpts,
-      )
-      let target = document.querySelector(`#${elementId} .observer`)
-      if (!target) {
-        target = document.querySelector(`#${elementId} h1`)
-      }
-      if (!target) {
-        target = document.querySelector(`#${elementId} h2`)
-      }
-      try {
-        observer.observe(target)
-      } catch (error) {
-        debugPrint(error.message)
-      }
-    })
+    observableSelectors.forEach(attachObserver(observerCallback))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

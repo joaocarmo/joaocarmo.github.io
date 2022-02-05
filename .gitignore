@@ -89,6 +89,3 @@ typings/
 
 # macOS files
 .DS_Store
-
-# Build
-dist/

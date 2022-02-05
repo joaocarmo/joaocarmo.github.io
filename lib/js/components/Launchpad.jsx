@@ -20,7 +20,11 @@ const Link = ({ children, to }) => {
 
 Link.propTypes = {
   children: PropTpes.node.isRequired,
-  to: PropTpes.string.isRequired,
+  to: PropTpes.string,
+}
+
+Link.defaultProps = {
+  to: '',
 }
 
 const Launchpad = ({ open, onClickPages, onClose }) => {
