@@ -1,8 +1,10 @@
+$distance-from-border: 20px;
+
 button#back-to-top {
   background: none;
   border: 2px solid;
   border-radius: 4px;
-  bottom: 20px;
+  bottom: $distance-from-border;
   color: var(--bg-dark-color);
   cursor: pointer;
   font-size: 0.7em;
@@ -12,7 +14,7 @@ button#back-to-top {
   overflow-x: hidden;
   padding: 0.6em;
   position: fixed;
-  right: 20px;
+  right: calc(50% - #{var(--page-max-width)} / 2 + #{$distance-from-border});
   text-align: center;
   text-transform: uppercase;
   transition: opacity 0.3s ease-in-out;
@@ -32,11 +34,18 @@ button#back-to-top {
   }
 }
 
+@media only screen and (max-width: 1440px) {
+  button#back-to-top {
+    right: $distance-from-border;
+  }
+}
+
 @media only screen and (max-device-width: 640px),
   only screen and (max-width: 768px) {
   button#back-to-top {
-    bottom: 80px;
+    bottom: 4 * $distance-from-border;
     line-height: 0; /* Collapse the original line */
+    right: $distance-from-border;
     text-indent: -9999px;
     width: 2.5em;
 
