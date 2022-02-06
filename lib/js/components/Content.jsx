@@ -1,3 +1,4 @@
+import BackToTop from '@js/components/BackToTop'
 import AboutMe from '@js/components/pages/AboutMe'
 import WhatIDo from '@js/components/pages/WhatIDo'
 import WhatIDid from '@js/components/pages/WhatIDid'
@@ -6,7 +7,8 @@ import Social from '@js/components/Social'
 import '@scss/content'
 
 const Content = () => (
-  <div className="content">
+  <div id="content-root" className="content">
+    <BackToTop />
     <section id="about-me">
       <div className="observer" />
       <AboutMe />

@@ -1,0 +1,50 @@
+button#back-to-top {
+  background: none;
+  border: 2px solid;
+  border-radius: 4px;
+  bottom: 20px;
+  color: var(--bg-dark-color);
+  cursor: pointer;
+  font-size: 0.7em;
+  font-weight: 600;
+  height: 3em;
+  outline-color: var(--bg-color);
+  overflow-x: hidden;
+  padding: 0.6em;
+  position: fixed;
+  right: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease-in-out;
+  width: 4em;
+  z-index: 9999;
+
+  &:hover {
+    border: 1px solid;
+  }
+
+  &.visible {
+    opacity: 0.8;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-device-width: 640px),
+  only screen and (max-width: 768px) {
+  button#back-to-top {
+    bottom: 80px;
+    line-height: 0; /* Collapse the original line */
+    text-indent: -9999px;
+    width: 2.5em;
+
+    &::after {
+      content: '↑';
+      display: block;
+      line-height: initial; /* New content takes up original line height */
+      text-indent: 0;
+    }
+  }
+}
