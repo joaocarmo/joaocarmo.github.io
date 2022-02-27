@@ -37,7 +37,7 @@ const socialLinks = [
     style: 'brands',
     icon: faInstagram,
     name: 'Instagram',
-    url: 'https://www.instagram.com/johnnypestana/',
+    url: 'https://www.instagram.com/theverytalentedjohnny/',
     ariaLabel: 'Go to my Instagram profile',
   },
   {
