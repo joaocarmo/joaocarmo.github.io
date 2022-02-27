@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 const { GenerateSW } = require('workbox-webpack-plugin')
@@ -32,11 +33,17 @@ const appleTouchIconTo = path.resolve(path.join(__dirname, 'img'))
 module.exports = {
   mode,
   context: path.join(__dirname, 'lib', 'js'),
-  entry: ['core-js/stable', 'regenerator-runtime/runtime', './index.jsx'],
+  entry: [
+    './trusted-security-policies.js',
+    'core-js/stable',
+    'regenerator-runtime/runtime',
+    './index.jsx',
+  ],
   output: {
     path: path.join(__dirname, 'docs'),
     filename: './js/[name].js',
     publicPath: '',
+    trustedTypes: true,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],
@@ -109,10 +116,26 @@ module.exports = {
         description: pkg.description,
         viewport: 'width=device-width, initial-scale=1',
       },
-      useGoogleAnalytics: mode === 'production',
       serviceWorker,
       appleTouchIcon,
     }),
+    new CspHtmlWebpackPlugin(
+      {
+        'require-trusted-types-for': "'script'",
+        'block-all-mixed-content': '',
+      },
+      {
+        enabled: true,
+        hashEnabled: {
+          'script-src': false,
+          'style-src': false,
+        },
+        nonceEnabled: {
+          'script-src': false,
+          'style-src': false,
+        },
+      },
+    ),
     new WebpackPwaManifest({
       name: pkg.title,
       short_name: pkg.author.name,
