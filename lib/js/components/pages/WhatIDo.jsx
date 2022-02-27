@@ -9,7 +9,7 @@ import '@scss/pages/what-i-do'
 
 const frontEndSkills = [
   'JavaScript (ES) | TypeScript (TS)',
-  'React.js | React Native | Vue.js',
+  'React.js | React Native',
   'HTML5',
   'CSS | SCSS | Styled Components',
   'Webpack | Parcel | Jest | Cypress',
@@ -25,10 +25,10 @@ const backEndSkills = [
 
 const unixSkills = [
   'Bash | Perl',
-  'Git | Docker',
+  'Git',
   'Apache | nginx',
   'npm | yarn',
-  'LDAP',
+  'Docker | Kubernetes',
 ]
 
 const WhatIDo = () => (
