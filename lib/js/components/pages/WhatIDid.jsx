@@ -125,9 +125,10 @@ const experience = [
     time: 'Jun 2021 - now',
     content: (
       <p>
-        Member of the frontend team behind the cloud software application for
-        data sharing and analysis. Working with React, Docker, Go, Python,
-        OpenAPI, Google Cloud (Kubernetes).
+        Member of the software engineering team behind the collaborative cloud
+        web application for scientific data sharing and analysis. Currently
+        working with Node.js, React, CircleCI, GitHub, GitHub Actions, Docker,
+        Go, Python, OpenAPI, Google Cloud Platform, and Kubernetes.
       </p>
     ),
     color: 'hsl(0, 0%, 0%)',
