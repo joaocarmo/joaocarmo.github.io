@@ -32,6 +32,7 @@ const appleTouchIconTo = path.resolve(path.join(__dirname, 'img'))
 
 module.exports = {
   mode,
+  devtool: mode === 'development' ? 'eval-source-map' : false,
   context: path.join(__dirname, 'lib', 'js'),
   entry: [
     './trusted-security-policies.js',
@@ -56,7 +57,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(j|t)sx?$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules)/,
         use: [
           {
@@ -73,7 +74,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 2,
-              sourceMap: true,
+              sourceMap: mode === 'development',
             },
           },
           {
@@ -83,7 +84,9 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
+              // Prefer `dart-sass`
+              implementation: require.resolve('dart-sass'),
+              sourceMap: mode === 'development',
             },
           },
         ],
