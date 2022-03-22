@@ -31,6 +31,22 @@ div.content {
   }
 }
 
+main.show div.content {
+  /* Animation hack — I don't know why, but it works ¯\_(ツ)_/¯ */
+  animation-duration: 0.7s;
+  animation-name: background-hack;
+}
+
+@keyframes background-hack {
+  from {
+    background-position: top center;
+  }
+
+  to {
+    background-position: center center;
+  }
+}
+
 span.emoji {
   font-style: normal;
   margin-left: 0.5em;

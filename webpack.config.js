@@ -119,38 +119,39 @@ module.exports = {
       serviceWorker,
       appleTouchIcon,
     }),
-    new CspHtmlWebpackPlugin(
-      {
-        'default-src': "'self'",
-        'script-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'"],
-        'style-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'"],
-        'img-src': ["'self'", 'data:'],
-        'font-src': ["'self'", 'https://fonts.googleapis.com/*'],
-        'base-uri': "'self'",
-        'media-src': "'self'",
-        'object-src': "'none'",
-        'form-action': "'self'",
-        'child-src': "'self'",
-        'frame-src': "'self'",
-        'connect-src': "'self'",
-        'worker-src': "'self'",
-        'manifest-src': "'self'",
-        'prefetch-src': "'self'",
-        'require-trusted-types-for': "'script'",
-        'block-all-mixed-content': '',
-      },
-      {
-        enabled: true,
-        hashEnabled: {
-          'script-src': false,
-          'style-src': false,
+    mode !== 'development' &&
+      new CspHtmlWebpackPlugin(
+        {
+          'default-src': "'self'",
+          'script-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'"],
+          'style-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'"],
+          'img-src': ["'self'", 'data:'],
+          'font-src': ["'self'", 'https://fonts.googleapis.com/*'],
+          'base-uri': "'self'",
+          'media-src': "'self'",
+          'object-src': "'none'",
+          'form-action': "'self'",
+          'child-src': "'self'",
+          'frame-src': "'self'",
+          'connect-src': "'self'",
+          'worker-src': "'self'",
+          'manifest-src': "'self'",
+          'prefetch-src': "'self'",
+          'require-trusted-types-for': "'script'",
+          'block-all-mixed-content': '',
         },
-        nonceEnabled: {
-          'script-src': false,
-          'style-src': false,
+        {
+          enabled: true,
+          hashEnabled: {
+            'script-src': false,
+            'style-src': false,
+          },
+          nonceEnabled: {
+            'script-src': false,
+            'style-src': false,
+          },
         },
-      },
-    ),
+      ),
     new WebpackPwaManifest({
       name: pkg.title,
       short_name: pkg.author.name,
@@ -220,7 +221,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [{ from: appleTouchIconFrom, to: appleTouchIconTo }],
     }),
-  ],
+  ].filter(Boolean),
   devServer: {
     client: {
       logging: 'verbose',
