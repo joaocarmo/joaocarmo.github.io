@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import 'settings';
 @import 'mixins';
 
@@ -13,7 +14,7 @@
   height: $main-section-size;
   position: absolute;
   text-align: center;
-  top: calc(50% - #{($main-section-size / 2)});
+  top: calc(50% - #{math.div($main-section-size, 2)});
   width: 100%;
 
   header {

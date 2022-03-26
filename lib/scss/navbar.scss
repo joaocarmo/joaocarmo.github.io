@@ -113,11 +113,11 @@ div {
 
 button {
   &.navbar {
-    background-color: hsl(0, 0, 40%);
-    border-bottom: solid 1px hsl(0, 0, 15%);
+    background-color: hsl(0, 0%, 40%);
+    border-bottom: solid 1px hsl(0, 0%, 15%);
     border-left: 0;
     border-right: 0;
-    border-top: solid 1px hsl(0, 0, 15%);
+    border-top: solid 1px hsl(0, 0%, 15%);
     color: hsl(0, 0%, 85%);
     cursor: pointer;
     font-size: 0.8em;

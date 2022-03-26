@@ -85,7 +85,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               // Prefer `dart-sass`
-              implementation: require.resolve('dart-sass'),
+              implementation: require.resolve('sass'),
               sourceMap: mode === 'development',
             },
           },
