@@ -84,8 +84,6 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              // Prefer `dart-sass`
-              implementation: require.resolve('sass'),
               sourceMap: mode === 'development',
             },
           },
@@ -117,6 +115,7 @@ module.exports = {
       meta: {
         author: pkg.author.name,
         description: pkg.description,
+        keywords: pkg.keywords.join(', '),
         viewport: 'width=device-width, initial-scale=1',
       },
       serviceWorker,
