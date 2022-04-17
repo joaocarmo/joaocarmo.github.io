@@ -30,7 +30,7 @@ const socialLinks = [
     style: 'brands',
     icon: faStackOverflow,
     name: 'Stack Overflow',
-    url: 'https://stackoverflow.com/story/joaocarmo',
+    url: 'https://stackoverflow.com/users/8713532/jo%c3%a3o-carmo',
     ariaLabel: 'Go to my Stack Overflow page',
   },
   {
