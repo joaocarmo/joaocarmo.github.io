@@ -37,7 +37,7 @@ const socialLinks = [
     style: 'brands',
     icon: faInstagram,
     name: 'Instagram',
-    url: 'https://www.instagram.com/theverytalentedjohnny/',
+    url: 'https://www.instagram.com/joaowithatilde/',
     ariaLabel: 'Go to my Instagram profile',
   },
   {
