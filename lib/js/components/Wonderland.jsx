@@ -1,4 +1,4 @@
-import { PureComponent } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import cx from 'clsx'
 import BackButton from '@js/components/BackButton'
 import BrandName from '@js/components/BrandName'
@@ -11,24 +11,17 @@ import WonderlandContext from '@js/components/utils/wonderland-context'
 import { getAppVersion, getEnv, styledConsole } from '@js/functions'
 import '@scss/wonderland'
 
-class Wonderland extends PureComponent {
-  constructor() {
-    super()
+const Wonderland = () => {
+  const [initialRender, setInitialRender] = useState(true)
+  const [launchpadOpen, setLaunchpadOpen] = useState(false)
+  const [showPages, setShowPages] = useState(false)
 
-    this.state = {
-      initialRender: true,
-      launchpadOpen: false,
-      showPages: false,
-    }
+  const contextValue = useMemo(
+    () => ({ initialRender, showPages }),
+    [initialRender, showPages],
+  )
 
-    this.wheelTimer = null
-
-    this.handleOnWheel = this.handleOnWheel.bind(this)
-    this.toggleLaunchpad = this.toggleLaunchpad.bind(this)
-    this.togglePages = this.togglePages.bind(this)
-  }
-
-  componentDidMount() {
+  useEffect(() => {
     styledConsole(`
 > whoami
 joaocarmo
@@ -37,78 +30,51 @@ ${getAppVersion()}
 > echo $ENVIRONMENT
 ${getEnv()}
 `)
-  }
+  }, [])
 
-  handleOnWheel({ nativeEvent: { wheelDelta, deltaY } }) {
-    const { showPages } = this.state
+  const toggleLaunchpad = useCallback(() => {
+    setLaunchpadOpen(!launchpadOpen)
+  }, [launchpadOpen])
 
-    if (!showPages) {
-      if (wheelDelta < 0 && deltaY > 100) {
-        if (this.wheelTimer) {
-          clearTimeout(this.wheelTimer)
-        }
-        this.wheelTimer = setTimeout(
-          () => this.setState({ showPages: true }),
-          0,
-        )
-      }
-    }
-  }
+  const togglePages = useCallback(() => {
+    setShowPages(!showPages)
+    setInitialRender(false)
+  }, [showPages])
 
-  togglePages() {
-    const { showPages } = this.state
-
-    this.setState({ showPages: !showPages, initialRender: false })
-  }
-
-  toggleLaunchpad() {
-    const { launchpadOpen } = this.state
-
-    this.setState({ launchpadOpen: !launchpadOpen })
-  }
-
-  render() {
-    const { initialRender, launchpadOpen, showPages } = this.state
-
-    return (
-      <>
-        <main
-          id="brandname"
-          onWheel={this.handleOnWheel}
-          className={cx({
-            'no-animation': !initialRender,
-          })}
-        >
-          <BrandName />
-          <NextButton onClick={this.toggleLaunchpad} />
-        </main>
-        <footer className="brandname">
-          <Social />
-          <Copyright />
-        </footer>
-        <main
-          id="pages"
-          className={cx({
-            show: showPages,
-            hide: !showPages,
-          })}
-        >
-          <WonderlandContext.Provider
-            // eslint-disable-next-line react/jsx-no-constructed-context-values
-            value={{ initialRender, showPages }}
-          >
-            <Pages />
-            <BackButton onClick={this.togglePages} />
-          </WonderlandContext.Provider>
-        </main>
-        <Launchpad
-          open={launchpadOpen}
-          onClickPages={this.togglePages}
-          onClose={this.toggleLaunchpad}
-        />
-      </>
-    )
-  }
+  return (
+    <>
+      <main
+        id="brandname"
+        className={cx({
+          'no-animation': !initialRender,
+        })}
+      >
+        <BrandName />
+        <NextButton onClick={toggleLaunchpad} />
+      </main>
+      <footer className="brandname">
+        <Social />
+        <Copyright />
+      </footer>
+      <main
+        id="pages"
+        className={cx({
+          show: showPages,
+          hide: !showPages,
+        })}
+      >
+        <WonderlandContext.Provider value={contextValue}>
+          <Pages />
+          <BackButton onClick={togglePages} />
+        </WonderlandContext.Provider>
+      </main>
+      <Launchpad
+        open={launchpadOpen}
+        onClickPages={togglePages}
+        onClose={toggleLaunchpad}
+      />
+    </>
+  )
 }
 
 export default Wonderland

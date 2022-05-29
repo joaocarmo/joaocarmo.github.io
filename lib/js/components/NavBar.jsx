@@ -24,12 +24,13 @@ const NavBar = ({ activeIndex } = {}) => (
       <h6 className="navbar-title">Senior Software Engineer</h6>
       <div className="navbar-location">
         <p className="navbar-location-text">
-          <FontAwesomeIcon icon={faMapMarkerAlt} /> Oxford, England
+          <FontAwesomeIcon icon={faMapMarkerAlt} color="palevioletred" />{' '}
+          Digital Nomad
         </p>
       </div>
       <div className="navbar-gender">
         <p className="navbar-gender-text">
-          <FontAwesomeIcon icon={faMale} /> he/him/his
+          <FontAwesomeIcon icon={faMale} color="cadetblue" /> he/him/his
         </p>
       </div>
     </div>

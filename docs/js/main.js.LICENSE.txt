@@ -10,7 +10,7 @@ object-assign
  * Copyright 2022 Fonticons, Inc.
  */
 
-/*! @license DOMPurify 2.3.6 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/2.3.6/LICENSE */
+/*! @license DOMPurify 2.3.8 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/2.3.8/LICENSE */
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 
