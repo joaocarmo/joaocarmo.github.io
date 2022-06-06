@@ -147,7 +147,7 @@ const experience = [
           Go, Python, OpenAPI, Google Cloud Platform, and Kubernetes.
         </p>
         <p>
-          Worked on an event-driven architecture to analyze raw data form
+          Worked on an event-driven architecture to analyze raw data from
           super-resolution microscopy asynchronously with an auto scaling K8S
           cluster.
         </p>
