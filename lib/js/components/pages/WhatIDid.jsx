@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFlask,
   faGlobe,
+  faHelmetSafety,
   faLaptopCode,
   faMicroscope,
   faProjectDiagram,
@@ -120,16 +121,37 @@ const academicSkills = [
 
 const experience = [
   {
-    key: 'seven',
+    key: 'eight',
     title: 'Senior Software Engineer',
-    time: 'Jun 2021 - now',
+    time: 'Jun 2022 - now',
     content: (
       <p>
-        Member of the software engineering team behind the collaborative cloud
-        web application for scientific data sharing and analysis. Currently
-        working with Node.js, React, CircleCI, GitHub, GitHub Actions, Docker,
-        Go, Python, OpenAPI, Google Cloud Platform, and Kubernetes.
+        Member of the software engineering team responsible for users,
+        permissions, and organizations.
       </p>
+    ),
+    color: 'hsl(72, 79%, 43%)',
+    icon: <FontAwesomeIcon icon={faHelmetSafety} color="white" />,
+    where: 'Capmo GmbH - Bausoftware',
+  },
+  {
+    key: 'seven',
+    title: 'Senior Software Engineer',
+    time: 'Jun 2021 - May 2022',
+    content: (
+      <>
+        <p>
+          Member of the software engineering team behind the collaborative cloud
+          web application for scientific data sharing and analysis. Currently
+          working with Node.js, React, CircleCI, GitHub, GitHub Actions, Docker,
+          Go, Python, OpenAPI, Google Cloud Platform, and Kubernetes.
+        </p>
+        <p>
+          Worked on an event-driven architecture to analyze raw data form
+          super-resolution microscopy asynchronously with an auto scaling K8S
+          cluster.
+        </p>
+      </>
     ),
     color: 'hsl(0, 0%, 0%)',
     icon: <FontAwesomeIcon icon={faMicroscope} color="white" />,
