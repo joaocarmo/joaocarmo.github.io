@@ -44,6 +44,7 @@
     "lint": "eslint . --ext js,jsx && stylelint lib/**/*.{css,scss,sass}",
     "no-non-ascii": "scripts/no-non-ascii",
     "postinstall": "husky install",
+    "preinstall": "npx only-allow pnpm",
     "pretty:fix": "prettier --write .",
     "pretty": "prettier --check .",
     "start": "NODE_ENV=development webpack serve",
