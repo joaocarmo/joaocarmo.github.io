@@ -16,10 +16,10 @@ const frontEndSkills = [
 ]
 
 const backEndSkills = [
-  'Python | Go',
   'Node.js',
+  'Python | Go',
   'Ruby | Ruby On Rails',
-  'MongoDB | SQL',
+  'PostgreSQL | MongoDB',
   'ElasticSearch',
 ]
 

@@ -125,10 +125,17 @@ const experience = [
     title: 'Senior Software Engineer',
     time: 'Jun 2022 - now',
     content: (
-      <p>
-        Member of the software engineering team responsible for users,
-        permissions, and organizations.
-      </p>
+      <>
+        <p>
+          Member of the software engineering team responsible for users,
+          permissions, and organisations, integrations, and core data.
+        </p>
+        <p>
+          Currently working with TypeScript, React.js, React Native, NestJS,
+          PostgreSQL, Amazon Web Services (AWS), CircleCI, JavaScript, Unix, and
+          GitHub.
+        </p>
+      </>
     ),
     color: 'hsl(72, 79%, 43%)',
     icon: <FontAwesomeIcon icon={faHelmetSafety} color="white" />,
@@ -142,9 +149,9 @@ const experience = [
       <>
         <p>
           Member of the software engineering team behind the collaborative cloud
-          web application for scientific data sharing and analysis. Currently
-          working with Node.js, React, CircleCI, GitHub, GitHub Actions, Docker,
-          Go, Python, OpenAPI, Google Cloud Platform, and Kubernetes.
+          web application for scientific data sharing and analysis. Worked with
+          Node.js, React, CircleCI, GitHub, GitHub Actions, Docker, Go, Python,
+          OpenAPI, Google Cloud Platform, and Kubernetes.
         </p>
         <p>
           Worked on an event-driven architecture to analyze raw data from
