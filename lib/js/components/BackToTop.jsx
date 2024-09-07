@@ -28,7 +28,6 @@ const BackToTop = () => {
     return () => {
       contentRoot.onscroll = null
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const className = useMemo(

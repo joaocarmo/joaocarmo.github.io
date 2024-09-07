@@ -9,7 +9,8 @@ $banner-delay: 7.5s;
 $banner-duration: 2.5s;
 
 #blackout::before {
-  animation: showUp 0.3s ease-in-out $banner-delay 1 normal forwards,
+  animation:
+    showUp 0.3s ease-in-out $banner-delay 1 normal forwards,
     showUp 0.3s ease-in-out ($banner-delay + $banner-duration) 1 reverse
     forwards;
   background-color: rgba(255, 255, 255, 0);
