@@ -1,3 +1,4 @@
 *.hbs
 docs/
 react-smart-data-table/examples/bootstrap/example.js
+*.yaml

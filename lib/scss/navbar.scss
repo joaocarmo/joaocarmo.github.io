@@ -46,7 +46,9 @@ div {
 
     &.menu {
       flex: 1;
-      height: calc(100vh - #{$avatar-height} - #{$name-title-height} - #{$social-height} - #{$copyright-height});
+      height: calc(
+        100vh - #{$avatar-height} - #{$name-title-height} - #{$social-height} - #{$copyright-height}
+      );
       justify-content: flex-start;
     }
 
