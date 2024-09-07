@@ -22,7 +22,6 @@ module.exports = {
   },
   plugins: ['jest', 'jsx-a11y'],
   rules: {
-    'max-len': ['off'],
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/function-component-definition': [
@@ -31,7 +30,6 @@ module.exports = {
         namedComponents: 'arrow-function',
       },
     ],
-    semi: ['error', 'never'],
   },
   settings: {
     react: {
