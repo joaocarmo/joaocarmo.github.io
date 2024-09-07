@@ -1,7 +1,4 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-yarn no-non-ascii
-yarn build
-yarn test
-yarn add-all
+pnpm no-non-ascii
+pnpm build
+pnpm test
+pnpm add-all
