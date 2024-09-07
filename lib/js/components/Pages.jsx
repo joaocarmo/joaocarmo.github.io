@@ -57,7 +57,6 @@ const Pages = () => {
 
   useEffect(() => {
     observableSelectors.forEach(attachObserver(observerCallback))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

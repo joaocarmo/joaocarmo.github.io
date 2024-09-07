@@ -172,6 +172,7 @@ module.exports = {
       display: 'standalone',
     }),
     new ESLintPlugin({
+      configType: 'flat',
       context: path.join(__dirname, 'lib', 'js'),
       extensions: ['js', 'jsx', 'ts', 'tsx'],
       fix: true,
