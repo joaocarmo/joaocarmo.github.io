@@ -4,6 +4,7 @@ const brandName = 'João Carmo'
 const tagLines = [
   'Senior Software Engineer',
   'Open-Source Enthusiast',
+  'Runner',
   'Photographer',
   'Poet',
   'Knower Of things',

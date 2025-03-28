@@ -2,11 +2,11 @@ import { Fragment } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {
-  faLinkedin,
   faGithub,
-  faStackOverflow,
   faInstagram,
-  faFlickr,
+  faLinkedin,
+  faStackOverflow,
+  faStrava,
 } from '@fortawesome/free-brands-svg-icons'
 import pkg from '../../../package.json'
 import '@scss/social'
@@ -42,10 +42,10 @@ const socialLinks = [
   },
   {
     style: 'brands',
-    icon: faFlickr,
-    name: 'Flickr',
-    url: 'https://www.flickr.com/people/joao_pestana/',
-    ariaLabel: 'Go to my Flickr gallery',
+    icon: faStrava,
+    name: 'Strava',
+    url: 'https://www.strava.com/athletes/84370817',
+    ariaLabel: 'Go to my Strava profile',
   },
   {
     style: 'solid',

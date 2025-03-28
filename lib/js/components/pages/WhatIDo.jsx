@@ -9,14 +9,14 @@ import '@scss/pages/what-i-do'
 
 const frontEndSkills = [
   'JavaScript (ES) | TypeScript (TS)',
-  'React.js | React Native',
+  'React | React Native',
   'HTML5',
   'CSS | SCSS | Styled Components',
-  'Webpack | Parcel | Jest | Cypress',
+  'Webpack | Jest',
 ]
 
 const backEndSkills = [
-  'Node.js',
+  'Node.js | NestJS',
   'Python | Go',
   'Ruby | Ruby On Rails',
   'PostgreSQL | MongoDB',
@@ -27,7 +27,7 @@ const unixSkills = [
   'Bash | Perl',
   'Git',
   'Apache | nginx',
-  'npm | yarn',
+  'npm | pnpm | yarn',
   'Docker | Kubernetes',
 ]
 
