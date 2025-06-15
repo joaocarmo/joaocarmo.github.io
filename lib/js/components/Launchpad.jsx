@@ -4,6 +4,7 @@ import cx from 'clsx'
 import cvApp from '@img/launchpad-cv.png'
 import littenApp from '@img/launchpad-litten.png'
 import uyghursApp from '@img/launchpad-uyghurs.png'
+import manifestoApp from '@img/launchpad-manifesto.png'
 import '@scss/launchpad'
 
 const Link = ({ children, to }) => {
@@ -52,6 +53,14 @@ const Launchpad = ({ open, onClickPages, onClose }) => {
         label: 'Free The Uyghurs',
         alt: 'Free The Uyghurs',
         href: 'https://freetheuyghurs.com',
+        onClick: null,
+      },
+      {
+        key: 'manifesto',
+        icon: manifestoApp,
+        label: 'Democratic Manifesto',
+        alt: 'Democratic Manifesto',
+        href: 'https://manifesto.joaocarmo.com',
         onClick: null,
       },
     ],
