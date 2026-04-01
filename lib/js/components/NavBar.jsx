@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import cx from 'clsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMale, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faPerson, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import Social from '@js/components/Social'
 import { scrollToElement, getAppVersion, getBuildTime } from '@js/functions'
 import me from '@img/avatar-me.jpg'
@@ -24,13 +24,13 @@ const NavBar = ({ activeIndex } = {}) => (
       <h6 className="navbar-title">Senior Software Engineer</h6>
       <div className="navbar-location">
         <p className="navbar-location-text">
-          <FontAwesomeIcon icon={faMapMarkerAlt} color="palevioletred" />{' '}
+          <FontAwesomeIcon icon={faLocationDot} color="palevioletred" />{' '}
           Digital Nomad
         </p>
       </div>
       <div className="navbar-gender">
         <p className="navbar-gender-text">
-          <FontAwesomeIcon icon={faMale} color="cadetblue" /> he/him/his
+          <FontAwesomeIcon icon={faPerson} color="cadetblue" /> he/him/his
         </p>
       </div>
     </div>
