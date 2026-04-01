@@ -35,14 +35,14 @@ div.timeline {
       position: relative;
 
       div.timeline-element-icon {
+        align-items: center;
         background-color: $timeline-color;
         border-radius: 50%;
         box-shadow: 0 0 0 5px $timeline-color;
-        display: block;
+        display: flex;
         float: left;
         height: 40px;
-        line-height: 40px;
-        text-align: center;
+        justify-content: center;
         width: 40px;
 
         &:last-of-type {
