@@ -1,40 +1,56 @@
 # Suggested Fixes
 
-## HIGH — Should fix
+## HIGH — Done
 
-- [x] **Remove `prop-types` package** — Deprecated since React 19. All 8 component
-  files use it, two with typos (`PropTpes` in Launchpad.jsx, `PropType` in
-  Accordion.jsx). Remove all PropTypes declarations and the dependency.
-- [x] **Remove `defaultProps`** — Deprecated in React 19 for function components.
-  Used in NavBar.jsx, Launchpad.jsx, Timeline.jsx. Replace with ES6 default
-  parameters.
-- [x] **Remove `smoothscroll-polyfill`** — `scrollIntoView({ behavior: 'smooth' })`
-  is Baseline since 2020. The polyfill in `functions.js` is dead weight.
-- [x] **Remove `core-js/stable` and `regenerator-runtime/runtime` from webpack
-  entry** — Babel's `useBuiltIns: 'usage'` already injects polyfills per-file.
-  Importing the full bundle in the entry point defeats the purpose and bloats
-  the output. With modern browser targets, very few polyfills are needed.
+- [x] **Remove `prop-types` package** — Removed all PropTypes declarations from 8
+  components (including typos `PropTpes`, `PropType`), deleted the dependency,
+  disabled `react/prop-types` ESLint rule.
+- [x] **Remove `defaultProps`** — Replaced with ES6 default parameters in NavBar,
+  Launchpad (Link), and Timeline (Content).
+- [x] **Remove `smoothscroll-polyfill`** — Removed import from `functions.js` and
+  deleted the dependency. Native `scrollIntoView` is sufficient.
+- [x] **Remove `core-js` and `regenerator-runtime`** — Removed from webpack entry,
+  removed `useBuiltIns`/`corejs` from babel config, deleted both dependencies.
+  Bundle dropped from 622 KiB to 392 KiB.
+- [x] **Remove unused `@eslint/compat` and `file-loader`** — Neither was referenced
+  in any config or source file.
 
-## MEDIUM — Worth addressing
+## MEDIUM — Summary
 
-- [ ] **Replace `typography` and `typography-theme-alton`** — Abandoned packages
-  (5+ years since last publish). `setup.js` injects Google Fonts via DOM
-  manipulation. A `<link>` tag in the HTML template or `@import` in SCSS would
-  be simpler and more cacheable.
-- [ ] **Fix `onscroll` direct assignment in BackToTop.jsx** — Line 26 uses
-  `contentRoot.onscroll = handleOnScroll` which overwrites other scroll
-  handlers. Use `addEventListener`/`removeEventListener` instead.
-- [ ] **Remove browser hack mixin** — `_mixins.scss` targets IE 10-11, old Edge,
-  old Safari 7. Only used once in `nextbutton.scss` (hides a button for IE).
-  Dead code given modern browser targets.
-- [ ] **Simplify `no-scrollbar` mixin** — Remove `-ms-overflow-style` (IE-only).
-  Keep `scrollbar-width: none` and `::-webkit-scrollbar`.
-- [ ] **Review Trusted Types policy** — `trusted-security-policies.js` has unsafe
-  passthrough for `createScriptURL` and `createScript` (returns input
-  unmodified), defeating the purpose of Trusted Types.
-- [ ] **Remove `postcss-css-variables`** — Compiles CSS custom properties to static
-  values. Modern browsers support them natively. Removing this preserves
-  runtime dynamism.
+Six items remain. Grouped by theme:
+
+### Dead legacy code (IE/old browser support)
+
+The `browser-hack-for` mixin in `_mixins.scss` targets IE 10-11, old Edge 12,
+and Safari 7. It's used once (`nextbutton.scss` hides a button for IE). The
+`no-scrollbar` mixin includes `-ms-overflow-style` (IE-only). Both are dead
+code given the modern browser targets — delete the `browser-hack-for` mixin and
+its one call site, drop the IE line from `no-scrollbar`.
+
+### Abandoned typography packages
+
+`typography` and `typography-theme-alton` haven't been published in 5+ years.
+`setup.js` uses them to inject Google Fonts via DOM manipulation
+(`insertAdjacentHTML`). Replace with a `<link>` in the HTML template or
+`@import` in SCSS, then remove both packages and `setup.js`.
+
+### Event handling antipattern
+
+`BackToTop.jsx` assigns `contentRoot.onscroll = handleOnScroll` directly, which
+overwrites any other scroll listeners. Switch to
+`addEventListener`/`removeEventListener`.
+
+### Security: Trusted Types passthrough
+
+`trusted-security-policies.js` defines `createScriptURL` and `createScript` as
+identity functions (`(string) => string`), defeating the purpose of Trusted
+Types. Either add proper validation or remove the passthrough handlers.
+
+### Unnecessary PostCSS plugin
+
+`postcss-css-variables` compiles CSS custom properties to static values. Modern
+browsers support them natively, and removing this preserves runtime dynamism.
+Delete from `postcss.config.js` and uninstall the package.
 
 ## LOW — Nice to have
 
@@ -43,8 +59,6 @@
 - [ ] **Remove `/* global */` comment and try/catch in functions.js** — Webpack
   `DefinePlugin` globals are replaced at compile time. The comment is a
   leftover from ESLint's old format.
-- [ ] **Remove `file-loader` from devDependencies** — Not used in webpack config
-  (uses `asset/resource` instead). Dead dependency.
 - [ ] **Replace `handlebars` + `handlebars-loader`** — Used only for a single HTML
   template. `html-webpack-plugin` supports EJS out of the box.
 - [ ] **Fix duplicate `<main>` elements in Wonderland.jsx** — HTML spec allows only
