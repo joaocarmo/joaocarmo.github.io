@@ -2,7 +2,9 @@
 // Fonts: Domine (headings), Open Sans (body)
 
 html {
-  font: 112.5% / 1.45 'Open Sans', sans-serif;
+  font:
+    112.5% / 1.45 'Open Sans',
+    sans-serif;
 }
 
 body {
@@ -29,12 +31,29 @@ h6 {
   line-height: 1.1;
 }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.51572rem; }
-h3 { font-size: 1.31951rem; }
-h4 { font-size: 1rem; }
-h5 { font-size: 0.87055rem; }
-h6 { font-size: 0.81225rem; }
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.51572rem;
+}
+
+h3 {
+  font-size: 1.31951rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.87055rem;
+}
+
+h6 {
+  font-size: 0.81225rem;
+}
 
 img {
   max-width: 100%;

@@ -23,8 +23,8 @@ const NavBar = ({ activeIndex = 0 } = {}) => (
       <h6 className="navbar-title">Senior Software Engineer</h6>
       <div className="navbar-location">
         <p className="navbar-location-text">
-          <FontAwesomeIcon icon={faLocationDot} color="palevioletred" />{' '}
-          Digital Nomad
+          <FontAwesomeIcon icon={faLocationDot} color="palevioletred" /> Digital
+          Nomad
         </p>
       </div>
       <div className="navbar-gender">

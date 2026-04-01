@@ -34,10 +34,7 @@ module.exports = {
   mode,
   devtool: mode === 'development' ? 'eval-source-map' : false,
   context: path.join(__dirname, 'lib', 'js'),
-  entry: [
-    './trusted-security-policies.js',
-    './index.jsx',
-  ],
+  entry: ['./trusted-security-policies.js', './index.jsx'],
   output: {
     path: path.join(__dirname, 'docs'),
     filename: './js/[name].js',
@@ -123,7 +120,12 @@ module.exports = {
         {
           'default-src': "'self'",
           'script-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'"],
-          'style-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'", 'https://fonts.googleapis.com'],
+          'style-src': [
+            "'unsafe-inline'",
+            "'self'",
+            "'unsafe-eval'",
+            'https://fonts.googleapis.com',
+          ],
           'img-src': ["'self'", 'data:'],
           'font-src': ["'self'", 'https://fonts.gstatic.com'],
           'base-uri': "'self'",
@@ -132,7 +134,11 @@ module.exports = {
           'form-action': "'self'",
           'child-src': "'self'",
           'frame-src': "'self'",
-          'connect-src': ["'self'", 'https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
+          'connect-src': [
+            "'self'",
+            'https://fonts.googleapis.com',
+            'https://fonts.gstatic.com',
+          ],
           'worker-src': "'self'",
           'manifest-src': "'self'",
           'prefetch-src': "'self'",
