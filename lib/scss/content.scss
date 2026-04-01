@@ -31,7 +31,7 @@ div.content {
   }
 }
 
-main.show div.content {
+.show div.content {
   /* Animation hack — I don't know why, but it works ¯\_(ツ)_/¯ */
   animation-duration: 0.7s;
   animation-name: background-hack;
