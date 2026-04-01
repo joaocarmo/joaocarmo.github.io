@@ -35,7 +35,6 @@
     "lib": "lib"
   },
   "scripts": {
-    "add-all": "git add .",
     "build:dev": "NODE_ENV=development webpack",
     "build:prd": "NODE_ENV=production webpack",
     "build": "pnpm clean && pnpm build:prd",
