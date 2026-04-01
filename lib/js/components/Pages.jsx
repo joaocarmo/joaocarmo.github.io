@@ -56,7 +56,7 @@ const Pages = () => {
 
   useEffect(() => {
     observableSelectors.forEach(attachObserver(observerCallback))
-  }, [])
+  }, [observerCallback])
 
   return (
     <div className="grid">

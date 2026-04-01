@@ -1,16 +1,18 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const WebpackPwaManifest = require('webpack-pwa-manifest')
-const { GenerateSW } = require('workbox-webpack-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
-const ESLintPlugin = require('eslint-webpack-plugin')
-const StylelintPlugin = require('stylelint-webpack-plugin')
-const babelOptions = require('./babel.config')
-const postCssOptions = require('./postcss.config')
-const pkg = require('./package.json')
+import path from 'path'
+import { readFileSync } from 'fs'
+import webpack from 'webpack'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import CspHtmlWebpackPlugin from 'csp-html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import WebpackPwaManifest from 'webpack-pwa-manifest'
+import { GenerateSW } from 'workbox-webpack-plugin'
+import CopyPlugin from 'copy-webpack-plugin'
+import StylelintPlugin from 'stylelint-webpack-plugin'
+import babelOptions from './babel.config.js'
+import postCssOptions from './postcss.config.js'
+
+const __dirname = import.meta.dirname
+const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'))
 
 const mode = process.env.NODE_ENV || 'development'
 const styleLoader =
@@ -30,7 +32,7 @@ const appleTouchIconFrom = path.resolve(
 )
 const appleTouchIconTo = path.resolve(path.join(__dirname, 'img'))
 
-module.exports = {
+export default {
   mode,
   devtool: mode === 'development' ? 'eval-source-map' : false,
   context: path.join(__dirname, 'lib', 'js'),
@@ -173,12 +175,6 @@ module.exports = {
       start_url: '/',
       scope: '/',
       display: 'standalone',
-    }),
-    new ESLintPlugin({
-      configType: 'flat',
-      context: path.join(__dirname, 'lib', 'js'),
-      extensions: ['js', 'jsx', 'ts', 'tsx'],
-      fix: true,
     }),
     new StylelintPlugin({
       context: path.join(__dirname, 'lib', 'scss'),
