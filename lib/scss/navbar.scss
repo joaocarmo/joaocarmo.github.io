@@ -1,5 +1,4 @@
-@import 'settings';
-@import 'mixins';
+@use 'mixins';
 
 $avatar-height: 240px;
 $avatar-img-size: 200px;
@@ -10,7 +9,7 @@ $button-height: 3.5em;
 
 div {
   &.navbar {
-    @include no-scrollbar;
+    @include mixins.no-scrollbar;
 
     align-items: stretch;
     background-color: var(--bg-color);
