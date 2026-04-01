@@ -1,13 +1,8 @@
-import PropType from 'prop-types'
 import '@scss/accordion'
 
 const AccordionContainer = ({ children }) => (
   <ul className="accordion">{children}</ul>
 )
-
-AccordionContainer.propTypes = {
-  children: PropType.node.isRequired,
-}
 
 const AccordionItem = ({ title, children }) => (
   <li className="accordion">
@@ -22,11 +17,6 @@ const AccordionItem = ({ title, children }) => (
     <article className="accordion">{children}</article>
   </li>
 )
-
-AccordionItem.propTypes = {
-  title: PropType.node.isRequired,
-  children: PropType.node.isRequired,
-}
 
 const Accordion = {
   Container: AccordionContainer,

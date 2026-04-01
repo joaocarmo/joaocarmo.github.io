@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import '@scss/nextbutton'
@@ -8,9 +7,5 @@ const NextButton = ({ onClick = () => null }) => (
     <FontAwesomeIcon icon={faChevronDown} size="3x" />
   </button>
 )
-
-NextButton.propTypes = {
-  onClick: PropTypes.func.isRequired,
-}
 
 export default NextButton

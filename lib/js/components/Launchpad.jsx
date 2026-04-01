@@ -1,5 +1,4 @@
 import { useMemo } from 'react'
-import PropTpes from 'prop-types'
 import cx from 'clsx'
 import cvApp from '@img/launchpad-cv.png'
 import littenApp from '@img/launchpad-litten.png'
@@ -7,7 +6,7 @@ import uyghursApp from '@img/launchpad-uyghurs.png'
 import manifestoApp from '@img/launchpad-manifesto.png'
 import '@scss/launchpad'
 
-const Link = ({ children, to }) => {
+const Link = ({ children, to = '' }) => {
   if (!to) {
     return children
   }
@@ -17,15 +16,6 @@ const Link = ({ children, to }) => {
       {children}
     </a>
   )
-}
-
-Link.propTypes = {
-  children: PropTpes.node.isRequired,
-  to: PropTpes.string,
-}
-
-Link.defaultProps = {
-  to: '',
 }
 
 const Launchpad = ({ open, onClickPages, onClose }) => {
@@ -93,12 +83,6 @@ const Launchpad = ({ open, onClickPages, onClose }) => {
       </div>
     </div>
   )
-}
-
-Launchpad.propTypes = {
-  open: PropTpes.bool.isRequired,
-  onClickPages: PropTpes.func.isRequired,
-  onClose: PropTpes.func.isRequired,
 }
 
 export default Launchpad

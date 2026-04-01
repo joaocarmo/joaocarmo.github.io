@@ -1,4 +1,3 @@
-import 'intersection-observer'
 import { useCallback, useEffect, useState } from 'react'
 import NavBar from '@js/components/NavBar'
 import Content from '@js/components/Content'

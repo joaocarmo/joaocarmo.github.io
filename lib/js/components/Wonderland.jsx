@@ -56,8 +56,9 @@ ${getEnv()}
         <Social />
         <Copyright />
       </footer>
-      <main
+      <div
         id="pages"
+        role="region"
         className={cx({
           show: showPages,
           hide: !showPages,
@@ -67,7 +68,7 @@ ${getEnv()}
           <Pages />
           <BackButton onClick={togglePages} />
         </WonderlandContext.Provider>
-      </main>
+      </div>
       <Launchpad
         open={launchpadOpen}
         onClickPages={togglePages}

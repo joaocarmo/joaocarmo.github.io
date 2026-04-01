@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import cx from 'clsx'
-import PropTypes from 'prop-types'
 import '@scss/popup'
 
 const Popup = ({ content, children }) => {
@@ -24,11 +23,6 @@ const Popup = ({ content, children }) => {
       </span>
     </span>
   )
-}
-
-Popup.propTypes = {
-  content: PropTypes.node.isRequired,
-  children: PropTypes.node.isRequired,
 }
 
 export default Popup

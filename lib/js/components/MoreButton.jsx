@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import '@scss/morebutton'
 
 const MoreButton = ({ onClick = () => null }) => (
@@ -6,9 +5,5 @@ const MoreButton = ({ onClick = () => null }) => (
     Let&apos;s go for coffee !
   </button>
 )
-
-MoreButton.propTypes = {
-  onClick: PropTypes.func.isRequired,
-}
 
 export default MoreButton

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { scrollToElement } from '@js/functions'
 import '@scss/backtotop'
 
@@ -23,17 +23,14 @@ const BackToTop = () => {
   useEffect(() => {
     const contentRoot = document.getElementById('content-root')
 
-    contentRoot.onscroll = handleOnScroll
+    contentRoot.addEventListener('scroll', handleOnScroll)
 
     return () => {
-      contentRoot.onscroll = null
+      contentRoot.removeEventListener('scroll', handleOnScroll)
     }
-  }, [])
+  }, [handleOnScroll])
 
-  const className = useMemo(
-    () => (isVisible ? 'visible' : 'hidden'),
-    [isVisible],
-  )
+  const className = isVisible ? 'visible' : 'hidden'
 
   return (
     <>

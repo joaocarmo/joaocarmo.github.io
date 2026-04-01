@@ -1,0 +1,166 @@
+// Typography styles (Alton theme)
+// Fonts: Domine (headings), Open Sans (body)
+
+html {
+  font:
+    112.5% / 1.45 'Open Sans',
+    sans-serif;
+}
+
+body {
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  font-kerning: normal;
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1.16rem;
+  padding: 0;
+  color: inherit;
+  font-family: 'Domine', sans-serif;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.51572rem;
+}
+
+h3 {
+  font-size: 1.31951rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.87055rem;
+}
+
+h6 {
+  font-size: 0.81225rem;
+}
+
+img {
+  max-width: 100%;
+  margin: 0 0 1.16rem;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0 0 1.16rem 1.45rem;
+  padding: 0;
+  list-style-position: outside;
+  list-style-image: none;
+}
+
+p,
+figure,
+pre,
+fieldset,
+noscript,
+iframe,
+address,
+dl,
+dd,
+hgroup,
+form {
+  margin: 0 0 1.16rem;
+  padding: 0;
+}
+
+blockquote {
+  margin: 0 1.45rem 1.16rem 0;
+  padding: 0 0 0 1.17812rem;
+  font-size: 1.1487rem;
+  line-height: 1.45rem;
+  color: hsla(0, 0%, 0%, 0.59);
+  font-style: italic;
+  border-left: 0.27187rem solid hsla(0, 0%, 0%, 0.9);
+}
+
+table {
+  margin: 0 0 1.16rem;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.45rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+hr {
+  margin: 0 0 calc(1.16rem - 1px);
+  padding: 0;
+  background: hsla(0, 0%, 0%, 0.2);
+  border: 0;
+  height: 1px;
+}
+
+b,
+strong,
+dt,
+th {
+  font-weight: 700;
+}
+
+li {
+  margin-bottom: calc(1.16rem / 2);
+}
+
+li > ol,
+li > ul {
+  margin-left: 1.45rem;
+  margin-bottom: calc(1.16rem / 2);
+  margin-top: calc(1.16rem / 2);
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-size: 0.85rem;
+  line-height: 1.45rem;
+}
+
+a {
+  color: #ff5700;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: #000;
+  }
+}
+
+blockquote > :last-child,
+li *:last-child,
+p *:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+
+  blockquote {
+    margin-left: -1.0875rem;
+    margin-right: 0;
+    padding-left: 0.81562rem;
+  }
+}

@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCameraRetro,
   faCode,
-  faCoffee,
+  faMugSaucer,
   faFilm,
   faHeadphones,
   faLightbulb,
@@ -84,7 +84,7 @@ const WhatILike = () => (
       <div className="diy">
         <div className="interest-box">
           <div className="interest-icon">
-            <FontAwesomeIcon icon={faCoffee} size="3x" />
+            <FontAwesomeIcon icon={faMugSaucer} size="3x" />
           </div>
           <h6 className="interest-title">Coffee</h6>
         </div>

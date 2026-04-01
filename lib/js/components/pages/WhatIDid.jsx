@@ -5,9 +5,9 @@ import {
   faHelmetSafety,
   faLaptopCode,
   faMicroscope,
-  faProjectDiagram,
+  faDiagramProject,
   faRobot,
-  faUniversity,
+  faBuildingColumns,
 } from '@fortawesome/free-solid-svg-icons'
 import Accordion from '@js/components/Accordion'
 import Timeline from '@js/components/Timeline'
@@ -204,7 +204,7 @@ const experience = [
       </>
     ),
     color: 'hsl(300, 80%, 35%)',
-    icon: <FontAwesomeIcon icon={faProjectDiagram} color="white" />,
+    icon: <FontAwesomeIcon icon={faDiagramProject} color="white" />,
     where: 'InterNations',
   },
   {
@@ -306,7 +306,7 @@ const experience = [
       'Statistical study on data compiled from several published papers on selected atmospheric properties of transiting planets.',
     extra: '',
     color: 'hsl(180, 25%, 36%)',
-    icon: <FontAwesomeIcon icon={faUniversity} color="white" />,
+    icon: <FontAwesomeIcon icon={faBuildingColumns} color="white" />,
     where: 'Centro de Astrofísica da Universidade do Porto',
   },
 ]
