@@ -1,6 +1,5 @@
 @use 'sass:math';
-@import 'settings';
-@import 'mixins';
+@use 'mixins';
 
 $button-width: 5em;
 
@@ -34,7 +33,7 @@ button {
 .no-animation {
   button {
     &.next {
-      @include visible-no-animation;
+      @include mixins.visible-no-animation;
 
       bottom: 15%;
     }

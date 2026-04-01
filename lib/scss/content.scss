@@ -1,9 +1,8 @@
-@import 'settings';
-@import 'mixins';
+@use 'mixins';
 
 div.content {
-  @include no-scrollbar;
-  @include me-background;
+  @include mixins.no-scrollbar;
+  @include mixins.me-background;
 
   height: 100vh;
   overflow-y: auto;

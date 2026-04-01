@@ -1,9 +1,9 @@
 @use 'sass:math';
-@import 'settings';
-@import 'mixins';
+@use 'settings';
+@use 'mixins';
 
 #brandname {
-  @include no-scrollbar;
+  @include mixins.no-scrollbar;
   color: var(--text-color);
 
   height: 100%;
@@ -11,10 +11,10 @@
 }
 
 #brandname-section {
-  height: $main-section-size;
+  height: settings.$main-section-size;
   position: absolute;
   text-align: center;
-  top: calc(50% - #{math.div($main-section-size, 2)});
+  top: calc(50% - #{math.div(settings.$main-section-size, 2)});
   width: 100%;
 
   header {
@@ -51,11 +51,11 @@
   &.no-animation {
     header {
       h1 {
-        @include visible-no-animation;
+        @include mixins.visible-no-animation;
       }
 
       h4 {
-        @include visible-no-animation;
+        @include mixins.visible-no-animation;
       }
     }
   }
@@ -64,7 +64,7 @@
 @media only screen and (min-width: 768px) {
   #brandname-section {
     header {
-      width: $brand-header-size-mobile;
+      width: settings.$brand-header-size-mobile;
     }
   }
 }
@@ -74,11 +74,11 @@
   #brandname-section {
     header {
       h1 {
-        font-size: $brand-header-font-size-hobile-h1;
+        font-size: settings.$brand-header-font-size-hobile-h1;
       }
 
       h4 {
-        font-size: $brand-header-font-size-mobile-h4;
+        font-size: settings.$brand-header-font-size-mobile-h4;
       }
     }
   }
