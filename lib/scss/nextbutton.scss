@@ -52,5 +52,3 @@ button {
     opacity: 1;
   }
 }
-
-@include browser-hack-for('ie', 'button.next', 'display', none);

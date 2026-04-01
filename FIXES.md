@@ -15,47 +15,30 @@
 - [x] **Remove unused `@eslint/compat` and `file-loader`** — Neither was referenced
   in any config or source file.
 
-## MEDIUM — Summary
+## MEDIUM — Done
 
-Six items remain. Grouped by theme:
-
-### Dead legacy code (IE/old browser support)
-
-The `browser-hack-for` mixin in `_mixins.scss` targets IE 10-11, old Edge 12,
-and Safari 7. It's used once (`nextbutton.scss` hides a button for IE). The
-`no-scrollbar` mixin includes `-ms-overflow-style` (IE-only). Both are dead
-code given the modern browser targets — delete the `browser-hack-for` mixin and
-its one call site, drop the IE line from `no-scrollbar`.
-
-### Abandoned typography packages
-
-`typography` and `typography-theme-alton` haven't been published in 5+ years.
-`setup.js` uses them to inject Google Fonts via DOM manipulation
-(`insertAdjacentHTML`). Replace with a `<link>` in the HTML template or
-`@import` in SCSS, then remove both packages and `setup.js`.
-
-### Event handling antipattern
-
-`BackToTop.jsx` assigns `contentRoot.onscroll = handleOnScroll` directly, which
-overwrites any other scroll listeners. Switch to
-`addEventListener`/`removeEventListener`.
-
-### Security: Trusted Types passthrough
-
-`trusted-security-policies.js` defines `createScriptURL` and `createScript` as
-identity functions (`(string) => string`), defeating the purpose of Trusted
-Types. Either add proper validation or remove the passthrough handlers.
-
-### Unnecessary PostCSS plugin
-
-`postcss-css-variables` compiles CSS custom properties to static values. Modern
-browsers support them natively, and removing this preserves runtime dynamism.
-Delete from `postcss.config.js` and uninstall the package.
+- [x] **Replace `typography` and `typography-theme-alton`** — Deleted `setup.js`,
+  removed `injectFonts` from `functions.js`. Created `_typography.scss` with
+  the Alton theme styles. Added Google Fonts `<link>` to `index.hbs` with
+  preconnect hints. Updated CSP to allow fonts.googleapis.com and
+  fonts.gstatic.com. Removed both packages.
+- [x] **Fix `onscroll` direct assignment in BackToTop.jsx** — Replaced
+  `contentRoot.onscroll = handleOnScroll` with `addEventListener` /
+  `removeEventListener`. Also removed unnecessary `useMemo` and unused
+  `useMemo` import.
+- [x] **Remove browser hack mixin** — Deleted the entire `browser-hack-for` mixin
+  from `_mixins.scss` and its one call site in `nextbutton.scss`.
+- [x] **Simplify `no-scrollbar` mixin** — Removed `-ms-overflow-style` (IE-only),
+  fixed nesting selector for `::-webkit-scrollbar`.
+- [x] **Remove unsafe Trusted Types passthrough** — Removed `createScriptURL` and
+  `createScript` identity functions from the default policy. Only `createHTML`
+  (sanitized via DOMPurify) remains.
+- [x] **Remove `postcss-css-variables`** — Removed from `postcss.config.js` and
+  uninstalled the package. Native CSS custom properties are preserved at
+  runtime.
 
 ## LOW — Nice to have
 
-- [ ] **Remove unnecessary `useMemo` in BackToTop.jsx** — Memoizing
-  `isVisible ? 'visible' : 'hidden'` adds complexity for zero benefit.
 - [ ] **Remove `/* global */` comment and try/catch in functions.js** — Webpack
   `DefinePlugin` globals are replaced at compile time. The comment is a
   leftover from ESLint's old format.
