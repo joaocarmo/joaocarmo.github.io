@@ -7,7 +7,6 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import WebpackPwaManifest from 'webpack-pwa-manifest'
 import { GenerateSW } from 'workbox-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
-import ESLintPlugin from 'eslint-webpack-plugin'
 import StylelintPlugin from 'stylelint-webpack-plugin'
 import babelOptions from './babel.config.js'
 import postCssOptions from './postcss.config.js'
@@ -176,12 +175,6 @@ export default {
       start_url: '/',
       scope: '/',
       display: 'standalone',
-    }),
-    new ESLintPlugin({
-      configType: 'flat',
-      context: path.join(__dirname, 'lib', 'js'),
-      extensions: ['js', 'jsx', 'ts', 'tsx'],
-      fix: true,
     }),
     new StylelintPlugin({
       context: path.join(__dirname, 'lib', 'scss'),
