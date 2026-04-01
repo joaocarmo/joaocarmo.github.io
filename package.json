@@ -2,6 +2,7 @@
   "name": "joaocarmo",
   "version": "1.9.0",
   "private": true,
+  "type": "module",
   "title": "João Carmo - WebMagician",
   "description": "Help João in his great quest for web adventure !",
   "keywords": [

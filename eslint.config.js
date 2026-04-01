@@ -19,11 +19,6 @@ export default [
       'docs/',
       'react-smart-data-table/',
       'reacy-very-simple-data-table/',
-      'eslint.config.mjs',
-      'babel.config.js',
-      'jest.config.js',
-      'webpack.config.js',
-      'postcss.config.js',
     ],
   },
   {
@@ -35,6 +30,12 @@ export default [
         BUILDTIME: 'readonly',
         ENVIRONMENT: 'readonly',
       },
+    },
+  },
+  {
+    files: ['*.config.js'],
+    languageOptions: {
+      globals: globals.node,
     },
   },
   {

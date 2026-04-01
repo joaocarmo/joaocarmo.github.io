@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   verbose: true,
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/*',
