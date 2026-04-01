@@ -19,7 +19,7 @@
 
 - [x] **Replace `typography` and `typography-theme-alton`** — Deleted `setup.js`,
   removed `injectFonts` from `functions.js`. Created `_typography.scss` with
-  the Alton theme styles. Added Google Fonts `<link>` to `index.hbs` with
+  the Alton theme styles. Added Google Fonts `<link>` to template with
   preconnect hints. Updated CSP to allow fonts.googleapis.com and
   fonts.gstatic.com. Removed both packages.
 - [x] **Fix `onscroll` direct assignment in BackToTop.jsx** — Replaced
@@ -37,13 +37,15 @@
   uninstalled the package. Native CSS custom properties are preserved at
   runtime.
 
-## LOW — Nice to have
+## LOW — Done
 
-- [ ] **Remove `/* global */` comment and try/catch in functions.js** — Webpack
-  `DefinePlugin` globals are replaced at compile time. The comment is a
-  leftover from ESLint's old format.
-- [ ] **Replace `handlebars` + `handlebars-loader`** — Used only for a single HTML
-  template. `html-webpack-plugin` supports EJS out of the box.
-- [ ] **Fix duplicate `<main>` elements in Wonderland.jsx** — HTML spec allows only
-  one `<main>` per page. One of the two should use a different semantic
-  element.
+- [x] **Clean up `functions.js`** — Removed `/* global */` comment, declared
+  `VERSION`, `BUILDTIME`, `ENVIRONMENT` in ESLint config globals instead.
+  Simplified try/catch wrappers to direct returns (DefinePlugin replaces
+  these at compile time).
+- [x] **Replace `handlebars` + `handlebars-loader`** — Converted `index.hbs` to
+  `index.ejs` (built-in html-webpack-plugin support). Inlined `no-script.hbs`
+  content. Removed handlebars loader rule from webpack config. Deleted both
+  packages.
+- [x] **Fix duplicate `<main>` elements in Wonderland.jsx** — Changed the pages
+  container from `<main>` to `<section>`. Only one `<main>` landmark remains.

@@ -32,6 +32,9 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.jest,
+        VERSION: 'readonly',
+        BUILDTIME: 'readonly',
+        ENVIRONMENT: 'readonly',
       },
     },
   },

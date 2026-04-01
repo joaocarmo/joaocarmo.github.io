@@ -87,7 +87,6 @@ module.exports = {
           },
         ],
       },
-      { test: /\.hbs$/, use: ['handlebars-loader'] },
       {
         test: /\.(jpe?g|png|gif)$/i,
         type: 'asset/resource',
@@ -109,7 +108,7 @@ module.exports = {
       hash: true,
       title: pkg.title,
       favicon: path.join(__dirname, 'lib', 'img', 'favicon.ico'),
-      template: path.join(__dirname, 'lib', 'index.hbs'),
+      template: path.join(__dirname, 'lib', 'index.ejs'),
       meta: {
         author: pkg.author.name,
         description: pkg.description,
