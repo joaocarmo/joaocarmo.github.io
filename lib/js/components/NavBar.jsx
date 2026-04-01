@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import cx from 'clsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPerson, faLocationDot } from '@fortawesome/free-solid-svg-icons'
@@ -14,7 +13,7 @@ const menuItems = [
   { key: 'what-i-like', title: 'What I like', action: '' },
 ]
 
-const NavBar = ({ activeIndex } = {}) => (
+const NavBar = ({ activeIndex = 0 } = {}) => (
   <div className="navbar">
     <div className="navbar avatar">
       <img src={me} alt="My photograph" className="navbar-avatar" />
@@ -62,13 +61,5 @@ const NavBar = ({ activeIndex } = {}) => (
     </div>
   </div>
 )
-
-NavBar.propTypes = {
-  activeIndex: PropTypes.number,
-}
-
-NavBar.defaultProps = {
-  activeIndex: 0,
-}
 
 export default NavBar

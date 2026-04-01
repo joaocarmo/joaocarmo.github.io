@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import '@scss/backbutton'
@@ -8,9 +7,5 @@ const BackButton = ({ onClick = () => null }) => (
     <FontAwesomeIcon icon={faXmark} />
   </button>
 )
-
-BackButton.propTypes = {
-  onClick: PropTypes.func.isRequired,
-}
 
 export default BackButton

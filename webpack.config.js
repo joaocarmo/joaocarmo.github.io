@@ -36,8 +36,6 @@ module.exports = {
   context: path.join(__dirname, 'lib', 'js'),
   entry: [
     './trusted-security-policies.js',
-    'core-js/stable',
-    'regenerator-runtime/runtime',
     './index.jsx',
   ],
   output: {

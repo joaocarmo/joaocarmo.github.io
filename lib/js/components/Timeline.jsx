@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'clsx'
 import '@scss/timeline'
 
@@ -16,11 +15,15 @@ const Container = ({ children }) => (
   </div>
 )
 
-Container.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-const Content = ({ children, color, icon, time, title, where, extra }) => {
+const Content = ({
+  children,
+  color = null,
+  icon = '',
+  time,
+  title,
+  where = '',
+  extra = '',
+}) => {
   const [showExtra, setShowExtra] = useState(false)
 
   return (
@@ -65,23 +68,6 @@ const Content = ({ children, color, icon, time, title, where, extra }) => {
       </div>
     </article>
   )
-}
-
-Content.propTypes = {
-  children: PropTypes.node.isRequired,
-  color: PropTypes.string,
-  icon: PropTypes.node,
-  time: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  where: PropTypes.string,
-  extra: PropTypes.node,
-}
-
-Content.defaultProps = {
-  color: null,
-  icon: '',
-  where: '',
-  extra: '',
 }
 
 Timeline.Container = Container
