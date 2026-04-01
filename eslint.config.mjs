@@ -3,7 +3,6 @@ import eslint from '@eslint/js'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
 import pluginReact from 'eslint-plugin-react'
-import pluginJest from 'eslint-plugin-jest'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 
 export default [
@@ -48,10 +47,6 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
     },
-  },
-  {
-    files: ['__tests__/**'],
-    ...pluginJest.configs['flat/recommended'],
   },
   {
     settings: {
