@@ -2,24 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="<%= author %>">
+  <meta name="description" content="<%= description %>">
+  <meta name="keywords" content="<%= keywords %>">
+  <title><%= title %></title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/img/my-icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <% if (htmlWebpackPlugin.options.serviceWorker) { %>
-    <script>
-      // Check that service workers are supported
-      if ('serviceWorker' in navigator) {
-        // Use the window load event to keep the page load performant
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('<%= htmlWebpackPlugin.options.serviceWorker %>');
-        });
-      }
-    </script>
-  <% } %>
-  <% if (htmlWebpackPlugin.options.appleTouchIcon) { %>
-    <link rel="apple-touch-icon" href="<%= htmlWebpackPlugin.options.appleTouchIcon %>">
-  <% } %>
 </head>
   <body>
     <div id="blackout">
@@ -152,5 +144,6 @@
         </footer>
       </div>
     </noscript>
+    <script type="module" src="/js/index.jsx"></script>
   </body>
 </html>

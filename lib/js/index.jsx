@@ -1,3 +1,4 @@
+import './trusted-security-policies.js'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Wonderland from './components/Wonderland'

@@ -1,5 +1,6 @@
 export default {
   verbose: true,
+  transform: {},
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/*',
     '<rootDir>/scripts/*',
