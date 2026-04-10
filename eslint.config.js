@@ -13,7 +13,7 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.jest,
+        ...globals.vitest,
         VERSION: 'readonly',
         BUILDTIME: 'readonly',
         ENVIRONMENT: 'readonly',
@@ -37,11 +37,6 @@ export default [
     },
   },
   {
-    ignores: [
-      'node_modules/',
-      'docs/',
-      'react-smart-data-table/',
-      'reacy-very-simple-data-table/',
-    ],
+    ignores: ['node_modules/', 'docs/'],
   },
 ]

@@ -41,6 +41,11 @@ function cspPlugin(directives) {
 }
 
 export default defineConfig(({ mode }) => ({
+  test: {
+    globals: true,
+    environment: 'node',
+    include: ['**/__tests__/**/*.js', '**/*.{test,spec}.?(c|m)[jt]s?(x)'],
+  },
   root: 'lib',
   publicDir: '../public',
   build: {
