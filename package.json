@@ -48,7 +48,7 @@
     "pretty": "prettier --check .",
     "preview": "vite preview",
     "start": "vite",
-    "test": "NODE_OPTIONS='--experimental-vm-modules' jest"
+    "test": "vitest run"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -72,7 +72,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "globals": "^17.4.0",
     "husky": "^9.1.7",
-    "jest": "^30.3.0",
+    "vitest": "^3.2.4",
     "postcss": "^8.5.9",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.8.2",
